@@ -1,0 +1,116 @@
+%
+% File acl2020.tex
+%
+%% Based on the style files for ACL 2020, which were
+%% Based on the style files for ACL 2018, NAACL 2018/19, which were
+%% Based on the style files for ACL-2015, with some improvements
+%%  taken from the NAACL-2016 style
+%% Based on the style files for ACL-2014, which were, in turn,
+%% based on ACL-2013, ACL-2012, ACL-2011, ACL-2010, ACL-IJCNLP-2009,
+%% EACL-2009, IJCNLP-2008...
+%% Based on the style files for EACL 2006 by 
+%%e.agirre@ehu.es or Sergi.Balari@uab.es
+%% and that of ACL 08 by Joakim Nivre and Noah Smith
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[hyperref]{template/acl}
+\usepackage{times}
+\usepackage{latexsym}
+\renewcommand{\UrlFont}{\ttfamily\small}
+
+% This is not strictly necessary, and may be commented out,
+% but it will improve the layout of the manuscript,
+% and will typically save some space.
+\usepackage{microtype}
+
+\aclfinalcopy % Uncomment this line for the final submission
+%\def\aclpaperid{***} %  Enter the acl Paper ID here
+
+%\setlength\titlebox{5cm}
+% You can expand the titlebox if you need extra space
+% to show all the authors. Please do not make the titlebox
+% smaller than 5cm (the original size); we will check this
+% in the camera-ready version and ask you to change it back.
+
+\newcommand\BibTeX{B\textsc{ib}\TeX}
+
+\title{Multilingual Emotion Detection}
+
+\author{Junyin Chen \and Hanshu Ding \and Zoe Fang \and Yifan Jiang \\
+		\texttt{\{junyinc, hsding99, zoekfang, yfjiang\}@uw.edu} \\
+        Department of Linguistics \\ University of Washington}
+
+
+\date{}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+TBD
+\end{abstract}
+
+\section{Introduction}
+
+TBD
+
+
+\section{Task Description}
+\subsection{Primary Task}
+\label{sect:primary_task}
+
+Our primary task is an emotion detection task on dialogues in the Emotionlines dataset. The dataset is in English and contains TV show scripts and text message dialogues. We need to classify the emotion for each utterance in dialogues.
+
+\subsubsection{Dataset}
+
+Emotionlines \citep{hsu-etal-2018-emotionlines}\footnote{\url{http://doraemon.iis.sinica.edu.tw/emotionlines/index.html}} dataset is an emotion dialogue dataset with emotion labels for each utterance. The dataset contains a total of 29, 245 utterances from 2, 000 dialogues, which are collected from Friends TV scripts and private Facebook messenger dialogues. Each utterance is labeled with one of Ekman’s six basic emotions plus the neutral emotion.
+
+\citet{hsu-etal-2018-emotionlines} have split the dataset into training, development, and testing set separately. We use the testing set and corresponding gold standard annotation for analysis.
+
+\subsection{Adaptation Task}
+\label{sect:adaptation_task}
+
+Our adaptation task is to adapt our emotion detection model to Chinese dialogues in the Multi-party Dialogue Dataset (MPDD). Other dimensions for this task remain the same as the primary task.
+
+\subsubsection{Dataset}
+
+Multi-party Dialogue Dataset (MPDD) \citep{chen-etal-2020-mpdd}\footnote{\url{http://nlg.csie.ntu.edu.tw/nlpresource/MPDD}} is a Chinese emotion dialogue dataset with emotion and relation labels for each utterance. The dataset contains a total of 25, 548 utterances from 4, 142 dialogues, which are collected from five TV series scripts from \url{www.juban108.com}. The dialogues have three types of labels: emotion, relation, and target listener. In particular, emotion labels are consistent with those in the Emotionlines dataset.
+
+We will randomly split ten percent of the dataset as the test data for analysis.
+
+\subsection{Evaluation}
+Both tasks will be evaluated using standard evaluation metrics, including accuracy, precision, recall and F1-score. 
+
+\section{System Overview}
+\label{sec:overview}
+
+TBD
+
+\section{Approach}
+\label{sec:approach}
+
+TBD
+
+
+\section{Results}
+\label{sec:results}
+
+TBD
+
+
+
+\section{Discussion}
+
+TBD
+
+
+\section{Conclusion}
+\label{sect:conclusion}
+
+TBD
+
+\section{References}
+
+\bibliographystyle{template/acl_natbib}
+\bibliography{template/custom,template/anthology}
+
+\end{document}
