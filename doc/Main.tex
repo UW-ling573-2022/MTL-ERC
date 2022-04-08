@@ -1,0 +1,118 @@
+% This must be in the first 5 lines to tell arXiv to use pdfLaTeX, which is strongly recommended.
+\pdfoutput=1
+% In particular, the hyperref package requires pdfLaTeX in order to break URLs across lines.
+
+\documentclass[11pt]{article}
+
+% Remove the "review" option to generate the final version.
+\usepackage{acl}
+
+% Standard package includes
+\usepackage{times}
+\usepackage{latexsym}
+
+% For proper rendering and hyphenation of words containing Latin characters (including in bib files)
+\usepackage[T1]{fontenc}
+% For Vietnamese characters
+% \usepackage[T5]{fontenc}
+% See https://www.latex-project.org/help/documentation/encguide.pdf for other character sets
+
+% This assumes your files are encoded as UTF8
+\usepackage[utf8]{inputenc}
+
+% This is not strictly necessary, and may be commented out,
+% but it will improve the layout of the manuscript,
+% and will typically save some space.
+\usepackage{microtype}
+
+% If the title and author information does not fit in the area allocated, uncomment the following
+%
+%\setlength\titlebox{<dim>}
+%
+% and set <dim> to something 5cm or larger.
+
+\title{Multilingual Emotion Recognition in Conversation}
+
+% Author information can be set in various styles:
+% For several authors from the same institution:
+% \author{Author 1 \and ... \and Author n \\
+%         Address line \\ ... \\ Address line}
+% if the names do not fit well on one line use
+%         Author 1 \\ {\bf Author 2} \\ ... \\ {\bf Author n} \\
+% For authors from different institutions:
+% \author{Author 1 \\ Address line \\  ... \\ Address line
+%         \And  ... \And
+%         Author n \\ Address line \\ ... \\ Address line}
+% To start a seperate ``row'' of authors use \AND, as in
+% \author{Author 1 \\ Address line \\  ... \\ Address line
+%         \AND
+%         Author 2 \\ Address line \\ ... \\ Address line \And
+%         Author 3 \\ Address line \\ ... \\ Address line}
+
+\author{Junyin Chen \and Hanshu Ding \and Zoe Fang \and Yifan Jiang \\
+		\texttt{\{junyinc, hsding99, zoekfang, yfjiang\}@uw.edu} \\
+        Department of Linguistics \\ University of Washington}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+  TBD
+\end{abstract}
+
+\section{Introduction}
+TBD
+
+\section{Task Description}
+
+\subsection{Primary Task}
+\label{sect:primary_task}
+
+Our primary task is emotion recognition in conversation (ERC) task on the text modality of the Multimodal EmotionLines Dataset (MELD). The dataset is in English and contains dialogues and utterances from TV series scripts . We will predict the emotion for each utterance from dialogues involving multiple speakers.
+
+\subsubsection{Dataset}
+
+Multimodal EmotionLines Dataset (MELD) \citep{poria-etal-2019-meld} \footnote{\url{https://affective-meld.github.io/}} dataset is a multimodal emotional conversational dataset built on EmotionLines dataset \citep{hsu-etal-2018-emotionlines} with three modalities: audio, visual, and text. The dataset contains about 13,000 utterances from 1,433 dialogues, which are collected from the TV-series Friends. Each utterance is annotated with Ekman's basic emotions plus neutral and sentiment labels.
+
+\subsection{Adaptation Task}
+\label{sect:adaptation_task}
+
+Our adaptation task is to adapt our model to Chinese dialogues in the Multi-party Dialogue Dataset (MPDD). Other dimensions for this task remain the same as the primary task.
+
+\subsubsection{Dataset}
+
+Multi-party Dialogue Dataset (MPDD) \citep{chen-etal-2020-mpdd} \footnote{\url{http://nlg.csie.ntu.edu.tw/nlpresource/MPDD}} is a Chinese emotional conversational dataset. The dataset contains a total of 25, 548 utterances from 4, 142 dialogues, which are collected from five TV series scripts from \url{www.juban108.com}. Each uttrance is annmotated with three types of labels: emotion, relation, and target listener. In particular, the emotion labels are consistent with those in the Emotionlines dataset.
+
+\subsection{Evaluation}
+Both tasks will be evaluated using standard metrics, including accuracy, precision, recall and F1-score. Weighted-F1 may be used to account for the imbalance of the dataset.
+
+\section{System Overview}
+\label{sec:overview}
+
+TBD
+
+\section{Approach}
+\label{sec:approach}
+
+TBD
+
+
+\section{Results}
+\label{sec:results}
+
+TBD
+
+
+\section{Discussion}
+
+TBD
+
+
+\section{Conclusion}
+\label{sect:conclusion}
+
+TBD
+
+% Entries for the entire Anthology, followed by custom entries
+\bibliography{anthology, custom}
+
+\end{document}
