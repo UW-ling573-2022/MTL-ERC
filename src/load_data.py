@@ -147,10 +147,10 @@ class TextDataset(torch.utils.data.Dataset):
         for diaid in tqdm(diaids):
             ues = [
                 self.raw_data[uttid]
-                for uttid in self.utterance_ordered[diaid]
+                for uttid in self.dialog_group[diaid]
             ]
 
-            num_tokens = [len(tokenizer(ue["Utterance"])["input_ids"]) for ue in ues]
+            num_tokens = [len(tokenizer(ue["utterance"])["input_ids"]) for ue in ues]
 
             for idx, ue in enumerate(ues):
                 if ue["Emotion"] not in list(self.emotion2id.keys()):
@@ -196,7 +196,7 @@ class TextDataset(torch.utils.data.Dataset):
                             num_truncated += 1
                             break
 
-                utterances = [ues[idx_]["Utterance"] for idx_ in indexes]
+                utterances = [ues[idx_]["utterance"] for idx_ in indexes]
 
                 if num_past_utterances == 0 and num_future_utterances == 0:
                     assert len(utterances) == 1
@@ -253,7 +253,7 @@ class TextDataset(torch.utils.data.Dataset):
 
         diaids = sorted(list(self.dialog_group.keys()))
 
-        set_seed(self.SEED)
+        set_seed(self.seed)
         random.shuffle(diaids)
 
         if self.ONLY_UPTO:
