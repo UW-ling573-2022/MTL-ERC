@@ -60,3 +60,4 @@ def train(model,
         eval_emotion_acc = eval_emotion_correct / len(eval_dataloader.dataset)
         
         progress_bar.set_description(f"Epoch {epoch} | Train Speaker Acc: {train_speaker_acc:.3f} | Train Emotion Acc: {train_emotion_acc:.3f} | Eval Speaker Acc: {eval_speaker_acc:.3f} | Eval Emotion Acc: {eval_emotion_acc:.3f}")
+    
