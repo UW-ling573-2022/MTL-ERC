@@ -1,11 +1,13 @@
 import torch
 from tqdm.auto import tqdm
 
+
 def criterion(outputs, labels, loss_fn):
     losses = 0
     for key in outputs:
         losses += loss_fn(outputs[key], labels[key])
     return losses
+
 
 def train(model, 
           train_dataloader, 
