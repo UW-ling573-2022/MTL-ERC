@@ -1,0 +1,13 @@
+name: UW-LING-573
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - numpy
+  - scikit-learn
+  - pytorch
+  - torchvision
+  - tqdm
+  - transformers
+  - pandas
+  - datasets
