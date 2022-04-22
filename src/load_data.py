@@ -92,7 +92,7 @@ class TextDataset(torch.utils.data.Dataset):
             num_past_utterances=0,
             num_future_utterances=0,
             model_checkpoint="roberta-base",
-            directory="../data/",
+            directory="data/",
             up_to=False,
             seed=0
     ):
