@@ -6,45 +6,47 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trai
 from MTL.model import MultiTaskModel
 from MTL.train import MultitaskTrainer
 from load_data import TextDataset
+import util
 
 
-def pipeline(do_train, saved_model_path=None):
+def pipeline(do_train, saved_model_path=None, **args):
     train_dataset = {
         "emotion": TextDataset(
             dataset="MELD",
             split="train",
             field="emotion",
-            speaker_mode=True,
-            num_past_utterances=1,
-            num_future_utterances=1,
+            seed=args["seed"],
+            directory=args["data_dir"],
+            num_past_utterances=args["num_past_utterances"],
+            num_future_utterances=args["num_future_utterances"],
         ),
         "speaker": TextDataset(
             dataset="MELD",
             split="train",
             field="speaker",
-            speaker_mode=True,
-            num_past_utterances=1,
-            num_future_utterances=1,
+            seed=args["seed"],
+            directory=args["data_dir"],
+            num_past_utterances=args["num_past_utterances"],
+            num_future_utterances=args["num_future_utterances"],
         )
     }
-    eval_dataset = {
-        "emotion": TextDataset(
-            dataset="MELD",
-            split="dev",
-            field="emotion",
-            speaker_mode=True,
-            num_past_utterances=1,
-            num_future_utterances=1,
-        ),
-        "speaker": TextDataset(
-            dataset="MELD",
-            split="dev",
-            field="speaker",
-            speaker_mode=True,
-            num_past_utterances=1,
-            num_future_utterances=1,
-        )
-    }
+    eval_dataset = {"emotion": TextDataset(
+        dataset="MELD",
+        split="dev",
+        field="emotion",
+        seed=args["seed"],
+        directory=args["data_dir"],
+        num_past_utterances=args["num_past_utterances"],
+        num_future_utterances=args["num_future_utterances"],
+    ), "speaker": TextDataset(
+        dataset="MELD",
+        split="dev",
+        field="speaker",
+        seed=args["seed"],
+        directory=args["data_dir"],
+        num_past_utterances=args["num_past_utterances"],
+        num_future_utterances=args["num_future_utterances"],
+    ), "task": args["evaluation"]}
 
     checkpoint = "roberta-base"
     tokenizer = AutoTokenizer.from_pretrained(checkpoint)
@@ -62,8 +64,8 @@ def pipeline(do_train, saved_model_path=None):
     }
     multi_task_model = MultiTaskModel.from_single_task_models(single_task_models)
 
-    if saved_model_path is not None:
-        multi_task_model.load_state_dict(torch.load(saved_model_path))
+    if args["model_file"] is not None:
+        multi_task_model.load_state_dict(torch.load(args["train_dir"]))
 
     def compute_metrics(eval_preds):
         metric = load_metric("f1")
@@ -72,12 +74,13 @@ def pipeline(do_train, saved_model_path=None):
         return metric.compute(predictions=predictions, references=labels, average="weighted")
 
     training_args = TrainingArguments(
-        output_dir="../outputs/multi_task_model",
+        output_dir=args["train_dir"],
+        seed=args["seed"],
         overwrite_output_dir=True,
         label_names=["labels"],
-        learning_rate=1e-5,
-        num_train_epochs=10,
-        per_device_train_batch_size=8,
+        learning_rate=args["learning_rate"],
+        num_train_epochs=args["epoch"],
+        per_device_train_batch_size=args["batch_size"],
         logging_strategy="epoch",
         evaluation_strategy="epoch",
         save_strategy="epoch",
@@ -102,18 +105,20 @@ def pipeline(do_train, saved_model_path=None):
             dataset="MELD",
             split="test",
             field="emotion",
-            speaker_mode=True,
-            num_past_utterances=1,
-            num_future_utterances=1,
+            seed=args["seed"],
+            directory=args["data_dir"],
+            num_past_utterances=args["num_past_utterances"],
+            num_future_utterances=args["num_future_utterances"],
         ),
         "speaker": TextDataset(
             dataset="MELD",
             split="test",
             field="speaker",
-            speaker_mode=True,
-            num_past_utterances=1,
-            num_future_utterances=1,
-        )
+            seed=args["seed"],
+            directory=args["data_dir"],
+            num_past_utterances=args["num_past_utterances"],
+            num_future_utterances=args["num_future_utterances"],
+        ), "task": args["evaluation"]
     }
 
     f1 = trainer.predict(test_dataset).metrics['test_f1']
@@ -121,4 +126,5 @@ def pipeline(do_train, saved_model_path=None):
 
 
 if __name__ == "__main__":
-    pipeline(True)
+    args = vars(util.get_args())
+    pipeline(**args)

@@ -64,10 +64,10 @@ class MultitaskTrainer(Trainer):
         
     def get_eval_dataloader(self, eval_dataset=None):
         eval_dataset = eval_dataset if eval_dataset is not None else self.eval_dataset
-        task_to_eval = eval_dataset["Task to Evaluate"]
+        task_to_eval = eval_dataset["task"]
         return self.get_single_task_dataloader(task_to_eval, eval_dataset[task_to_eval], description="evaluation")
         
     
     def get_test_dataloader(self, test_dataset):
-        task_to_test = test_dataset["Task to Test"]
+        task_to_test = test_dataset["task"]
         return self.get_single_task_dataloader(task_to_test, test_dataset[task_to_test], description="test")

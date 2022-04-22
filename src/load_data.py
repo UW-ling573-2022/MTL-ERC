@@ -23,7 +23,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-"""utility and helper functions / classes."""
 import logging
 import os
 import random
@@ -34,6 +33,8 @@ import pandas as pd
 import torch
 from tqdm import tqdm
 from transformers import AutoTokenizer
+
+import util
 
 MELD_SPEAKER = ["Chandler", "Joey", "Monica", "Rachel", "Ross", "Phoebe"]
 
@@ -87,12 +88,11 @@ class TextDataset(torch.utils.data.Dataset):
             self,
             dataset="MELD",
             split="train",
-            speaker_mode=False,
             field="emotion",
             num_past_utterances=0,
             num_future_utterances=0,
             model_checkpoint="roberta-base",
-            directory="data/",
+            directory=util.get_root_dir() + "data/",
             up_to=False,
             seed=0
     ):
@@ -101,7 +101,6 @@ class TextDataset(torch.utils.data.Dataset):
         self.dataset = dataset
         self.directory = directory
         self.split = split
-        self.speaker_mode = speaker_mode
         self.field = field
         self.num_past_utterances = num_past_utterances
         self.num_future_utterances = num_future_utterances
@@ -136,26 +135,25 @@ class TextDataset(torch.utils.data.Dataset):
                 self.emotion[utterance_id] = row['Emotion']
                 utterance = row["Utterance"]
                 speaker = "OTHERS"
-                if self.speaker_mode:
-                    if row["Speaker"] in MELD_SPEAKER:
-                        speaker = row["Speaker"].upper()
-                    utterance = speaker + ": " + utterance
+                if row["Speaker"] in MELD_SPEAKER:
+                    speaker = row["Speaker"].upper()
 
-                self.speaker_emotion[utterance_id] = {"utterance": utterance,
+                self.speaker_emotion[utterance_id] = {"utterance": speaker + ": " + utterance,
+                                                      "clean": utterance,
                                                       "emotion": row['Emotion'],
                                                       "speaker": speaker,
                                                       }
         else:
             raise ValueError(f"{self.dataset} is not MELD")
 
+
     def _create_input(
-            self, diaids, speaker_mode, num_past_utterances, num_future_utterances
+            self, diaids, num_past_utterances, num_future_utterances
     ):
         """Create an input which will be an input to RoBERTa."""
 
         args = {
             "diaids": diaids,
-            "speaker_mode": speaker_mode,
             "num_past_utterances": num_past_utterances,
             "num_future_utterances": num_future_utterances,
         }
@@ -220,35 +218,36 @@ class TextDataset(torch.utils.data.Dataset):
                             break
 
                 utterances = [ues[idx_]["utterance"] for idx_ in indexes]
+                clean = [ues[idx_]["clean"] for idx_ in indexes]
 
                 if num_past_utterances == 0 and num_future_utterances == 0:
                     assert len(utterances) == 1
-                    final_utterance = utterances[0]
+                    final_utterance = clean[0]
 
                 elif num_past_utterances > 0 and num_future_utterances == 0:
                     if len(utterances) == 1:
-                        final_utterance = "</s></s>" + utterances[-1]
+                        final_utterance = "</s></s>" + clean[-1]
                     else:
                         final_utterance = (
-                                " ".join(utterances[:-1]) + "</s></s>" + utterances[-1]
+                                " ".join(utterances[:-1]) + "</s></s>" + clean[-1]
                         )
 
                 elif num_past_utterances == 0 and num_future_utterances > 0:
                     if len(utterances) == 1:
-                        final_utterance = utterances[0] + "</s></s>"
+                        final_utterance = clean[0] + "</s></s>"
                     else:
                         final_utterance = (
-                                utterances[0] + "</s></s>" + " ".join(utterances[1:])
+                                clean[0] + "</s></s>" + " ".join(utterances[1:])
                         )
 
                 elif num_past_utterances > 0 and num_future_utterances > 0:
                     if len(utterances) == 1:
-                        final_utterance = "</s></s>" + utterances[0] + "</s></s>"
+                        final_utterance = "</s></s>" + clean[0] + "</s></s>"
                     else:
                         final_utterance = (
                                 " ".join(utterances[:offset])
                                 + "</s></s>"
-                                + utterances[offset]
+                                + clean[offset]
                                 + "</s></s>"
                                 + " ".join(utterances[offset + 1:])
                         )
@@ -290,7 +289,6 @@ class TextDataset(torch.utils.data.Dataset):
         logging.info(f"creating input utterance data ... ")
         self.inputs_ = self._create_input(
             diaids=diaids,
-            speaker_mode=self.speaker_mode,
             num_past_utterances=self.num_past_utterances,
             num_future_utterances=self.num_future_utterances,
         )
@@ -306,7 +304,6 @@ if __name__ == "__main__":
     ds_train = TextDataset(
         dataset="MELD",
         split="dev",
-        speaker_mode=True,
         num_past_utterances=1,
         num_future_utterances=1,
     )
