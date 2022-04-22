@@ -37,6 +37,7 @@ from transformers import AutoTokenizer
 
 MELD_SPEAKER = ["Chandler", "Joey", "Monica", "Rachel", "Ross", "Phoebe"]
 
+
 def set_seed(seed: int) -> None:
     """Set random seed to a fixed value.
 
@@ -56,15 +57,7 @@ def get_emotion2id(dataset: str) -> Tuple[dict, dict]:
 
     if dataset == "MELD":
         # MELD has 7 classes
-        emotions = [
-            "Chandler",
-            "joy",
-            "surprise",
-            "anger",
-            "sadness",
-            "disgust",
-            "fear",
-        ]
+        emotions = ["anger", "disgust", "fear", "joy", "neutral", "sadness", "surprise"]
         emotion2id = {emotion: idx for idx, emotion in enumerate(emotions)}
         id2emotion = {val: key for key, val in emotion2id.items()}
     return emotion2id, id2emotion
@@ -95,10 +88,11 @@ class TextDataset(torch.utils.data.Dataset):
             dataset="MELD",
             split="train",
             speaker_mode=False,
+            field="emotion",
             num_past_utterances=0,
             num_future_utterances=0,
             model_checkpoint="roberta-base",
-            directory="data/",
+            directory="../data/",
             up_to=False,
             seed=0
     ):
@@ -108,6 +102,7 @@ class TextDataset(torch.utils.data.Dataset):
         self.directory = directory
         self.split = split
         self.speaker_mode = speaker_mode
+        self.field = field
         self.num_past_utterances = num_past_utterances
         self.num_future_utterances = num_future_utterances
         self.model_checkpoint = model_checkpoint
@@ -264,11 +259,14 @@ class TextDataset(torch.utils.data.Dataset):
                 input_ids = input_ids_attention_mask["input_ids"]
                 attention_mask = input_ids_attention_mask["attention_mask"]
 
+                label = emotion
+                if self.field == "speaker":
+                    label = speaker
+
                 input_ = {
                     "input_ids": input_ids,
                     "attention_mask": attention_mask,
-                    "speaker": speaker,
-                    "emotion": emotion,
+                    "label": label,
                 }
 
                 inputs.append(input_)
