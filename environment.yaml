@@ -1,12 +1,13 @@
 name: UW-LING-573
 channels:
+  - pytorch
+  - conda-forge
   - defaults
 dependencies:
   - python=3.9
   - numpy
   - scikit-learn
   - pytorch
-  - torchvision
   - tqdm
   - transformers
   - pandas
