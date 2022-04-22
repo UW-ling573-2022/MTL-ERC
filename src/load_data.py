@@ -35,6 +35,7 @@ import torch
 from tqdm import tqdm
 from transformers import AutoTokenizer
 
+MELD_SPEAKER = ["Chandler", "Joey", "Monica", "Rachel", "Ross", "Phoebe"]
 
 def set_seed(seed: int) -> None:
     """Set random seed to a fixed value.
@@ -56,7 +57,7 @@ def get_emotion2id(dataset: str) -> Tuple[dict, dict]:
     if dataset == "MELD":
         # MELD has 7 classes
         emotions = [
-            "neutral",
+            "Chandler",
             "joy",
             "surprise",
             "anger",
@@ -67,6 +68,25 @@ def get_emotion2id(dataset: str) -> Tuple[dict, dict]:
         emotion2id = {emotion: idx for idx, emotion in enumerate(emotions)}
         id2emotion = {val: key for key, val in emotion2id.items()}
     return emotion2id, id2emotion
+
+
+def get_speaker2id(dataset: str) -> Tuple[dict, dict]:
+    """Get a dict that converts string class to number."""
+
+    if dataset == "MELD":
+        # MELD has 7 classes
+        speakers = [
+            "CHANDLER",
+            "JOEY",
+            "MONICA",
+            "RACHEL",
+            "ROSS",
+            "PHOEBE",
+            "OTHERS",
+        ]
+        speaker2id = {speaker: idx for idx, speaker in enumerate(speakers)}
+        id2speaker = {val: key for key, val in speaker2id.items()}
+    return speaker2id, id2speaker
 
 
 class TextDataset(torch.utils.data.Dataset):
@@ -92,6 +112,7 @@ class TextDataset(torch.utils.data.Dataset):
         self.num_future_utterances = num_future_utterances
         self.model_checkpoint = model_checkpoint
         self.emotion2id, self.id2emotion = get_emotion2id(self.dataset)
+        self.speaker2id, self.id2speaker = get_speaker2id(self.dataset)
         self.up_to = up_to
         self.seed = seed
 
@@ -119,10 +140,16 @@ class TextDataset(torch.utils.data.Dataset):
                 self.dialog_group[dialog_id].append(utterance_id)
                 self.emotion[utterance_id] = row['Emotion']
                 utterance = row["Utterance"]
+                speaker = "OTHERS"
                 if self.speaker_mode:
-                    utterance = row["Speaker"].upper() + ": " + utterance
+                    if row["Speaker"] in MELD_SPEAKER:
+                        speaker = row["Speaker"].upper()
+                    utterance = speaker + ": " + utterance
+
                 self.speaker_emotion[utterance_id] = {"utterance": utterance,
-                                                      "emotion": row['Emotion']}
+                                                      "emotion": row['Emotion'],
+                                                      "speaker": speaker,
+                                                      }
         else:
             raise ValueError(f"{self.dataset} is not MELD")
 
@@ -156,7 +183,8 @@ class TextDataset(torch.utils.data.Dataset):
                 if ue["emotion"] not in list(self.emotion2id.keys()):
                     continue
 
-                label = self.emotion2id[ue["emotion"]]
+                emotion = self.emotion2id[ue["emotion"]]
+                speaker = self.speaker2id[ue["speaker"]]
 
                 indexes = [idx]
                 indexes_past = [
@@ -239,7 +267,8 @@ class TextDataset(torch.utils.data.Dataset):
                 input_ = {
                     "input_ids": input_ids,
                     "attention_mask": attention_mask,
-                    "label": label,
+                    "speaker": speaker,
+                    "emotion": emotion,
                 }
 
                 inputs.append(input_)
