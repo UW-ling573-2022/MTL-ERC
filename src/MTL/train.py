@@ -5,14 +5,14 @@ from transformers import is_datasets_available
 from transformers.trainer_pt_utils import IterableDatasetShard
 from MTL.data import SingleTaskDataLoader, MultiTaskDataLoader
 
-class MultitaskTrainer(Trainer):
+class MultiTaskTrainer(Trainer):
 
     def get_single_task_dataloader(self, task, dataset, description):
         if description == "training" and self.train_dataset is None:
             raise ValueError("Trainer: training requires a train_dataset.")
         elif description == "evaluation" and dataset is None and self.eval_dataset is None:
             raise ValueError("Trainer: evaluation requires an eval_dataset.")
-
+        
         if is_datasets_available() and isinstance(dataset, datasets.Dataset):
             dataset = self._remove_unused_columns(dataset, description=description)
 
