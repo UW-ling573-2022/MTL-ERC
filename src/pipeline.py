@@ -9,7 +9,7 @@ from load_data import TextDataset
 import util
 
 
-def pipeline(do_train, saved_model_path=None, **args):
+def pipeline(**args):
     train_dataset = {
         "emotion": TextDataset(
             dataset="MELD",
@@ -64,8 +64,12 @@ def pipeline(do_train, saved_model_path=None, **args):
     }
     multi_task_model = MultiTaskModel.from_single_task_models(single_task_models)
 
-    if args["model_file"] is not None:
-        multi_task_model.load_state_dict(torch.load(args["train_dir"]))
+    if args["do_train"]:
+        multi_task_model.from_pretrained(torch.load(args["model_file"]))
+
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(device)
+    multi_task_model.to(device)
 
     def compute_metrics(eval_preds):
         metric = load_metric("f1")
@@ -97,7 +101,7 @@ def pipeline(do_train, saved_model_path=None, **args):
         compute_metrics=compute_metrics
     )
 
-    if do_train:
+    if args["do_train"]:
         trainer.train()
 
     test_dataset = {
