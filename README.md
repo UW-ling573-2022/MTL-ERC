@@ -13,6 +13,7 @@
 
 - Install [conda](https://docs.anaconda.com/anaconda/install/index.html) and [git-lfs](https://git-lfs.github.com/)
 - Clone this project and change to the project's root directory
+- `git lfs fetch` to fetch compressed model file
 - `conda env create -f environment.yaml` to initialize conda environment
 - `cd outputs/D2 && tar -xvzf model.tar.gz` to extract compressed model file
 

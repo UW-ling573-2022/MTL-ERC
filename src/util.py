@@ -62,7 +62,7 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--epoch",
         type=int,
-        default=10,
+        default=5,
         help="Number of training epoch",
     )
     parser.add_argument(
