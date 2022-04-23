@@ -56,7 +56,7 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--model_file",
         type=str,
-        default=None,
+        default=get_root_dir() + "outputs/D2",
         help="Path to stored model",
     )
     parser.add_argument(
