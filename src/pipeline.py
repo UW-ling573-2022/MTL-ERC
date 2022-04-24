@@ -14,7 +14,8 @@ def prepare_datasets(cx_datasets, **kwargs):
     for split in ["train", "validation", "test"]:
         task_datasets[split] = {}
         for cx in cx_datasets:
-            if cx == "with_past" or cx == "with_future":
+            if (cx == "with_past" and kwargs["num_past_utterances"] > 0) or (
+                    cx == "with_future" and kwargs["num_future_utterances"] > 0):
                 for task, (ds, _) in cx_datasets[cx].items():
                     if task not in task_datasets[split]:
                         task_datasets[split][task] = ds[split]
@@ -33,9 +34,6 @@ def prepare_datasets(cx_datasets, **kwargs):
 
 
 def pipeline(**kwargs):
-    data_files = {"train": "/train_sent_emo.csv",
-                  "validation": "/dev_sent_emo.csv",
-                  "test": "/test_sent_emo.csv"}
     labels = {
         "Speaker": ClassLabel(
             num_classes=7,
