@@ -92,7 +92,8 @@ def pipeline(**kwargs):
         evaluation_strategy="epoch",
         save_strategy="epoch",
         remove_unused_columns=False,
-        load_best_model_at_end=True
+        load_best_model_at_end=True,
+        metric_for_best_model="eval_f1"
     )
 
     trainer = MultiTaskTrainer(
@@ -111,11 +112,15 @@ def pipeline(**kwargs):
     f1 = pred.metrics['test_f1']
     print("Weighted F1:", f1)
     
+    
     pred_labels = labels["Emotion"].int2str(pred.predictions.argmax(axis=-1))
+    true_labels = labels["Emotion"].int2str(pred.references.argmax(axis=-1))
     inputs = tokenizer.batch_decode(test_dataset[kwargs['evaluation']]["input_ids"], skip_special_tokens=True)
     f = open(kwargs["output_file"], "w")
-    f.write("Input\tPrediction\n")
-    f.write("\n".join(["\t".join([input, pred_label]) for input, pred_label in zip(inputs, pred_labels)]))
+    f.write("Input\tPredicted\tTrue\n")
+    f.write("\n".join(["\t".join([input, pred_label, true_label]) 
+                       for input, pred_label, true_label 
+                       in zip(inputs, pred_labels, true_labels)]))
     f.close()
     
     f = open(kwargs["result"], "a+")
