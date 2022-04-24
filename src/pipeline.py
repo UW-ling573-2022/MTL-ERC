@@ -66,7 +66,7 @@ def pipeline(**kwargs):
     multi_task_model = MultiTaskModel.from_task_models(task_models)
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    print(device)
+    print(device)    
 
     if not kwargs["do_train"]:
         multi_task_model.load_state_dict(torch.load(kwargs["model_file"], map_location=torch.device(device)))
@@ -106,10 +106,17 @@ def pipeline(**kwargs):
     if kwargs["do_train"]:
         trainer.train()
 
-    f1 = trainer.predict(test_dataset).metrics['test_f1']
+    pred = trainer.predict(test_dataset)
+    f1 = pred.metrics['test_f1']
     print("Weighted F1:", f1)
-
-
+    
+    pred_labels = labels["Emotion"].int2str(pred.predictions.argmax(axis=-1))
+    inputs = tokenizer.batch_decode(test_dataset[kwargs['evaluation']]["input_ids"], skip_special_tokens=True)
+    f = open(kwargs["output_file"], "w")
+    f.write("Input\tPrediction\n")
+    f.write("\n".join(["\t".join([input, pred_label]) for input, pred_label in zip(inputs, pred_labels)]))
+    f.close()
+    
 if __name__ == "__main__":
     kwargs = vars(util.get_args())
     pipeline(**kwargs)

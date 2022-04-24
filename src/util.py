@@ -43,7 +43,7 @@ def get_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--training",
-        type=list,
+        type=str,
         nargs='+',
         default=["Emotion", "Speaker"],
         help="Task for training. (\"Emotion\", \"Speaker\",\"Sentiment\")",
@@ -65,6 +65,12 @@ def get_args() -> argparse.Namespace:
         type=str,
         default=get_root_dir() + "outputs/D2/pytorch_model.bin",
         help="Path to stored model",
+    )
+    parser.add_argument(
+        "--output_file",
+        type = str,
+        default=get_root_dir() + "outputs/D2/predictions.out",
+        help="Path to store predictions",
     )
     parser.add_argument(
         "--epoch",
