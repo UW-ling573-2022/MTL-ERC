@@ -1,4 +1,4 @@
-executable = D2.sh
+executable = src/run.sh
 log=log/D2.log
 output=log/D2.out
 error=log/D2.error
