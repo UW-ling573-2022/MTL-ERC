@@ -1,6 +1,11 @@
 from datasets import load_dataset
 
-def preprocess(tokenizer, data_files, labels, num_contexts=0):
+
+def preprocess(tokenizer, labels, **kwargs):
+
+    data_files = {"train": kwargs["data_dir"] + "MELD/train_sent_emo.csv",
+                  "validation": kwargs["data_dir"] + "MELD/dev_sent_emo.csv",
+                  "test": kwargs["data_dir"] + "MELD/test_sent_emo.csv"}
     raw_datasets = load_dataset("csv", data_files=data_files)
 
     def encode_label(example):
@@ -13,7 +18,7 @@ def preprocess(tokenizer, data_files, labels, num_contexts=0):
         return example
 
     raw_datasets = raw_datasets.map(encode_label)
-    
+
     def add_context(example, idx, dataset):
         example["Past"] = ""
         example["Future"] = ""
@@ -25,10 +30,10 @@ def preprocess(tokenizer, data_files, labels, num_contexts=0):
                 past_speaker = labels["Speaker"].int2str(past["Speaker"])
                 past_utterance = past["Utterance"]
                 example["Past"] += past_speaker + ":" + past_utterance
-                if past["Utterance_ID"] == 0 or i == num_contexts:
+                if past["Utterance_ID"] == 0 or i == kwargs["num_past_utterances"]:
                     break
                 i += 1
-                
+
         if idx + 1 < len(dataset) and dataset[idx + 1]["Utterance_ID"] != 0:
             i = 1
             while idx + i < len(dataset):
@@ -36,23 +41,23 @@ def preprocess(tokenizer, data_files, labels, num_contexts=0):
                 future_speaker = labels["Speaker"].int2str(future["Speaker"])
                 future_utterance = future["Utterance"]
                 example["Future"] += future_speaker + ":" + future_utterance
-                if future["Utterance_ID"] == 0 or i == num_contexts:
+                if future["Utterance_ID"] == 0 or i == kwargs["num_future_utterances"]:
                     break
                 i += 1
 
         return example
-    
+
     for split, dataset in raw_datasets.items():
         raw_datasets[split] = dataset.map(lambda e, i: add_context(e, i, dataset), with_indices=True)
-    
+
     def tokenize(example, add_past, add_future):
         if add_past:
-            return tokenizer(example["Past"], example["Utterance"]) 
+            return tokenizer(example["Past"], example["Utterance"])
         elif add_future:
             return tokenizer(example["Utterance"], example["Future"])
         else:
             return tokenizer(example["Utterance"])
-    
+
     cx_datasets = {}
     cx_datasets["with_past"] = raw_datasets.map(
         lambda e: tokenize(e, add_past=True, add_future=False), batched=True)
