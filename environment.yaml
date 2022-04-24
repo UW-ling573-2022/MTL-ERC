@@ -8,7 +8,7 @@ dependencies:
   - numpy
   - scikit-learn
   - pytorch
+  - cudatoolkit=10.2
   - tqdm
   - transformers
-  - pandas
   - datasets

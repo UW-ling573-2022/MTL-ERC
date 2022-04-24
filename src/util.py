@@ -44,8 +44,8 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--evaluation",
         type=str,
-        default="emotion",
-        help="Either \"emotion\" or \"speaker\" for evaluation",
+        default="Emotion",
+        help="Task for evaluation. (\"Emotion\", \"Speaker\",\"Sentiment\")",
     )
     parser.add_argument(
         "--train_dir",

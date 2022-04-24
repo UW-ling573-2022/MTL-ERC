@@ -1,94 +1,68 @@
 import numpy as np
 import torch
-from datasets import ClassLabel, load_metric
+from datasets import ClassLabel, load_metric, concatenate_datasets
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, TrainingArguments
 
 import util
 from MTL.model import MultiTaskModel
-from MTL.train import MultitaskTrainer
-from load_data import TextDataset
+from MTL.train import MultiTaskTrainer
+from preprocess import preprocess
 
 
-def pipeline(**args):
-    train_dataset = {
-        "emotion": TextDataset(
-            dataset="MELD",
-            split="train",
-            field="emotion",
-            seed=args["seed"],
-            directory=args["data_dir"],
-            num_past_utterances=args["num_past_utterances"],
-            num_future_utterances=args["num_future_utterances"],
-        ),
-        "speaker": TextDataset(
-            dataset="MELD",
-            split="train",
-            field="speaker",
-            seed=args["seed"],
-            directory=args["data_dir"],
-            num_past_utterances=args["num_past_utterances"],
-            num_future_utterances=args["num_future_utterances"],
-        )
+def prepare_datasets(cx_datasets, **kwargs):
+    task_datasets = {}
+    for split in ["train", "validation", "test"]:
+        task_datasets[split] = {}
+        for cx in cx_datasets:
+            if (cx == "with_past" and kwargs["num_past_utterances"] > 0) or (
+                    cx == "with_future" and kwargs["num_future_utterances"] > 0):
+                for task, (ds, _) in cx_datasets[cx].items():
+                    if task not in task_datasets[split]:
+                        task_datasets[split][task] = ds[split]
+                    else:
+                        ds_to_concat = [task_datasets[split][task], ds[split]]
+                        task_datasets[split][task] = concatenate_datasets(ds_to_concat)
+
+    train_dataset = task_datasets["train"]
+    eval_dataset = task_datasets["validation"]
+    test_dataset = task_datasets["test"]
+
+    eval_dataset["task"] = kwargs["evaluation"]
+    test_dataset["task"] = kwargs["evaluation"]
+
+    return train_dataset, eval_dataset, test_dataset
+
+
+def pipeline(**kwargs):
+    labels = {
+        "Speaker": ClassLabel(
+            num_classes=7,
+            names=["Chandler", "Joey", "Monica", "Rachel", "Ross", "Phoebe", "Others"]),
+        "Emotion": ClassLabel(
+            num_classes=7,
+            names=["anger", "disgust", "fear", "joy", "neutral", "sadness", "surprise"]),
+        "Sentiment": ClassLabel(
+            num_classes=3,
+            names=["positive", "neutral", "negative"])
     }
-    eval_dataset = {"emotion": TextDataset(
-        dataset="MELD",
-        split="dev",
-        field="emotion",
-        seed=args["seed"],
-        directory=args["data_dir"],
-        num_past_utterances=args["num_past_utterances"],
-        num_future_utterances=args["num_future_utterances"],
-    ), "speaker": TextDataset(
-        dataset="MELD",
-        split="dev",
-        field="speaker",
-        seed=args["seed"],
-        directory=args["data_dir"],
-        num_past_utterances=args["num_past_utterances"],
-        num_future_utterances=args["num_future_utterances"],
-    ), "task": args["evaluation"]}
-    test_dataset = {
-        "emotion": TextDataset(
-            dataset="MELD",
-            split="test",
-            field="emotion",
-            seed=args["seed"],
-            directory=args["data_dir"],
-            num_past_utterances=args["num_past_utterances"],
-            num_future_utterances=args["num_future_utterances"],
-        ),
-        "speaker": TextDataset(
-            dataset="MELD",
-            split="test",
-            field="speaker",
-            seed=args["seed"],
-            directory=args["data_dir"],
-            num_past_utterances=args["num_past_utterances"],
-            num_future_utterances=args["num_future_utterances"],
-        ), "task": args["evaluation"]
-    }
-
     checkpoint = "roberta-base"
     tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+    cx_datasets = preprocess(tokenizer, labels, **kwargs)
+    train_dataset, eval_dataset, test_dataset = prepare_datasets(
+        cx_datasets, **kwargs)
 
-    labels = {
-        "speaker": ClassLabel(num_classes=7,
-                              names=["Chandler", "Joey", "Monica", "Rachel", "Ross", "Phoebe", "Others"]),
-        "emotion": ClassLabel(num_classes=7,
-                              names=["anger", "disgust", "fear", "joy", "neutral", "sadness", "surprise"])
+    task_models = {
+        task: AutoModelForSequenceClassification.from_pretrained(
+            checkpoint, num_labels=label.num_classes)
+        for task, (_, label) in cx_datasets["no_context"].items()
     }
-
-    single_task_models = {
-        task: AutoModelForSequenceClassification.from_pretrained(checkpoint, num_labels=label.num_classes)
-        for task, label in labels.items()
-    }
-    multi_task_model = MultiTaskModel.from_single_task_models(single_task_models)
+    multi_task_model = MultiTaskModel.from_task_models(task_models)
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(device)
 
-    if not args["do_train"]:
-        multi_task_model.load_state_dict(torch.load(args["model_file"], map_location=torch.device(device)))
+    if not kwargs["do_train"]:
+        multi_task_model.load_state_dict(torch.load(kwargs["model_file"], map_location=torch.device(device)))
 
     multi_task_model.to(device)
 
@@ -99,13 +73,13 @@ def pipeline(**args):
         return metric.compute(predictions=predictions, references=labels, average="weighted")
 
     training_args = TrainingArguments(
-        output_dir=args["train_dir"],
-        seed=args["seed"],
+        output_dir=kwargs["train_dir"],
+        seed=kwargs["seed"],
         overwrite_output_dir=True,
         label_names=["labels"],
-        learning_rate=args["learning_rate"],
-        num_train_epochs=args["epoch"],
-        per_device_train_batch_size=args["batch_size"],
+        learning_rate=kwargs["learning_rate"],
+        num_train_epochs=kwargs["epoch"],
+        per_device_train_batch_size=kwargs["batch_size"],
         logging_strategy="epoch",
         evaluation_strategy="epoch",
         save_strategy="epoch",
@@ -113,7 +87,7 @@ def pipeline(**args):
         load_best_model_at_end=True
     )
 
-    trainer = MultitaskTrainer(
+    trainer = MultiTaskTrainer(
         multi_task_model,
         training_args,
         train_dataset=train_dataset,
@@ -122,7 +96,7 @@ def pipeline(**args):
         compute_metrics=compute_metrics
     )
 
-    if args["do_train"]:
+    if kwargs["do_train"]:
         trainer.train()
 
     f1 = trainer.predict(test_dataset).metrics['test_f1']
@@ -130,5 +104,5 @@ def pipeline(**args):
 
 
 if __name__ == "__main__":
-    args = vars(util.get_args())
-    pipeline(**args)
+    kwargs = vars(util.get_args())
+    pipeline(**kwargs)

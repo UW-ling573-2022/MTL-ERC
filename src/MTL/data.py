@@ -17,18 +17,18 @@ class SingleTaskDataLoader:
             yield batch
     
 class MultiTaskDataLoader:
-    def __init__(self, single_task_data_loaders):
-        self.single_task_data_loaders = single_task_data_loaders
-        self.dataset = [None] * sum([len(dl.dataset) for dl in single_task_data_loaders.values()])
+    def __init__(self, task_data_loaders):
+        self.task_data_loaders = task_data_loaders
+        self.dataset = [None] * sum([len(dl.dataset) for dl in task_data_loaders.values()])
         
     def __len__(self) -> int:
-        return sum([len(dl) for dl in self.single_task_data_loaders.values()])
+        return sum([len(dl) for dl in self.task_data_loaders.values()])
     
     def __iter__(self):
         task_choices = []
-        for task, dl in self.single_task_data_loaders.items():
+        for task, dl in self.task_data_loaders.items():
             task_choices.extend([task] * len(dl))
         task_choices = np.array(task_choices)
         np.random.shuffle(task_choices)
         for task in task_choices:
-            yield next(iter(self.single_task_data_loaders[task]))
+            yield next(iter(self.task_data_loaders[task]))
