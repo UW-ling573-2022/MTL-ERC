@@ -26,6 +26,8 @@ class MultiTaskModel(PreTrainedModel):
             return 'roberta'
         elif model_name.startswith('Albert'):
             return 'albert'
+        elif model_name.startswith('Longformer'):
+            return 'longformer'
         else:
             raise ValueError('Unsupported model: {}'.format(model_name))
         

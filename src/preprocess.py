@@ -41,7 +41,7 @@ def preprocess(tokenizer, labels, **kwargs):
                 future_speaker = labels["Speaker"].int2str(future["Speaker"])
                 future_utterance = future["Utterance"]
                 example["Future"] += future_speaker + ":" + future_utterance
-                if future["Utterance_ID"] == 0 or i == kwargs["num_future_utterances"]:
+                if future["Utterance_ID"] == 0 or i == kwargs["num_future_utterances"] - 1:
                     break
                 i += 1
 
