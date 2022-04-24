@@ -91,7 +91,7 @@ def get_args() -> argparse.Namespace:
         help="How many examples per batch"
     )
     parser.add_argument(
-        "--result",
+        "--result_file",
         type=str,
         default=get_root_dir() + "results/D2_scores.out",
         help="Path to store results"

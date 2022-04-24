@@ -123,7 +123,7 @@ def pipeline(**kwargs):
                        in zip(inputs, pred_labels, true_labels)]))
     f.close()
     
-    f = open(kwargs["result"], "a+")
+    f = open(kwargs["result_file"], "a+")
     f.write(json.dumps(kwargs))
     f.write("\nWeighted F1: {}\n".format(f1))
     f.close()
