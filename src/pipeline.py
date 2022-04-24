@@ -18,7 +18,7 @@ def prepare_datasets(cx_datasets, **kwargs):
                 continue
             elif cx == "with_future" and kwargs["num_future_utterances"] == 0:
                 continue
-            elif cx == "no_context" and kwargs["num_past_utterances"] + kwargs["num_past_utterances"] > 0:
+            elif cx == "no_context" and kwargs["num_past_utterances"] + kwargs["num_future_utterances"] > 0:
                 continue
             else:
                 for task, (ds, _) in cx_datasets[cx].items():
