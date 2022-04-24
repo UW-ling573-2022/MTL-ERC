@@ -42,6 +42,13 @@ def get_args() -> argparse.Namespace:
         help="Train the model and store to default directory",
     )
     parser.add_argument(
+        "--training",
+        type=list,
+        nargs='+',
+        default=["Emotion", "Speaker"],
+        help="Task for training. (\"Emotion\", \"Speaker\",\"Sentiment\")",
+    )
+    parser.add_argument(
         "--evaluation",
         type=str,
         default="Emotion",

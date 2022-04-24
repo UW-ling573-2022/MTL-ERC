@@ -14,9 +14,16 @@ def prepare_datasets(cx_datasets, **kwargs):
     for split in ["train", "validation", "test"]:
         task_datasets[split] = {}
         for cx in cx_datasets:
-            if (cx == "with_past" and kwargs["num_past_utterances"] > 0) or (
-                    cx == "with_future" and kwargs["num_future_utterances"] > 0):
+            if cx == "with_past" and kwargs["num_past_utterances"] == 0:
+                continue
+            elif cx == "with_future" and kwargs["num_future_utterances"] == 0:
+                continue
+            elif cx == "no_context" and kwargs["num_past_utterances"] + kwargs["num_past_utterances"] > 0:
+                continue
+            else:
                 for task, (ds, _) in cx_datasets[cx].items():
+                    if split == "train" and task not in kwargs["training"]:
+                        continue
                     if task not in task_datasets[split]:
                         task_datasets[split][task] = ds[split]
                     else:
