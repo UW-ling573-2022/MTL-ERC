@@ -1,4 +1,4 @@
-## Multi-Task Sentiment Detection
+## Multi-Task Learning for Emotion Recognition in Conversation
 
 ## Getting started
 
