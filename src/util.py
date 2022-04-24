@@ -21,13 +21,13 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--num_past_utterances",
         type=int,
-        default=1,
+        default=6,
         help="Number of past utterances for generating dataset.",
     )
     parser.add_argument(
         "--num_future_utterances",
         type=int,
-        default=1,
+        default=0,
         help="Number of future utterances for generating dataset.",
     )
     parser.add_argument(
