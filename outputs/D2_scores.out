@@ -1,0 +1,2 @@
+{"seed": 42, "num_past_utterances": 1, "num_future_utterances": 1, "do_train": false, "evaluation": "Emotion", "epoch": 5, "learning_rate": 1e-05, "batch_size": 8}
+Weighted F1: 0.6038432733491949
