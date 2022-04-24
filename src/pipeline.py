@@ -114,7 +114,7 @@ def pipeline(**kwargs):
     
     
     pred_labels = labels["Emotion"].int2str(pred.predictions.argmax(axis=-1))
-    true_labels = labels["Emotion"].int2str(pred.references.argmax(axis=-1))
+    true_labels = labels["Emotion"].int2str(pred.label_ids)
     inputs = tokenizer.batch_decode(test_dataset[kwargs['evaluation']]["input_ids"], skip_special_tokens=True)
     f = open(kwargs["output_file"], "w")
     f.write("Input\tPredicted\tTrue\n")
