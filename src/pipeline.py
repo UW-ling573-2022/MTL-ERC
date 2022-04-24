@@ -1,5 +1,6 @@
 import numpy as np
 import torch
+import json
 from datasets import ClassLabel, load_metric, concatenate_datasets
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, TrainingArguments
 
@@ -117,6 +118,12 @@ def pipeline(**kwargs):
     f.write("\n".join(["\t".join([input, pred_label]) for input, pred_label in zip(inputs, pred_labels)]))
     f.close()
     
+    f = open(kwargs["result"], "a+")
+    f.write(json.dumps(kwargs))
+    f.write("\nWeighted F1: {}\n".format(f1))
+    f.close()
+
+
 if __name__ == "__main__":
     kwargs = vars(util.get_args())
     pipeline(**kwargs)
