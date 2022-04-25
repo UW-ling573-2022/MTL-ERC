@@ -167,7 +167,7 @@ cython_debug/
 *.log
 *.lot
 *.fls
-*.out
+# *.out
 *.toc
 *.fmt
 *.fot

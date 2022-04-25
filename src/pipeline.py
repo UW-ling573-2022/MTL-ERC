@@ -15,9 +15,16 @@ def prepare_datasets(cx_datasets, **kwargs):
     for split in ["train", "validation", "test"]:
         task_datasets[split] = {}
         for cx in cx_datasets:
-            if (cx == "with_past" and kwargs["num_past_utterances"] > 0) or (
-                    cx == "with_future" and kwargs["num_future_utterances"] > 0):
+            if cx == "with_past" and kwargs["num_past_utterances"] == 0:
+                continue
+            elif cx == "with_future" and kwargs["num_future_utterances"] == 0:
+                continue
+            elif cx == "no_context" and kwargs["num_past_utterances"] + kwargs["num_future_utterances"] > 0:
+                continue
+            else:
                 for task, (ds, _) in cx_datasets[cx].items():
+                    if split == "train" and task not in kwargs["training"]:
+                        continue
                     if task not in task_datasets[split]:
                         task_datasets[split][task] = ds[split]
                     else:
@@ -60,7 +67,7 @@ def pipeline(**kwargs):
     multi_task_model = MultiTaskModel.from_task_models(task_models)
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    print(device)
+    print(device)    
 
     if not kwargs["do_train"]:
         multi_task_model.load_state_dict(torch.load(kwargs["model_file"], map_location=torch.device(device)))
@@ -85,7 +92,8 @@ def pipeline(**kwargs):
         evaluation_strategy="epoch",
         save_strategy="epoch",
         remove_unused_columns=False,
-        load_best_model_at_end=True
+        load_best_model_at_end=True,
+        metric_for_best_model="eval_f1"
     )
 
     trainer = MultiTaskTrainer(
@@ -100,10 +108,22 @@ def pipeline(**kwargs):
     if kwargs["do_train"]:
         trainer.train()
 
-    f1 = trainer.predict(test_dataset).metrics['test_f1']
+    pred = trainer.predict(test_dataset)
+    f1 = pred.metrics['test_f1']
     print("Weighted F1:", f1)
-
-    f = open(kwargs["result"], "a+")
+    
+    
+    pred_labels = labels[kwargs["evaluation"]].int2str(pred.predictions.argmax(axis=-1))
+    true_labels = labels[kwargs["evaluation"]].int2str(pred.label_ids)
+    inputs = tokenizer.batch_decode(test_dataset[kwargs["evaluation"]]["input_ids"], skip_special_tokens=True)
+    f = open(kwargs["output_file"], "w")
+    f.write("Input\tPredicted\tTrue\n")
+    f.write("\n".join(["\t".join([input, pred_label, true_label]) 
+                       for input, pred_label, true_label 
+                       in zip(inputs, pred_labels, true_labels)]))
+    f.close()
+    
+    f = open(kwargs["result_file"], "a+")
     f.write(json.dumps(kwargs))
     f.write("\nWeighted F1: {}\n".format(f1))
     f.close()

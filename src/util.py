@@ -21,13 +21,13 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--num_past_utterances",
         type=int,
-        default=1,
+        default=6,
         help="Number of past utterances for generating dataset.",
     )
     parser.add_argument(
         "--num_future_utterances",
         type=int,
-        default=1,
+        default=0,
         help="Number of future utterances for generating dataset.",
     )
     parser.add_argument(
@@ -40,6 +40,13 @@ def get_args() -> argparse.Namespace:
         "--do_train",
         action='store_true',
         help="Train the model and store to default directory",
+    )
+    parser.add_argument(
+        "--training",
+        type=str,
+        nargs='+',
+        default=["Emotion", "Speaker"],
+        help="Task for training. (\"Emotion\", \"Speaker\",\"Sentiment\")",
     )
     parser.add_argument(
         "--evaluation",
@@ -60,6 +67,12 @@ def get_args() -> argparse.Namespace:
         help="Path to stored model",
     )
     parser.add_argument(
+        "--output_file",
+        type = str,
+        default=get_root_dir() + "outputs/D2/predictions.out",
+        help="Path to store predictions",
+    )
+    parser.add_argument(
         "--epoch",
         type=int,
         default=5,
@@ -78,10 +91,10 @@ def get_args() -> argparse.Namespace:
         help="How many examples per batch"
     )
     parser.add_argument(
-        "--result",
+        "--result_file",
         type=str,
-        default=get_root_dir() + "outputs/D2_scores.out",
-        help="How many examples per batch"
+        default=get_root_dir() + "results/D2_scores.out",
+        help="Path to store results"
     )
     args = parser.parse_args()
     return args
