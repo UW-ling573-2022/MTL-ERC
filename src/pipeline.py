@@ -53,15 +53,14 @@ def pipeline(**kwargs):
             num_classes=3,
             names=["positive", "neutral", "negative"])
     }
-    checkpoint = "roberta-base"
-    tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+    tokenizer = AutoTokenizer.from_pretrained(kwargs["checkpoint"])
     cx_datasets = preprocess(tokenizer, labels, **kwargs)
     train_dataset, eval_dataset, test_dataset = prepare_datasets(
         cx_datasets, **kwargs)
 
     task_models = {
         task: AutoModelForSequenceClassification.from_pretrained(
-            checkpoint, num_labels=label.num_classes)
+            kwargs["checkpoint"], num_labels=label.num_classes)
         for task, (_, label) in cx_datasets["no_context"].items()
     }
     multi_task_model = MultiTaskModel.from_task_models(task_models)
@@ -115,7 +114,7 @@ def pipeline(**kwargs):
     
     pred_labels = labels[kwargs["evaluation"]].int2str(pred.predictions.argmax(axis=-1))
     true_labels = labels[kwargs["evaluation"]].int2str(pred.label_ids)
-    inputs = tokenizer.batch_decode(test_dataset[kwargs["evaluation"]]["input_ids"], skip_special_tokens=True)
+    inputs = tokenizer.batch_decode(test_dataset[kwargs["evaluation"]]["input_ids"])
     f = open(kwargs["output_file"], "w")
     f.write("Input\tPredicted\tTrue\n")
     f.write("\n".join(["\t".join([input, pred_label, true_label]) 
