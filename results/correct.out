@@ -1,0 +1,165 @@
+('<s>Monica:It’s not!Monica:No-no, it’s not okay!Chandler:Oh, it’s okay. I '
+ 'don’tMonica:I totally forgot about tonight and the fact that we’re supposed '
+ 'toMonica:I’m sorry!Monica:I didn’t make it!</s></s>I mean you were just… '
+ 'You’re so incredible!</s>')
+
+'data_idx: 1638'
+'pred: sadness'
+'truth: sadness'
+'pred: Rachel'
+'truth: Monica'
+'number of tokens in the input: 95'
+
+[(14, '-', 0.059086677), (61, ':', 0.03827759), (43, ':', 0.033815593), (3, ':', 0.03270072), (70, ':', 0.027181778), (80, '</s>', 0.026902359), (86, 'âĢ¦', 0.024940385), (67, '!', 0.0225021), (83, 'you', 0.022288673), (9, '!', 0.02178441)]
+
+
+('<s>Others:Dr. Drake who?Joey:Uh, she’s with me.  Dr. Drake '
+ 'Remoray.Others:I’m sorry, that information is restricted to hospital '
+ 'staffPhoebe:Oh yay! Great! Okay, what room number is he in?Others:I think I '
+ 'know who you’re talking about.Phoebe:And umm, he’s like early to '
+ 'mid-thirties, very attractive.</s></s>Remoray. It’s Portuguese. We need that '
+ 'information. I’m a doctor.</s>')
+
+'data_idx: 1238'
+'pred: neutral'
+'truth: neutral'
+'pred: Phoebe'
+'truth: Joey'
+'number of tokens in the input: 125'
+
+[(2, ':', 0.046315283), (9, 'y', 0.04343592), (1, 'Others', 0.042680543), (6, 'who', 0.038162902), (7, '?', 0.035620134), (101, '</s>', 0.03354524), (63, ':', 0.033385023), (75, '.', 0.032824937), (46, ':', 0.028781384), (43, 'Ph', 0.028527876)]
+
+"<s>Others:Push, push!</s></s>We're here!</s>"
+
+'data_idx: 330'
+'pred: joy'
+'truth: joy'
+'pred: Others'
+'truth: Ross'
+'number of tokens in the input: 14'
+
+[(2, ':', 0.2650018), (1, 'Others', 0.10067837), (7, '</s>', 0.08718439), (13, '</s>', 0.08718391), (6, '!', 0.07250082), (8, '</s>', 0.067695074), (12, '!', 0.053973623), (10, "'re", 0.053089652), (5, 'push', 0.050794456), (3, 'Push', 0.048001047)]
+
+('<s>Phoebe:I\'m still on "no."Monica:Please, just a little bit off the '
+ 'back.Joey:You know, I think I was sixteen.</s></s>Uh, morning. Do you guys '
+ 'think you could close your eyes for just a sec?</s>')
+
+'data_idx: 2135'
+'pred: neutral'
+'truth: neutral'
+'pred: Rachel'
+'truth: Rachel'
+'number of tokens in the input: 58'
+
+[(41, 'morning', 0.07782862), (15, 'Please', 0.075252414), (4, ':', 0.06835378), (38, '</s>', 0.06063663), (24, '.', 0.05711348), (27, ':', 0.052377768), (11, '."', 0.047969036), (14, ':', 0.046774708), (37, '</s>', 0.04318116), (39, 'Uh', 0.033523135)]
+
+('<s>Chandler:What are you doing?Joey:Hey-hey-hey!Phoebe:Hey!Joey:Now, don’t '
+ 'hold back.Joey:You just take a big, big swing.Joey:Yeah!</s></s>We’re just '
+ 'celebrating that Joey got his health insurance back.</s>')
+
+'data_idx: 130'
+'pred: joy'
+'truth: joy'
+'pred: Joey'
+'truth: Phoebe'
+'number of tokens in the input: 71'
+
+[(51, ':', 0.08997647), (22, ':', 0.07025378), (53, '!', 0.06651891), (52, 'Yeah', 0.048889548), (4, ':', 0.04541176), (24, '!', 0.04280673), (18, '!', 0.040589917), (27, ':', 0.0371709), (19, 'Ph', 0.03182795), (5, 'What', 0.028499389)]
+
+('<s>Others:Okay I understand.  I wouldn’t want to be proved wrong '
+ 'either.Rachel:No! Come on its late, we’re not gonna go down to the '
+ 'office.Others:You wanna go down to the office right now?Rachel:Or maybe you '
+ 'would see me looking embarrassed because you are talking on the phone with '
+ 'your crotch!Others:No, I would see you looking embarrassed because they '
+ 'areRachel:Y’know what Tag, if we went down to the office you would see those '
+ 'contracts sitting on your desk.</s></s>Okay get your coat!  Oh! When did you '
+ 'unhook this?  Nice work!</s>')
+
+'data_idx: 1685'
+'pred: joy'
+'truth: joy'
+'pred: Rachel'
+'truth: Rachel'
+'number of tokens in the input: 135'
+
+[(2, ':', 0.069476716), (42, ':', 0.043023977), (7, '', 0.039637145), (119, '!', 0.038651455), (19, '.', 0.03861364), (54, ':', 0.03359556), (1, 'Others', 0.03232307), (21, ':', 0.032273334), (113, '</s>', 0.029394636), (75, ':', 0.02916844)]
+
+('<s>Rachel:Oh, that sounds great.Others:How does that sound?Others:Well, I’ve '
+ 'got a project for you that’s a lot more related to fashion.Others:Well, '
+ 'don’t think I haven’t noticed your potential.Rachel:Oh, you got '
+ 'me.Others:Eh.</s></s>Come on over here, sweetheart.</s>')
+
+'data_idx: 2324'
+'pred: neutral'
+'truth: neutral'
+'pred: Others'
+'truth: Others'
+'number of tokens in the input: 81'
+
+[(41, ':', 0.054718312), (59, ':', 0.052580222), (2, ':', 0.047419593), (17, ':', 0.044938024), (10, ':', 0.040116455), (1, 'Rachel', 0.036728915), (14, 'sound', 0.03487623), (11, 'How', 0.034809332), (57, '.', 0.033642154), (67, ':', 0.03095832)]
+
+'<s></s></s>Okay I-I just have to stop by my place first.</s>'
+
+'data_idx: 459'
+'pred: neutral'
+'truth: neutral'
+'pred: Ross'
+'truth: Ross'
+'number of tokens in the input: 17'
+
+[(5, '-', 0.21598397), (1, '</s>', 0.10670799), (3, 'Okay', 0.10405815), (13, 'place', 0.10201117), (2, '</s>', 0.098923795), (4, 'I', 0.070653275), (16, '</s>', 0.06554177), (0, '<s>', 0.046663653), (15, '.', 0.041915227), (12, 'my', 0.03679734)]
+
+('<s>Others:That’s just the way it is.Joey:Well, how-how come?</s></s>That’s '
+ 'crazy.</s>')
+
+'data_idx: 2300'
+'pred: surprise'
+'truth: surprise'
+'pred: Ross'
+'truth: Joey'
+'number of tokens in the input: 32'
+
+[(15, ':', 0.13389422), (19, '-', 0.11245649), (2, ':', 0.089029334), (25, 'That', 0.056237396), (28, 's', 0.055255905), (29, 'crazy', 0.052649558), (12, '.', 0.04885027), (26, 'âĢ', 0.04725677), (16, 'Well', 0.0399443), (17, ',', 0.039693486)]
+
+('<s>Joey:Nothing!Chandler:What’s wrong with you?</s></s>Well, I-I got this '
+ 'blinding pain in my stomach when I was lifting weights before, then I uh '
+ 'passed out and uh, haven’t been able to stand up since.</s>')
+
+'data_idx: 747'
+'pred: sadness'
+'truth: sadness'
+'pred: Rachel'
+'truth: Joey'
+'number of tokens in the input: 59'
+
+[(23, '-', 0.13060305), (3, ':', 0.12704979), (9, ':', 0.12046045), (0, '<s>', 0.052268792), (18, '</s>', 0.04406484), (4, 'Nothing', 0.04154833), (19, '</s>', 0.0410473), (1, 'Joe', 0.038540438), (5, '!', 0.034168687), (2, 'y', 0.03366026)]
+
+
+-------------------------------------------------------------------------------------------------
+('<s>Monica:Okay, look at this one. This is my favourite.Rachel:Little village '
+ 'people.Monica:Look what I got! Look what I got! Look what I got!  Can you '
+ 'believe they make these for little people?</s></s>Oh, that is so sweet!</s>')
+
+'data_idx: 474'
+'pred: joy'
+'truth: joy'
+'pred: Phoebe'
+'truth: Rachel'
+'number of tokens in the input: 61'
+
+[(16, 'Rachel', 0.11980302), (24, ':', 0.064982235), (3, ':', 0.04676541), (17, ':', 0.046542354), (52, '</s>', 0.04602286), (51, '</s>', 0.040587086), (40, '', 0.036435336), (25, 'Look', 0.027842116), (23, 'ica', 0.026387028), (56, 'is', 0.026030496)]
+
+('<s>Monica:With a mahogany sleigh bed and bedside tables with flowers on them '
+ 'all the time!Monica:Okay, I was thinking we should have a beautiful guest '
+ 'room, right?Chandler:Sure!</s></s>And we could have a roll top desk with '
+ 'comment cards on them so people could say how much they loved staying '
+ 'here!!</s>')
+
+'data_idx: 1082'
+'pred: joy'
+'truth: joy'
+'pred: Phoebe'
+'truth: Monica'
+'number of tokens in the input: 75'
+
+[(3, ':', 0.15569589), (26, ':', 0.12654437), (45, ':', 0.09358633), (27, 'Okay', 0.0666422), (41, '?', 0.038770296), (1, 'Mon', 0.03771585), (49, '</s>', 0.037067268), (24, 'Mon', 0.036391724), (42, 'Ch', 0.035449456), (44, 'ler', 0.028943956)]
