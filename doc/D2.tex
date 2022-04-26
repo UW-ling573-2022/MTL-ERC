@@ -40,7 +40,12 @@ Our primary task is emotion recognition in conversation (ERC) task on the text m
 
 \subsubsection{Dataset}
 
-Multimodal EmotionLines Dataset (MELD) \citep{poria-etal-2019-meld} \footnote{\url{https://affective-meld.github.io/}} dataset is a multimodal emotional conversational dataset built on EmotionLines dataset \citep{hsu-etal-2018-emotionlines} with three modalities: audio, visual, and text. The dataset contains about 13,000 utterances from 1,433 dialogues, which are collected from the TV-series Friends. Each utterance is annotated with Ekman's basic emotions plus neutral and sentiment labels.
+MELD\citep{poria-etal-2019-meld} \footnote{\url{https://affective-meld.github.io/}}, also kown as \textit{Multimodel Emotionlines Dataset}, is a multi-party emotional conversational database that is extended from Emotionlines dataset. 
+Emotionlines \citep{hsu-etal-2018-emotionlines}\footnote{\url{http://doraemon.iis.sinica.edu.tw/emotionlines/index.html}} dataset is an emotion dialogue dataset with emotion labels for each utterance. The utterances are collected from Friends TV scripts and private Facebook messenger dialogues. Each utterance is labeled with one of Ekman’s six basic emotions plus the neutral emotion. MELD is an upgraded emotion dataset that contains about 13,000 utterances from 1,433 dialogues from only the TV-series Friends. Each utterance in MELD is annotated with emotion and sentiment labels, and encompasses audio, visual, and textual modalities. 
+MELD split the dataset into training, development, and testing set separately (1039 dialogues for training set, 114 dialogues for developing set and 280 dialogues for testing set). We use the testing set and corresponding gold standard annotation for analysis.
+
+According to Poria, the speakers of these dialogues were categorized to 6 main characters and others. The utterances are distributed relatively evenly with respect to speakers (from 12\% to 16\%).  The emotion distribution for each character is also similar. 
+
 
 \subsection{Adaptation Task}
 \label{sect:adaptation_task}
