@@ -42,9 +42,9 @@ Our primary task is emotion recognition in conversation (ERC) task on the text m
 
 MELD\citep{poria-etal-2019-meld} \footnote{\url{https://affective-meld.github.io/}}, also kown as \textit{Multimodel Emotionlines Dataset}, is a multi-party emotional conversational database that is extended from Emotionlines dataset. 
 Emotionlines \citep{hsu-etal-2018-emotionlines}\footnote{\url{http://doraemon.iis.sinica.edu.tw/emotionlines/index.html}} dataset is an emotion dialogue dataset with emotion labels for each utterance. The utterances are collected from Friends TV scripts and private Facebook messenger dialogues. Each utterance is labeled with one of Ekman’s six basic emotions plus the neutral emotion. MELD is an upgraded emotion dataset that contains about 13,000 utterances from 1,433 dialogues from only the TV-series Friends. Each utterance in MELD is annotated with emotion and sentiment labels, and encompasses audio, visual, and textual modalities. 
-MELD split the dataset into training, development, and testing set separately (1039 dialogues for training set, 114 dialogues for developing set and 280 dialogues for testing set). We use the testing set and corresponding gold standard annotation for analysis.
+MELD splits the data into training, development, and testing set separately (1039 dialogues for training set, 114 dialogues for developing set and 280 dialogues for testing set). We use the testing set and corresponding gold standard annotation for analysis.
 
-According to Poria, the speakers of these dialogues were categorized to 6 main characters and others. The utterances are distributed relatively evenly with respect to speakers (from 12\% to 16\%).  The emotion distribution for each character is also similar. 
+According to Poria, the speakers of these dialogues are categorized to 6 main characters and others. The utterances are distributed relatively evenly with respect to speakers (from 12\% to 16\%).  The emotion distribution for each character is also similar. 
 
 
 \subsection{Adaptation Task}
@@ -89,8 +89,8 @@ MELD provides information on the speaker and turn (in the dialogue) of each utte
 
 \subsection{Model Architecture}
 
-We build a Multi-Task Deep Neural Networks (MP-DNN) Model \citet{liu-etal-2019-multi} to train both Emotionlines and MPDD data so that the model can learn shared knowledge between two datasets. We use a pre-trained RoBERTa base encoder transformer for the initial text embeddings. On top of the shared pre-trained transformer encoder, we build two different task-specific models for each task. \\
-To manipulate the inputs, we either add some context or provide the speaker information. The caveat of training a MP-DNN on top of RoBERTa is that the latter is previosuly trained with inputs no longer than two sentences, where each two sentence has a BOS \textit{<s>} token and an EOS \textit{</s>} token. When we concatenate more than one past utterance to the to-predict utterance, we strip the EOS token of the past utterances and keep only one that exists between the context and the to-predict utterance. Algorithm 1 shows our preprocessing algorithm of adding context information.
+We build a Multi-Task Deep Neural Networks (MT-DNN) Model \citet{liu-etal-2019-multi} to train both Emotionlines and MPDD data so that the model can learn shared knowledge between two datasets. We use a pre-trained RoBERTa base encoder transformer for the initial text embeddings. On top of the shared pre-trained transformer encoder, we build two different task-specific models for each task. \\
+To manipulate the inputs, we either add some context or provide the speaker information. The caveat of training a MT-DNN on top of RoBERTa is that the latter is previosuly trained with inputs no longer than two sentences, where each two sentence has a BOS \textit{<s>} token and an EOS \textit{</s>} token. When we concatenate more than one past utterance to the to-predict utterance, we strip the EOS token of the past utterances and keep only one that exists between the context and the to-predict utterance. Algorithm 1 shows our preprocessing algorithm of adding context information.
 \begin{algorithm}
 \caption{Add All Past Utterance(s)}\label{euclid}
 \begin{algorithmic}[1]
@@ -140,26 +140,26 @@ Using our evaluation metric, the model currently yields a 62.56 percent weighted
   \begin{tabular}{c|c|c|c}
     emotion & true count & total count & accuracy \\
     \hline
-    neutral & 1026 & 1256 & 81.69 \\
+    neutral & 1026 & 1256 & 0.8169 \\
     \hline
-    joy & 247 & 402 & 61.44 \\
+    joy & 247 & 402 & 0.6144 \\
     \hline
-    anger & 156 & 281 & 55.52 \\
+    anger & 156 & 281 & 0.5552 \\
     \hline
-    surprise & 173 & 345 & 50.14 \\
+    surprise & 173 & 345 & 0.5014 \\
     \hline
-    sadness & 66 & 208 & 31.73 \\
+    sadness & 66 & 208 & 0.3173 \\
     \hline
-    disgust & 5 & 68 & 7.35 \\
+    disgust & 5 & 68 & 0.0735 \\
     \hline
-    fear & 1 & 50 & 2.00 \\
+    fear & 1 & 50 & 0.02 \\
   \end{tabular}
   \caption{Weighted F1 when number of past or future utterances are added as context.}
 \end{table}
 
-The prediction output and accuracy is shown as below in Table 2. It is obvious that the prediction for emotion 'neutral' is easier compared to other types. Also, it is interesting that the accuracy for the prediction of specific emotions decreases with the decreasing number of learning instances for the corresponding emotions. 
+The prediction output and accuracy is shown as above in Table 2. It is obvious that the prediction for emotion 'neutral' is easier compared to other types. Also, it is interesting that the accuracy for the prediction of specific emotions decreases with the decreasing number of learning instances for the corresponding emotions. 
 
-Besides, we also noticed that there was a high tendency for non-neutral emotions to be predicted as 'neutral' emotions (323 out of 936 misprediction). Oppositely, for real neutral emotions, they are likely to be predicted as 'joy' or 'surprise'.
+Besides, it is worth noting that there is a high tendency for non-neutral emotions to be predicted as 'neutral' emotions (323 out of 936 mispredictions). Oppositely, for real neutral emotions, they are likely to be predicted as 'joy' or 'surprise'.
 
 \begin{figure}
 \centering
@@ -228,7 +228,7 @@ We did a qualitative analysis with on 10 correctly and 10 incorrectly classified
 
 \end{quote}
 
-An incorrectly classified example. The prediction is surprise while the truth is anger. The predicted speaker is Rachel while the true speaker is Monica.
+An incorrectly classified example. The prediction is 'surprise' while the truth is 'anger'. The predicted speaker is Rachel while the true speaker is Monica.
 
 \begin{quote}
 
@@ -236,7 +236,7 @@ An incorrectly classified example. The prediction is surprise while the truth is
 
 \end{quote}
 
-A correctly classified example. Both the prediction and truth are neutral. Both the predicted speaker and the true speaker are Others. \\
+A correctly classified example. Both the prediction and truth are 'neutral'. Both the predicted speaker and the true speaker are Others. \\
 
 We initially anticipate that the speaker tag will be utilized for sentiment classification. However, both the incorrectly and correctly classified example, the <s> token in the last layer mainly focus on punctuation marks. This phenomenon far deviates from Kim et al.'s result, that <s> token mainly focus on the speaker in correctly classified examples. This proves that separating speaker and utterance for speaker detection does not benefit the model to utilize speaker context for sentiment analysis.
 
