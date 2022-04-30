@@ -79,6 +79,12 @@ def get_args() -> argparse.Namespace:
         help="Number of training epoch",
     )
     parser.add_argument(
+        "--checkpoint",
+        type=str,
+        default="roberta-base",
+        help="Which checkpoint to use."
+    )
+    parser.add_argument(
         "--learning_rate",
         type=float,
         default=1e-5,

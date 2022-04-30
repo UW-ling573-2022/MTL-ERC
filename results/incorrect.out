@@ -1,0 +1,142 @@
+("<s>Monica:Gin.</s></s>We were playing Gin? Y'know if we were a couple, we "
+ 'could play this game naked.</s>')
+
+'data_idx: 512'
+'pred: neutral'
+'truth: joy'
+'pred: Joey'
+'truth: Chandler'
+'number of tokens in the input: 31'
+
+[(3, ':', 0.21382616), (12, 'Gin', 0.12274793), (8, '</s>', 0.12151212), (13, '?', 0.112009615), (1, 'Mon', 0.0879091), (7, '</s>', 0.05185111), (2, 'ica', 0.04778039), (10, 'were', 0.039090686), (9, 'We', 0.024674851), (11, 'playing', 0.024548305)]
+
+
+('<s>Ross:Who cares? I repel women.Chandler:Okay, is this lamp in the same '
+ "place?</s></s>No-no-no-no-no-no-no-no!!! You can't come in here! "
+ 'R-r-r-r-Ross is naked.</s>')
+
+'data_idx: 1294'
+'pred: anger'
+'truth: surprise'
+'pred: Rachel'
+'truth: Chandler'
+'number of tokens in the input: 63'
+
+[(14, ':', 0.1145263), (42, '!!!', 0.062413532), (58, 'Ross', 0.053200286), (2, ':', 0.050614934), (59, 'is', 0.050202966), (57, '-', 0.049621213), (26, '</s>', 0.045728277), (49, '!', 0.03414205), (51, '-', 0.03314766), (19, 'lamp', 0.030891903)]
+
+('<s>Others:Oh. Well, I’ll right you everyday.  15 Yemen Road, '
+ 'Yemen.Chandler:Well, just until we find an energy source to replace '
+ 'fuel.Others:Oh, my Bing-a-ling. I’ll wait for you. Do you even know how long '
+ 'you’re going to be gone?Chandler:Well, I-I guess I gotta go.Others:This is '
+ 'the final boarding call for Flight 664 to Yemen.</s></s>Okay, good-bye. '
+ 'Good-bye.</s>')
+
+'data_idx: 1130'
+'pred: neutral'
+'truth: sadness'
+'pred: Others'
+'truth: Chandler'
+'number of tokens in the input: 115'
+
+[(80, '-', 0.19243793), (2, ':', 0.0489197), (72, '?', 0.0421776), (48, 'ling', 0.033153478), (25, ':', 0.026222207), (42, ',', 0.025790773), (43, 'my', 0.02407818), (40, ':', 0.023645978), (41, 'Oh', 0.022370063), (21, '.', 0.020697504)]
+
+('<s>Ross:Yeah, but when the baby comes she’s gonna want to move.Joey:But '
+ 'Rachel has an apartment.Ross:It’s not for me, it’s for Rachel.Joey:Oh, '
+ 'you’re switching apartments?Ross:No-no, I-I have to see if this apartment '
+ 'became available.Joey:To tape the game? You do this every time Ross, '
+ 'you’re</s></s>She is?</s>')
+
+'data_idx: 466'
+'pred: neutral'
+'truth: surprise'
+'pred: Rachel'
+'truth: Joey'
+'number of tokens in the input: 100'
+
+[(22, 'But', 0.04204504), (60, '-', 0.041476168), (21, ':', 0.040116705), (64, '-', 0.0373185), (44, '.', 0.03549641), (47, ':', 0.03486513), (29, ':', 0.03460123), (2, ':', 0.033062715), (88, 'Ross', 0.033029694), (56, '?', 0.029408077)]
+
+("<s>Rachel:It wouldn't have mattered anyway, Phoebe, you and I are, are gonna "
+ "live together, we're roommates; that's the deal.Phoebe:Fish!Rachel:Honey, if "
+ 'you wanted to do that, you might as well just gotten him a fish, you know '
+ 'how fish freaked me out!Rachel:Did you get all this stuff for Joey to try '
+ 'and drive me out of the apartment?</s></s>Yes, but I wanted you to want to '
+ "live with me, but okay, if you're having so much fun over here</s>")
+
+'data_idx: 2169'
+'pred: anger'
+'truth: sadness'
+'pred: Rachel'
+'truth: Phoebe'
+'number of tokens in the input: 119'
+
+[(72, ':', 0.09498718), (37, ':', 0.084551826), (41, ':', 0.07383294), (39, '!', 0.072722994), (43, 'oney', 0.05591348), (93, 'Yes', 0.05492428), (38, 'Fish', 0.050520763), (40, 'Rachel', 0.038976945), (71, 'Rachel', 0.038498256), (2, ':', 0.038228385)]
+
+('<s>Monica:Is that too much to ask after six years?!Monica:I mean, all I’m '
+ 'asking for is just a little emotion!Chandler:And you’re upset because you '
+ 'didn’t make your best friend cry?</s></s>I mean what?</s>')
+
+'data_idx: 1482'
+'pred: surprise'
+'truth: anger'
+'pred: Rachel'
+'truth: Monica'
+'number of tokens in the input: 62'
+
+[(36, ':', 0.11704657), (3, ':', 0.08386153), (16, ':', 0.066770054), (32, '!', 0.063652396), (13, '?!', 0.04995934), (33, 'Ch', 0.037828002), (14, 'Mon', 0.03189098), (1, 'Mon', 0.030841282), (59, 'what', 0.0304541), (58, 'mean', 0.030341448)]
+
+('<s>Others:Folks, has this ever happened to you.Others:Shhhh!Joey:You guys, '
+ "can we please not watch this all right.Phoebe:Oh, oh! It's on "
+ 'again!Others:Welcome everybody, welcome to Amazing Discoveries!</s></s>You '
+ 'go to the refrigerator to get a nice glass of milk,  and these darn cartons '
+ "are so flingin'-flangin' hard to open.</s>")
+
+'data_idx: 769'
+'pred: surprise'
+'truth: neutral'
+'pred: Rachel'
+'truth: Others'
+'number of tokens in the input: 94'
+
+[(2, ':', 0.08929534), (15, ':', 0.07900982), (48, ':', 0.05438241), (14, 'Others', 0.050448425), (21, ':', 0.043781765), (37, ':', 0.04121372), (1, 'Others', 0.03444663), (58, '</s>', 0.03424143), (6, ',', 0.03144757), (47, 'Others', 0.025310684)]
+
+("<s>Chandler:WHAT IS IT?!</s></s>Okay, I-I d'know, you-you just- you have a "
+ 'quality.</s>')
+
+'data_idx: 2391'
+'pred: neutral'
+'truth: joy'
+'pred: Ross'
+'truth: Monica'
+'number of tokens in the input: 31'
+
+[(4, ':', 0.173012), (14, '-', 0.07462846), (5, 'WHAT', 0.06494111), (24, '-', 0.058352295), (21, '-', 0.054012667), (10, '</s>', 0.052255392), (8, '?!', 0.041903898), (1, 'Ch', 0.04006176), (20, 'you', 0.03935277), (3, 'ler', 0.038466927)]
+
+('<s>Ross:All that stuff you said about true love, you were right, I mean, we '
+ 'did learn a lot from Mom and Dad!Ross:Hey!Monica:Oh, come on.Ross:Y’know I '
+ 'don’t understand why they didn’t cry. It was a beautiful speech.</s></s>And '
+ 'that picture of Chi-Chi with her mischievous grin.</s>')
+
+'data_idx: 1515'
+'pred: joy'
+'truth: neutral'
+'pred: Rachel'
+'truth: Ross'
+'number of tokens in the input: 85'
+
+[(2, ':', 0.099073775), (34, 'ica', 0.057089623), (1, 'Ross', 0.052297667), (29, 'Ross', 0.04935031), (40, '.', 0.047927562), (35, ':', 0.04535138), (67, '</s>', 0.039534457), (31, 'Hey', 0.034682218), (41, 'Ross', 0.0342792), (33, 'Mon', 0.033351105)]
+
+('<s>Monica:The joke sucks!Monica:Now let it go!Monica:You shouldn’t be '
+ 'arguing over who gets credit, you should be arguing over who gets blamed for '
+ 'inflicting this horrible joke upon the world!Monica:The joke is not funny, '
+ 'and it’s offensive to women, and doctors, and monkeys!Monica:You are both '
+ 'idiots.Monica:All right, I’ve heard enough. I’ve made my '
+ 'decision.</s></s>It’s your joke.</s>')
+
+'data_idx: 2433'
+'pred: anger'
+'truth: neutral'
+'pred: Rachel'
+'truth: Ross'
+'number of tokens in the input: 111'
+
+[(6, 'sucks', 0.043193843), (3, ':', 0.04186948), (79, '.', 0.041493364), (74, ':', 0.03984442), (82, ':', 0.035356317), (10, ':', 0.032189835), (101, '</s>', 0.027302565), (18, ':', 0.025284305), (11, 'Now', 0.025097148), (50, ':', 0.024769897)]
