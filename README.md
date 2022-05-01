@@ -4,18 +4,16 @@
 
 ### On Colab
 
-- Upload `src/colab.ipynb` to Colab. 
-- Manually upload data folder to Colab's content folder while maintaining the same directory structure. 
+- Open `src/colab.ipynb` in Colab.  
 - Execute Runtime/Run All 
 - Customize training arguments in args dictionary
 
 ### Condor or Locally
 
-- Install [conda](https://docs.anaconda.com/anaconda/install/index.html) and [git-lfs](https://git-lfs.github.com/)
+- Install [conda](https://docs.anaconda.com/anaconda/install/index.html)
 - Clone this project and change to the project's root directory
-- `git lfs fetch` to fetch compressed model file
 - `conda env create -f environment.yaml` to initialize conda environment
-- `cd outputs/D2 && tar -xvzf model.tar.gz` to extract compressed model file
+- `cd outputs/D2`, download the model file from [Google Drive](https://drive.google.com/file/d/11gUWjXurmcthj6UGVoaOk-N2dE_Q1w3N/view?usp=sharing) via UW Google Account and extract compressed model file
 
 #### Condor
 - `condor_submit D2.cmd` to run inference and evaluation
