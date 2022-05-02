@@ -1,0 +1,1 @@
+Download the model from https://drive.google.com/file/d/11gUWjXurmcthj6UGVoaOk-N2dE_Q1w3N/view?usp=sharing (Login via UW Google account) and then decompress the model file to this folder.
