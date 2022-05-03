@@ -29,7 +29,10 @@ def preprocess(tokenizer, labels, **kwargs):
                 past = dataset[idx - i]
                 past_speaker = labels["Speaker"].int2str(past["Speaker"])
                 past_utterance = past["Utterance"]
-                example["Past"] += past_speaker + ":" + past_utterance
+                if kwargs["speaker_in_context"]:
+                    example["Past"] = past_speaker + ":" + past_utterance + " " + example["Past"]
+                else:
+                    example["Past"] = past_utterance + " " + example["Past"]
                 if past["Utterance_ID"] == 0 or i >= kwargs["num_past_utterances"]:
                     break
                 i += 1
@@ -40,7 +43,10 @@ def preprocess(tokenizer, labels, **kwargs):
                 future = dataset[idx + i]
                 future_speaker = labels["Speaker"].int2str(future["Speaker"])
                 future_utterance = future["Utterance"]
-                example["Future"] += future_speaker + ":" + future_utterance
+                if kwargs["speaker_in_context"]:
+                    example["Future"] += " " + future_speaker + ":" + future_utterance
+                else:
+                    example["Future"] += " " + future_utterance
                 i += 1
                 if idx + i < len(dataset) and dataset[idx + i]["Utterance_ID"] == 0 \
                     or i >= kwargs["num_future_utterances"]:

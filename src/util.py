@@ -31,6 +31,11 @@ def get_args() -> argparse.Namespace:
         help="Number of future utterances for generating dataset.",
     )
     parser.add_argument(
+        "--speaker_in_context",
+        action="store_true",
+        help="Whether to include speaker in context.",
+    )
+    parser.add_argument(
         "--data_dir",
         type=str,
         default=get_root_dir() + "data/",
