@@ -1,0 +1,1345 @@
+Utterance,Speaker,Emotion,Dialogue_ID,Utterance_ID
+Coffee.,Rachel,Neutral,1,0
+Thank you.,Joey,Neutral,1,1
+Cappuccino.,Rachel,Neutral,1,2
+Grazie.,Ross,Neutral,1,3
+And a nice hot cider for Monica.,Rachel,Neutral,1,4
+"Aww, thank you. Uh Rach?",Monica,Scared,1,5
+Yeah?,Rachel,Neutral,1,6
+Why does my cinamon stick have an eraser?,Monica,Neutral,1,7
+Oh! That's why. I'm sorry!,Rachel,Neutral,1,8
+"OK, try this salmon mousse.",Monica,Joyful,6,0
+Mmmm. Good.,Joey,Joyful,6,1
+Is it better than the other salmon mousse?,Monica,Joyful,6,2
+It's creamier.,Joey,Peaceful,6,3
+"Yeah, well, is that better?",Monica,Mad,6,4
+"I don't know. We're talking about whipped fish, Monica. I'm just happy I'm keeping it down, y'know?",Joey,Joyful,6,5
+My God! What happened to you?,Rachel,Scared,6,7
+"Eight and a half hours of aptitude tests, intelligence tests, personality tests... and what do I learn? ""You are ideally suited for a career in data processing for a large multinational corporation.""",Chandler,Mad,6,8
+That's so great! 'Cause you already know how to do that!,Phoebe,Joyful,6,9
+"Can you believe it? I mean, don't I seem like somebody who should be doing something really cool? You know, I just always pictured myself doing something...something.",Chandler,Mad,6,10
+"Oh Chandler, I know, I know... oh, hey! You can see your nipples through this shirt!",Rachel,Joyful,6,11
+"Here you go, maybe this'll cheer you up.",Monica,Peaceful,6,12
+"Ooh, you know, I had a grape about five hours ago, so I'd better split this with you.",Chandler,Mad,6,13
+It's supposed to be that small. It's a pre-appetizer. The French call it an amouz-bouche.,Monica,Joyful,6,14
+Well.... it is amouz-ing...,Chandler,Joyful,6,15
+"Hello? Oh, hi Wendy! Yeah, eight o'clock. What did we say? Ten dollars an hour?... OK, great. All right, I'll see you then. Bye.",Monica,Joyful,6,17
+Ten dollars an hour for what?,Phoebe,Neutral,6,18
+"Oh, I asked one of the waitresses at work if she'd help me out.",Monica,Neutral,6,19
+Waitressing?,Rachel,Mad,6,20
+Uh-oh.,Joey,Neutral,6,21
+Well... of course I thought of you! But... but...,Monica,Sad,6,22
+"But, but?",Rachel,Mad,6,23
+"But, you see, it's just... this night has to go just perfect, you know? And, well, Wendy's more of a... professional waitress.",Monica,Mad,6,24
+Oh! I see. And I've sort of been maintaining my amateur status so that I can waitress in the Olympics.,Rachel,Mad,6,25
+"You know, I don't mean to brag, but I waited tables at Innsbruck in '76. Amouz-bouche?",Chandler,Joyful,6,26
+Talk to me.,Celia,Neutral,7,0
+"OK.... um, a weird thing happened to me on the train this morning...",Ross,Scared,7,1
+No no no. Talk... dirty.,Celia,Joyful,7,2
+"Wha... what, here?",Ross,Scared,7,3
+Yes...,Celia,Neutral,7,4
+Ah....,Ross,Neutral,7,5
+Say something..... hot.,Celia,Neutral,7,6
+Er.... um.....,Ross,Scared,7,7
+What?,Celia,Neutral,7,8
+Um... uh.... vulva.,Ross,Joyful,7,9
+Well?,Chandler,Neutral,9,0
+"Wow! It's huge! It's so much bigger than the cubicle. Oh, this is a cube.",Phoebe,Joyful,9,1
+Look at this!,Chandler,Joyful,9,2
+Oh! You have a window!,Phoebe,Joyful,9,3
+Yes indeedy! With a beautiful view of...,Chandler,Joyful,9,4
+Oh look! That guy's peeing!,Phoebe,Joyful,9,5
+"OK, that's enough of the view. Check this out, look at this. Sit down, sit down.",Chandler,Joyful,9,6
+OK.,Phoebe,Neutral,9,7
+"This is great! Helen, could you come in here for a moment?",Chandler,Powerful,9,8
+"Thank you Helen, that'll be all.",Chandler,Neutral,9,10
+"Last time I do that, I promise.",Chandler,Mad,9,12
+"Wendy, we had a deal! Yeah, you promised! Wendy! Wendy! Wendy!",Monica,Mad,10,0
+Who was that?,Rachel,Neutral,10,1
+Wendy bailed. I have no waitress.,Monica,Mad,10,2
+Oh... that's too bad. Bye bye.,Rachel,Neutral,10,3
+Ten dollars an hour.,Monica,Neutral,10,4
+No.,Rachel,Neutral,10,5
+Twelve dollars an hour.,Monica,Neutral,10,6
+"Mon. I wish I could, but I've made plans to walk around.",Rachel,Neutral,10,7
+"You know, Rachel, when you ran out of your wedding, I was there for you. I put a roof over your head, and if that means nothing to you... twenty dollars an hour.",Monica,Scared,10,8
+Done.,Rachel,Neutral,10,9
+What a tool!,Joey,Mad,12,0
+You don't want to work for a guy like that.,Rachel,Powerful,12,1
+Yeah!,Ross,Powerful,12,2
+"I know... it's just... I thought this was, you know... it.",Monica,Sad,12,3
+"Look, you'll get there. You're an amazing chef.",Ross,Powerful,12,4
+Yeah! You know all those yummy noises? I wasn't faking.,Phoebe,Joyful,12,5
+"So, er... how did it go with Celia?",Joey,Scared,12,7
+"Oh, I was unbelievable.",Ross,Powerful,12,8
+"All right, Ross!",Joey,Powerful,12,9
+"I was the James Michener of dirty talk. It was the most elaborate filth you have ever heard. I mean, there were characters, plot lines, themes, a motif... at one point there were villagers.",Ross,Joyful,12,10
+Whoa! And the... huh-huh?,Joey,Joyful,12,11
+"Well, ahem... you know, by the time we'd finished with all the dirty talk, it was kinda late... and we were both kind of exhausted, so uh...",Ross,Scared,12,12
+You cuddled.,Joey,Joyful,12,13
+"Yeah, which was nice.",Ross,Joyful,12,14
+You guys wanna try and catch a late movie or something?,Phoebe,Neutral,12,15
+"Maybe, but shouldn't we wait for Chandler?",Rachel,Neutral,12,16
+"Yeah, where the hell is he?",Joey,Scared,12,17
+How's this?,Phoebe,Neutral,14,0
+Eeeee!,Steve,Joyful,14,1
+Sorry. How about over here?,Phoebe,Neutral,14,2
+Aaaaah!,Steve,Joyful,14,3
+"See, that just means it's working. Does this hurt?",Phoebe,Neutral,14,4
+No.,Steve,Neutral,14,5
+What about this?,Phoebe,Neutral,14,6
+Aaaaahhh!!,Steve,Mad,14,7
+There you go!,Phoebe,Neutral,14,8
+I can't believe you would actually say that. I would much rather be Mr. Peanut than Mr. Salty.,Chandler,Mad,1,0
+"No way! Mr.Salty is a sailor, all right, he's got to be, like, thetoughest snack there is.",Joey,Peaceful,1,1
+"I don't know, you don't wanna mess with corn nuts. They're craaazy.",Ross,Peaceful,1,2
+Oh my God. You guys! You gotta come see this! There's some creep out there with a telescope!,Monica,Joyful,1,3
+I can't believe it! He's looking right at us!,Ross,Mad,1,4
+"Oh, that is so sick.",Rachel,Scared,1,5
+I feel violated. And not in a good way.,Chandler,Scared,1,6
+"How can people do that?... Oh, you guys, look! Ugly Naked Guy got gravity boots!",Phoebe,Mad,1,7
+Wow... Wow!,Rachel,Joyful,3,0
+Yeah.,Barry,Neutral,3,1
+"I'm not crazy, right? I mean, it was never like that.",Rachel,Scared,3,2
+"Nooo, it wasn't.",Barry,Neutral,3,3
+"Ooh, and it's so nice having this little sink here...",Rachel,Peaceful,3,4
+"Oh, Danielle! I wasn't expecting the machine... Give me a call when you get a chance. Bye-bye. Oh God!",Chandler,Scared,4,0
+That's what you've been working on for the past two hours?!,Monica,Neutral,4,1
+"Hey, I've been honing!",Chandler,Neutral,4,2
+What was with the dishes?,Ross,Neutral,4,3
+"Oh, uh.. I want her to think I might be in a restaurant.. y'know? I might have some kind of life, like I haven't been sitting around here honing for the past few hours.",Chandler,Neutral,4,4
+"Look look! He's doing it again, the guy with the telescope!",Monica,Neutral,4,5
+Oh my God! Go away! Stop looking in here!,Phoebe,Mad,4,6
+"Great, now he's waving back.",Monica,Neutral,4,7
+"Man, we gotta do something about that guy. This morning, I caught him looking into our apartment. It creeps me out! I feel like I can't do stuff!",Joey,Scared,4,8
+What kinda stuff?,Monica,Neutral,4,9
+"Will you grow up? I'm not talking about sexy stuff, but, like, when I'm cooking naked.",Joey,Neutral,4,10
+You cook naked?,Phoebe,Neutral,4,11
+"Yeah, toast, oatmeal... nothing that spatters.",Joey,Neutral,4,12
+What are you looking at me for? I didn't know that.,Chandler,Neutral,4,14
+What's the matter?,Barry,Scared,5,0
+"Oh, it's just... Oh, Barry, this was not good.",Rachel,Sad,5,1
+"No, it was. It was very very good.",Barry,Joyful,5,2
+"Well, what about Mindy?",Rachel,Neutral,5,3
+"Oh, way, way better than Mindy.",Barry,Peaceful,5,4
+"No, not that, I mean, what about you and Mindy?",Rachel,Joyful,5,5
+"Well, if you want, I'll justI'll just break it off with her.",Barry,Scared,5,6
+"No. No-no-no-no, no. I mean, don't do that. Not, I mean not for me.",Rachel,Scared,5,7
+"Dr. Farber, Bobby Rush is here for his adjustment.",Bernice,Neutral,5,8
+"Thanks, Bernice. Let's go away this weekend.",Barry,Powerful,5,9
+"Oh, Barry..! Come on, this is all way too..",Rachel,Scared,5,10
+"We can, we can go to Aruba! When I went there on what would have been our honeymoon, it was, uh... it was really nice. You would've liked it.",Barry,Joyful,5,11
+I had a bra.,Rachel,Neutral,5,13
+"Hey, Dr. Farber.",Bobby,Neutral,5,15
+"All right Miss Green, everything looks fine... Yep, I think we're starting to see some real progress here.",Barry,Neutral,5,17
+What?!,Rachel,Neutral,5,19
+"I'm twelve, I'm not stupid.",Bobby,Mad,5,20
+Brrrrrrr!,Monica,Neutral,7,0
+Hell is filled with people like you.,Chandler,Mad,7,2
+He's back! The peeper's back!,Joey,Scared,7,3
+Get down!,Joey,Scared,7,5
+Get down?,Rachel,Scared,7,6
+...And boogie!,Chandler,Scared,7,7
+"Thanks, but I gotta go to work and get my eyes scratched out by Mindy.",Rachel,Neutral,7,8
+"Relax. Y'know, she may not even know.",Monica,Scared,7,9
+"Please. I haven't heard from her in seven months, and now she calls me? I mean, what else is it about? Oh! She was my best friend, you guys! We went to camp together... she taught me how to kiss..",Rachel,Joyful,7,10
+Yeah?,Joey,Neutral,7,11
+"And now, y'know, I'm like... I'm like the other woman! I feel so..",Rachel,Sad,7,12
+..Naughty!,Joey,Joyful,7,13
+"Right, I'll see you guys later...",Rachel,Neutral,7,14
+"Oh, hold up, I'll walk out with you. Now, Rach, when she taught you to kiss, you were at camp, and.. were you wearing any kinda little uniform, or- That's fine, yeah...",Joey,Joyful,7,15
+"Okay, I'm gonna go to the bathroom. Will you watch my phone?",Chandler,Neutral,7,17
+Why don't you just take it with you?,Monica,Neutral,7,18
+"Hey, we haven't been on a second date, she needs to hear me pee?",Chandler,Scared,7,19
+Why don't you just call her?,Monica,Neutral,7,20
+"I can't call her, I left a message! I have some pride.",Chandler,Scared,7,21
+Do you?,Monica,Neutral,7,22
+"No! Danielle, hi! It's, uh, it's Chandler! I'm fine. Uh, listen, I don't know if you tried to call me, because, uh, idiot that I am, I accidentally shut off my phone. Oh, uh, okay, that's fine, that's great. Okay. She's on the other line, she's gonna call me back. She's on the other line, she's gonna call me back, she's on the other line, gonna call me back...",Chandler,Joyful,7,23
+Don't you have to pee?,Monica,Neutral,7,24
+'S'why I'm dancing...,Chandler,Joyful,7,25
+"Four letters: ""Circle or hoop"".",Ross,Neutral,9,0
+"Ring dammit, ring!",Chandler,Joyful,9,1
+Thanks.,Ross,Neutral,9,2
+"Hey, you know our phone's not working?",Joey,Scared,9,3
+What?!,Chandler,Scared,9,4
+"I tried to call you from the coffee shop, and there was no answer.",Joey,Neutral,9,5
+"I turned it off. Mother of God, I turned it off!",Chandler,Mad,9,6
+Just like you told her you did! ... Just pointing out the irony.,Monica,Joyful,9,7
+"Hey, so listen, I went across the street and talked to the doorman- I got the peeper's name! Can I use the phone?",Joey,Neutral,9,8
+Nngghhh!!!!!!!,Chandler,Mad,9,9
+"Can I use your phone? Yeah, the number for a Sidney Marks, please.",Joey,Neutral,9,10
+"""Heating device.""",Ross,Neutral,9,11
+Radiator.,Phoebe,Neutral,9,12
+Five letters.,Ross,Neutral,9,13
+Rdtor.,Phoebe,Neutral,9,14
+"Yeah, is Sidney there? Oh, this is? Sidney's a woman.",Joey,Neutral,9,15
+So she's a woman! So what?,Monica,Neutral,9,16
+"Yeah. Yeah, so what? Look, I live across the street, and I know all about you and your little telescope, and I don't appreciate it, okay? Yeah, I can see you right now! Hello! If I wanna walk around my apartment in my underwear, I shouldn't have to feel like Thank you, but... that's not really the point... The point is that... Mostly free weights, but occasionally..",Joey,Mad,9,17
+Joey!!,Monica,Mad,9,18
+"Yeah, my neighbor... Yeah, the brunette... She says you looked very pretty the other day in the green dress.",Joey,Neutral,9,19
+The green dress? Really?,Monica,Joyful,9,20
+"Yeah, she said you looked like Ingrid Bergman that day.",Joey,Neutral,9,21
+Nooo!,Monica,Joyful,9,22
+You okay?,Monica,Neutral,11,0
+Yeah.,Rachel,Neutral,11,1
+Really?,Monica,Neutral,11,2
+"Yeah! Y'know, ever since I ran out on Barry at the wedding, I have wondered whether I made the right choice. And now I know.",Rachel,Sad,11,3
+Aww...,Monica,Peaceful,11,4
+Big day.,Joey,Neutral,11,6
+"All right, I'll give you this, Mr. Peanut is a better dresser. I mean he's got the monocle, he's got the top hat...",Joey,Joyful,12,0
+You know he's gay?,Phoebe,Joyful,12,1
+I just wanna clarify this: are you outing Mr. Peanut?,Ross,Joyful,12,2
+Chandler?,Danielle,Neutral,12,3
+"Danielle! Hi! Uh- everybody, this is Danielle, Danielle, everybody.",Chandler,Joyful,12,4
+Hi. Hi.,#ALL#,Neutral,12,5
+What are you doing here?,Chandler,Neutral,12,6
+"Well, I've been calling you, but it turns out I had your number wrong. And when I finally got the right one from Information, there was no answer. So I thought I'd just come down here, and make sure you were okay.",Danielle,Neutral,12,7
+"...I'm, I'm okay.",Chandler,Neutral,12,8
+"Listen uh, maybe we could get together later?",Danielle,Neutral,12,9
+"That sounds good. I'll call you- or you call me, whatever...",Chandler,Neutral,12,10
+You got it.,Danielle,Neutral,12,11
+Okay.,Chandler,Neutral,12,12
+"G'bye, everybody.",Danielle,Neutral,12,13
+Bye.,#ALL#,Neutral,12,14
+Whoo-hoo!,Phoebe,Joyful,12,15
+"Yeah, there you go!",Monica,Joyful,12,16
+Second date!,Ross,Joyful,12,17
+...I dunno.,Chandler,Scared,12,18
+You don't know?!,Rachel,Mad,12,19
+"Well, she seems very nice and everything, but that whole thing about her coming all the way down here, just to see if I was okay? I mean,... how needy is that?",Chandler,Scared,12,20
+"Stop saying you're not talented, you're very talented. It's just with the bird dead and all, there's very little act left. Oh, honey, give me a break, will ya? Oooh, ooh, I'll talk to you later.",Estelle,Neutral,3,1
+"Well, there's my favorite client. So tell me darling, how was the audition?",Estelle,Joyful,3,2
+"Well, I think it went pretty well. I.. I got a callback for Thursday.",Joey,Joyful,3,3
+"Joey, have you ever seen me ecstatic?",Estelle,Neutral,3,4
+No.,Joey,Neutral,3,5
+"Well, here it is.",Estelle,Joyful,3,6
+"OK, uh.... listen, there's something I want to talk to you about. The network casting lady...",Joey,Scared,3,7
+"Oh, isn't Lori a doll?",Estelle,Peaceful,3,8
+"Oh yeah, yeah, she's great, but... I kinda got the feeling that she was sort of... coming on to me. And I definitely would get the part if I would've... you know... if I would have sent the Little General in.",Joey,Scared,3,9
+"Oh, I see. Well, I'm just gonna put in a call here and we'll find out what's goin' on and straighten it out. Yeah, hi, Lori please. Hi darling. So how 'bout Joey Tribbiani for the part of the cab driver, isn't he terrific? Uh-huuuuh. Uh-huuuuh. OK, doll. Talk to you later. Yeah, you're gonna have to sleep with her.",Estelle,Neutral,3,10
+Hey.,Chandler,Neutral,5,1
+Hey.,Joey,Neutral,5,2
+"Whoa, whoa, so I'm guessing you didn't get the part, or... uh, Italy called and said it was hungry.",Chandler,Sad,5,3
+"Well, the part's mine if I want it.",Joey,Joyful,5,4
+Oh my God!,Chandler,Joyful,5,5
+"Yeah, if I'm willing to sleep with the casting lady.",Joey,Neutral,5,6
+Oh my... God?,Chandler,Scared,5,7
+"Ten years I've been waiting for a break like this Chandler, ten years! I mean, Days of Our Lives. That's actually on television.",Joey,Sad,5,8
+"So, what're you gonna do?",Chandler,Neutral,5,9
+"Well, I guess I could sleep with her... I mean, how could I do that?",Joey,Sad,5,10
+"Well, I... I've got a pop-up book that told me everything I need to know.",Chandler,Neutral,5,11
+I've never slept with someone for a part.,Joey,Sad,5,12
+Well is she...,Chandler,Neutral,5,13
+Sorry.,Joey,Neutral,5,14
+It's alright. Is she good-looking?,Chandler,Peaceful,5,15
+"Yeah, she's totally good looking. I mean, if I met her in a bar, or something, I'd be buying her breakfast. You know, after having slept with her.",Joey,Joyful,5,16
+"Y'know, maybe this isn't such a big deal. Y'know, I mean, the way that I see it is you get a great job and you get to have sex. Y'know, I mean, throw in a tree and a fat guy and you've got Christmas.",Chandler,Joyful,5,17
+"I just... I just don't think that I want it that way though, y'know? I mean, let's say I do make it, alright? I'm always gonna look back and wonder if it was because of my talent or because of.. y'know, the Little General.",Joey,Scared,5,18
+Didn't you used to call it the Little Major?,Chandler,Peaceful,5,19
+"Yeah, but after Denise DeMarco, I had to promote it.",Joey,Peaceful,5,20
+Can I get you something from the bar?,Waiter,Neutral,6,1
+"Yes, I would like something. No, no thank you.",Monica,Sad,6,2
+"If... if you want to drink, it's OK with me, I've got to get used to it.",Bobby,Neutral,6,3
+"No, no really. I.. I wouldn't feel right about it. Just some water.",Monica,Sad,6,4
+So the light went out in my refrigerator...,Bobby,Neutral,6,5
+I'd like a scotch on the rocks with a twist.,Monica,Neutral,6,6
+Hi.,Russ,Neutral,9,1
+"Oh, hey.",Chandler,Neutral,9,2
+Hi.,Phoebe,Neutral,9,3
+"I guess you guys heard, Rachel dumped me.",Russ,Sad,9,4
+"Yeah, I'm sorry man.",Chandler,Neutral,9,5
+"Oh, all she said was that I remind her too much of somebody. You have any idea who she's talking about?",Russ,Neutral,9,6
+"Oh I do, it's.... it's Bob Saget. She hates him.",Phoebe,Neutral,9,7
+Oh.,Russ,Neutral,9,8
+Hey.,Julie,Neutral,9,9
+Hey!,Chandler,Neutral,9,10
+"Hey, Julie! Hey, how are you doing?",Phoebe,Peaceful,9,11
+"Um, oh, I don't know. I mean, it's definitely weird not being with Ross, but I guess I'm doing OK. Actually I've got some of his stuff that he, um....",Julie,Neutral,9,12
+Hey. Watcha guys doin?,Phoebe,Joyful,1,1
+Monica's making us watch Old Yeller.,Richard,Sad,1,2
+"Why are you guys so upset? It's Old Yeller, it's a happy movie.",Phoebe,Scared,1,3
+What?,Rachel,Neutral,1,4
+What're you talkin' about?,Ross,Neutral,1,5
+"C'mon, happy family gets a dog, frontier fun.",Phoebe,Joyful,1,6
+"Yeah but Phoebs, what about the end?",Ross,Neutral,1,7
+What when Yeller saves saves the family from the wolf and everyone's happy?,Phoebe,Joyful,1,8
+That's not the end.,Rachel,Neutral,1,9
+Yu-huh. That's when my mother would shut off the TV and say 'The end'.,Phoebe,Neutral,1,10
+What about the part where he has rabies?,Monica,Scared,1,11
+"He doesn't have rabies, he has babies. That's what my mom said.",Phoebe,Neutral,1,12
+"Uh, Phoebe, I don't think your mom would want you to see what's about to happen.",Richard,Scared,1,13
+"What, what's about to happen? I've never seen this part before. Hey, Travis, watcha doin' with that gun? Oh no, no no Travis, put down the gun. No no no no, he he's your buddy, he's your Yeller, no, no no, the end, THE END.",Phoebe,Sad,1,14
+"Hey, have you guys eaten, because uh, Richard and I just finished and we've got leftovers... Chicken and potatoes... What am I wearing?...Actually, nothing but rubber gloves.",Monica,Peaceful,2,1
+"Ya know, one of these times you're gonna really be naked and we're not gonna come over.",Joey,Neutral,2,2
+"Alright, I've got a leg, three breasts and a wing.",Monica,Joyful,2,3
+"Well, how do you find clothes that fit?",Chandler,Joyful,2,4
+"Oh, hey, Monica, we've got a question.",Joey,Neutral,2,5
+"Alright, for the bizillionth time, yes I see other women in shower at the gym, and no I don't look.",Monica,Mad,2,6
+"No, not that one. We're trying to figure out who to bring to the Knicks game tonight, we have an extra ticket.",Joey,Peaceful,2,7
+"Yeah, Ross can't go so it's between my friend Eric Prower who has breath issues and Dan with the poking. 'Did you see that play? Do you want some more beer? Is that Spike Lee?'",Chandler,Scared,2,8
+"Ok. Hey, why don't you ask Richard?",Monica,Neutral,2,9
+"Ok, uh, hey Richard, if you had an extra ticket to the Knicks game and you had to choose between a friend who smells and one who bruises you who would you pick?",Joey,Joyful,2,10
+"Wow. Well being a huge Knicks fan myself, I think you should take someone who's a huge Knicks fan.",Richard,Neutral,2,11
+"Ok, that's Eric.",Chandler,Neutral,2,12
+Glad to be of help. Matches.,Richard,Joyful,2,13
+"I meant, why don't you take Richard to the game? What?",Monica,Scared,2,14
+I don't know.,Joey,Scared,2,15
+C'mon. Keeps his fingers to himself and he's always minty fresh.,Monica,Scared,2,16
+"I don't know, Richard's really nice and everything, uh, it's just that we don't know him really well, ya know, and plus he's, ya know, old -er than some people, but, uh, younger than some buildings.",Chandler,Scared,2,17
+"So what, he's a little older, big deal, I mean he's important to me. Ya know if you ask him, he might take you on his Jag.",Monica,Mad,2,18
+How do we say yes now and make it seem like we're not doin' it just to ride in the cool car?,Joey,Joyful,2,19
+"Ok, this could be tough.",Chandler,Neutral,2,20
+"Ok ok ok ok. Monica, we'll bring him, but only if he takes the Jaguar.",Joey,Neutral,2,21
+"Ooh, you almost had it.",Chandler,Joyful,2,22
+"No no, you're fine, you're fine.",Ross,Peaceful,3,1
+Hello,Carol,Neutral,3,2
+Hi.,Ross,Neutral,3,3
+Hey.,Susan,Neutral,3,4
+Hi honey.,Carol,Joyful,3,5
+Oh you guys are not gonna believe what happened.,Ross,Joyful,3,6
+What?,Carol,Scared,3,7
+What?,Susan,Joyful,3,8
+"Ok, we were sitting over there playing on the floor and he grabs the table and he pulls himself up. He pulled himself up. Standing man. I'm sorry you guys missed it but I did tape it so it you guys want to see it.",Ross,Joyful,3,9
+"Uhh, we know, he already did it last week.",Carol,Joyful,3,10
+You can watch our tape if you want.,Susan,Powerful,3,11
+"I don't believe this. I miss, I miss the first time of everything. I missed, what, the first time he rolled over, the first time he crawled. What else did I miss? Has he spoken yet, is he driving, does he have a favorite liquour?",Ross,Mad,3,12
+"Actually, he is getting closer on the talking thing. He can't quite say mama yet, but once he said yumen.",Carol,Powerful,3,13
+"Ooh, I, I'm so sick of missing stuff. Ya know, I want him for more than, than a day, I want him for a whole weekend. No listen , I mean, I feel like-",Ross,Sad,3,14
+Great. That would be fine.,Carol,Powerful,3,15
+"Really? I mean, I, I had a whole speach prepared.",Ross,Powerful,3,16
+"Oh shout, that would have been fun.",Susan,Joyful,3,17
+"Oh look, did, did you just see that? Did you see? He just waved, he just waved, he's never waved before, you've never waved before. Yes he has. Very good.",Ross,Joyful,3,18
+Hey.,Phoebe,Neutral,4,1
+"Hey Phoebs, whatcha got there?",Rachel,Neutral,4,2
+"Ok, Love Story, Brian's Song, and Terms of Endearment.",Phoebe,Neutral,4,3
+"Wow, all you need now is The Killing Fields and some guacamole and you've got yourself a part-ay.",Monica,Joyful,4,4
+"Yeah, I talked to my grandma about the Old Yeller incident, and she told me that my mom used to not show us the ends of sad movies to shield us from the pain and sadness. You know, before she killed herself.",Phoebe,Sad,4,5
+Hey.,Chandler,Neutral,4,6
+Hey.,Joey,Neutral,4,7
+Hey.,Rachel,Neutral,4,8
+"Hey. Where is he, where's Richard? Did you ditch him?",Monica,Neutral,4,9
+"Yeah right after we stole his lunch money and gave him a wedgie. What's the matter with you, he's parking the car.",Joey,Mad,4,10
+So'd you guys have fun?,Monica,Neutral,4,11
+Your boyfriend is so cool.,Chandler,Joyful,4,12
+Really?,Monica,Neutral,4,13
+"Yeah, he let us drive his Jaguar. Joey for 12 blocks, me for 15.",Chandler,Neutral,4,14
+"Wow, he must like you the best.",Rachel,Joyful,4,15
+"Oh, what about that thing he did when he tipped the guy who showed us to our seats. You never even saw the money, it was like this. Hey Chandler, thanks for showing us to our seats .",Joey,Joyful,4,16
+"You're welcome. Hey Joey, thanks for parking the car .",Chandler,Neutral,4,17
+No problem. Hey Chandler,Joey,Neutral,4,18
+I think they get it.,Chandler,Neutral,4,19
+Ok.,Joey,Neutral,4,20
+There's the man.,Chandler,Neutral,4,21
+He-he-eyy.,Joey,Joyful,4,22
+"Hey, you're gettin' better. I'm gonna keep this by the way.",Richard,Neutral,4,23
+Ok. He kept my dollar.,Joey,Sad,4,24
+Hey. Oh thanks for the great movie tip.,Phoebe,Joyful,8,1
+Did you like it?,Monica,Neutral,8,2
+"Oh yeah. You know, I don't know if I was happier when um George Bailey destroyed the family business or um, Donna Reid cried, or when the mean pharmacist made his ear bleed.",Phoebe,Joyful,8,3
+"Alright, I'll give you the ear thing but don't you think the ending was pretty wonderful?",Monica,Powerful,8,4
+"I didn't watch the ending, I was too depressed. It just kept getting worse and worse, it should have been called, ""It's a sucky life and just when you think it can't suck any more it does.""",Phoebe,Sad,8,5
+I have to say Tupolo Honey by Van Morrison.,Ross,Peaceful,2,1
+Nooo Way! The most romantic song ever is The Way We Were.,Rachel,Peaceful,2,2
+"See, I-I think that one that Elton John wrote for, um, that guy on Who's The Boss.",Phoebe,Joyful,2,3
+"What song was that, Pheebs?",Rachel,Neutral,2,4
+"Hold me close, young Tony Dan-za.",Phoebe,Neutral,2,5
+Hi Monica!,Phoebe,Joyful,2,7
+Hey Mon!,Ross,Joyful,2,8
+Hey Mon!,Rachel,Joyful,2,9
+"Oh my God, has she slept at all?",Phoebe,Mad,2,11
+Nope.,Ross,Neutral,2,12
+"No, it's been three nights in a row.",Rachel,Neutral,2,13
+"Yeah, she finally stopped crying yesterday, but then she found one of Richard's cigar butts out on the terrace, so.",Ross,Peaceful,2,14
+"Oh, okay that explains it. I got a call at two in the morning, but all I could hear was, like, this high squeaky sound, so I thought okay its like a mouse or a opossum. But then I realized where would a mouse or a opossum get the money to make the phone call.",Phoebe,Powerful,2,15
+Morning.,Chandler,Neutral,3,1
+"Morning, hey, you made pancakes?",Joey,Joyful,3,2
+"Yeah, like there's any way I could ever do that.",Chandler,Scared,3,3
+"Monica and Rachel had syrup, now I can get my man to cheer up. Good morning Joey.",Janice,Joyful,3,4
+Good morning.,Joey,Joyful,3,5
+"Hey, you know what, here's a thought. Why don't you stay home from work today and just hang out with me.",Chandler,Peaceful,3,6
+"Oh, I wish. Look, honey, you have that report to finish, and I gotta go see my lawyer.",Janice,Peaceful,3,7
+I can not believe that I am going out with someone that is getting divorced. I'm such a grown up.,Chandler,Sad,3,8
+"I-I-I gotta go, I gotta go. Okay, not without a kiss.",Janice,Joyful,3,9
+"Well, maybe I won't kiss you, and then you'll have to stay.",Chandler,Powerful,3,10
+Kiss her! Kiss her!,Joey,Joyful,3,11
+"I'll see you later, sweetie. Bye Joey.",Janice,Joyful,3,12
+B-bye Janice. So when ya' dumpin' her.,Joey,Neutral,3,13
+"Nope, not this time.",Chandler,Neutral,3,14
+"Come on, quite yankin' me.",Joey,Joyful,3,15
+I'm not yanking you.,Chandler,Neutral,3,16
+This is Janice.,Joey,Neutral,3,17
+"Yeah, I know. She makes me happy.",Chandler,Peaceful,3,18
+"Okay. All right. You look me in the eye and tell me, without blinking, that you're not breaking up with her. No blinking.",Joey,Neutral,3,19
+I'm not breaking up with her!,Chandler,Peaceful,3,20
+"God, look what I found in the drain.",Monica,Scared,4,1
+What?!,Rachel,Scared,4,2
+It's some of Richard's hair! What do I do with this?,Monica,Scared,4,3
+Getting it away from me would be job one.,Ross,Neutral,4,4
+"It's weird, but you know what I don't wanna throw this away. I mean this is like all I have left of him, gross, drain hair. Ooh!",Monica,Scared,4,5
+"Ooh. Oh. It looks like, like a tiny little person drowning in your cereal.",Phoebe,Neutral,4,6
+"God, what is wrong with me.",Monica,Sad,4,7
+You need to get some sleep.,Ross,Neutral,4,8
+I need to get some Richard.,Monica,Sad,4,9
+"Monica, you broke up with him for a reason.",Rachel,Neutral,4,10
+"I know, I know. I'm just so tired of-of missing him. I'm tired of wondering why hasn't he called. Why hasn't he called!",Monica,Sad,4,11
+"Maybe, because you told him not to.",Phoebe,Neutral,4,12
+What are you the memory woman?,Monica,Mad,4,13
+Their not breaking up. Chandler and Janice. Their not breaking up. He didn't blink or anything.,Joey,Neutral,4,14
+"Well, you know I'm not surprised. I mean have you seen them together, they're really cute.",Rachel,Joyful,4,15
+Cute! This is Janice! You remember Janice?,Joey,Mad,4,16
+"Yes, Joey, I remember, she's annoying, but you know what she's-she's his girlfriend now. I mean what can we do?",Rachel,Neutral,4,17
+There you go! That's the spirit I'm looking for! What can we do? Huh? All right who's first? Huh? Ross?,Joey,Joyful,4,18
+"Well I'm thinking that Chandler's our friend and Janice makes him happy, so I say we just all be adult about it and accept her.",Ross,Neutral,4,19
+"Yeah, we'll call that Plan B. All right?",Joey,Neutral,4,20
+"Honey, I was wondering....",Rachel,Peaceful,5,1
+Hmm?,Ross,Peaceful,5,2
+"Do you still have that, um, Navy uniform?",Rachel,Joyful,5,3
+"Nooo, I had to return it to the costume place.",Ross,Sad,5,4
+Hmm.,Rachel,Peaceful,5,5
+I think I have an old band uniform from high school.,Ross,Neutral,5,6
+"You remember not having sex in high school, right?",Rachel,Joyful,5,7
+Yeah.,Ross,Sad,5,8
+"Well honey, what about you?",Rachel,Sad,5,9
+What?,Ross,Neutral,5,10
+"I mean do you have any fun, you know, fantasy type things?",Rachel,Peaceful,5,11
+No.,Ross,Neutral,5,12
+Come on you gotta have one!,Rachel,Joyful,5,13
+Nope.,Ross,Neutral,5,14
+"Ross, you know what...",Rachel,Joyful,5,15
+What?,Ross,Scared,5,16
+"...if you tell me, I might do it.",Rachel,Joyful,5,17
+"Okay, umm. Did you ever see, um, Return Of The Jedi?",Ross,Scared,5,18
+Yeah.,Rachel,Neutral,5,19
+"Do you remember the scene with, um, Jabba the Hut? Well Jabba had as, as his prisoner, um, Princess Leia.",Ross,Peaceful,5,20
+Oooh!,Rachel,Joyful,5,21
+"Princess Leia, was wearing this, um, gold bikini thing. It was pretty cool.",Ross,Joyful,5,22
+Hey!,Chandler,Joyful,7,2
+Wheel!,Joey,Joyful,7,3
+Of!,Chandler,Joyful,7,4
+Fortune! This guy is so stupid. It's Count Rushmore!!,Joey,Mad,7,5
+"You know, you should really go on this show. All right, listen, I got three tickets to the Rangers tonight. What'd ya' say?",Chandler,Joyful,7,6
+"I say, 'I am there!' Cool! Aw, is Ross going to?",Joey,Neutral,7,7
+"No, Janice.",Chandler,Neutral,7,8
+"Jan-ice. 'Cause I, just, I feel bad for Ross, you know, we-we always go together, we're like the three hocke-teers.",Joey,Sad,7,9
+"You know, I may be way out on a limb here, but do you, do you, have a problem with Janice?",Chandler,Neutral,7,10
+"No, Yeeees. God, how do I say this. . Oh, hi, you know that girl from the Greek restaurant with the hair ?",Joey,Mad,7,11
+"Ooh, that girl that I hate, eww, drives me crazy, eww, eww, oh!",Chandler,Mad,7,12
+"Look, I don't hate Janice, she's-she's just a lot to take, you know.",Joey,Neutral,7,13
+"Well, there you go.",Chandler,Neutral,7,14
+"Oh, hey. Come on man, don't look at me like that, she used to drive you nuts before too, remember?",Joey,Peaceful,7,15
+"Well, I'm crazy about her now. I think this could be the real thing. Capital 'R'! Capital 'T'! Don't worry, those are the right letters.",Chandler,Mad,7,16
+"Look, what do you want me to say?",Joey,Neutral,7,17
+I want you to say that you like her!,Chandler,Mad,7,18
+"I can't. It's like this chemical thing, you know. Every time she starts laughing, I just wanna pull my arm off just so that I can have something to throw at her.",Joey,Mad,7,19
+"Thanks for trying. Oh, and by the way there is no Count Rushmore!",Chandler,Mad,7,20
+"Yeah, then-then who's the guy that painted the faces on the mountain?",Joey,Mad,7,21
+How could you have told her?,Ross,Scared,8,1
+"Ross, I didn't think it would that big of a deal.",Rachel,Mad,8,2
+"Oh, she didn't think it would be that big of deal.",Ross,Mad,8,3
+"Okay, who are you talking to when you do that?",Rachel,Scared,8,4
+"Look, that was supposed to be like a private, personal thing between us.",Ross,Mad,8,5
+"Okay, Ross, Phoebe is my girlfriend, okay, we tell each other everything. You know, I mean, come on, guys do the same thing, I mean, what about all that locker room stuff.",Rachel,Mad,8,6
+"That's different, okay. That's like, uh 'Who dated a stripper?' or 'Who did it on the back of the Staton Island Ferry?'.",Ross,Mad,8,7
+Were both of those Joey?,Rachel,Neutral,8,8
+"Yeah. Look, you don't, you don't talk about like, you know, your girlfriend and the intimate stuff you, you do with her.",Ross,Mad,8,9
+Not even with your best friend.,Rachel,Neutral,8,10
+Noo!,Ross,Mad,8,11
+"That is so sad. Your missing out on so much, Ross. I mean, the bonding and the sharing, you know. And-and knowing that someone else is going through the same thing you are.",Rachel,Sad,8,12
+"Hmph. So what you, you tell each other everything?",Ross,Scared,8,13
+Pretty much.,Rachel,Joyful,8,14
+Did you talk about the night of five times? Do you tell people about the night of five times?,Ross,Neutral,8,15
+"Uh, honey, yeah that was with Carol.",Rachel,Joyful,8,16
+"I know, but it's still worth mentioning, I think.",Ross,Scared,8,17
+"Relax every muscle in your body. Listen to the plinky-plunky music. Okay, now close you eyes, and think of a happy place. Okay, tell me your happy place.",Phoebe,Powerful,9,1
+"Richard's living room, drinking wine.",Monica,Joyful,9,2
+"All right. No, no, no, not a Richard thing, just put down the glass. And get out!",Phoebe,Scared,9,3
+"I'm sorry, but that's my happy place.",Monica,Powerful,9,4
+"Well, okay, fine, use my happy place. Okay, I'm just gonna, I have to ask that you don't move anything.",Phoebe,Mad,9,5
+"All right, I'll try not to.",Monica,Scared,9,6
+"Okay, all right, so, your in a meadow, millions of stars in the sky....",Phoebe,Peaceful,9,7
+Do you think breaking up with him was a huge mistake?,Monica,Scared,9,8
+"All right, there are no questions in the happy place. Okay, just, the warm breeze, and the moonlight flowing through the trees....",Phoebe,Peaceful,9,9
+"I'll bet he's totally over me, I'll bet he's fine.",Monica,Powerful,9,10
+"All right, betting and wagering of any kind, are, I'm sure, not permitted in the happy place. Okay. Just-just, you know, the-the lovely waterfalls, and the, the trickling fountains. And the-the calming sounds of the babbling brook....",Phoebe,Peaceful,9,11
+"Okay, this isn't working. I'm still awake and now I have to pee.",Monica,Powerful,9,12
+"So, I hear, you hate me!",Janice,Mad,10,1
+"I, ah, I never said hate, I was very careful about that.",Joey,Scared,10,2
+A little birdie told me something about you wanting to rip your arm off and throw it at me.,Janice,Mad,10,3
+And you got a 'hate' from that?! Your taking a big leap there...,Joey,Scared,10,4
+"All right, fine, fine, fine, fine, fine, We've got to do something about our little situation here Joey. So, this is my idea you and me spending some quality time together.",Janice,Sad,10,5
+But what does that gonna do...,Joey,Peaceful,10,6
+For Chandler!,Janice,Powerful,10,7
+Okay. I'm in.,Joey,Joyful,10,8
+Okay. All right. This is what we're gonna call it 'Joey and Janice's DAY OF FUN!',Janice,Joyful,10,9
+Does it have to be a whole day?,Joey,Powerful,10,10
+"Yes, because that's how long it takes to love me.",Janice,Peaceful,10,11
+"Yeah, I know, I sleep in the next room.",Joey,Peaceful,10,12
+We're baack!,Janice,Joyful,12,1
+Hey!,Joey,Joyful,12,2
+What are you guys doing together?,Chandler,Neutral,12,3
+Joey and Janice's DAY OF FUN!!!,Janice,Joyful,12,4
+Really.,Chandler,Neutral,12,5
+"Yeah, yeah. We went to a Mets game, we got Chinese food, and you know, I love this woman. You have got competition buddy.",Joey,Peaceful,12,6
+"I just came by to give you a kiss, I have to go pick up the baby, so. I'll see you later sweetheart, you too Chandler.",Janice,Joyful,12,7
+You still can't stand her can you?,Chandler,Neutral,12,8
+"I'm sorry man, I tired, I really did.",Joey,Sad,12,9
+"Well, you know, I appreciate you giving it a shot.",Chandler,Peaceful,12,10
+"But, hey, look, you know the good thing is, is that we spent the whole day together and I survived, and what's even more amazing, so did she. It was bat day at Shea Stadium.",Joey,Joyful,12,11
+"Well, I guess that's something.",Chandler,Peaceful,12,12
+"No man, that's huge! Now, I know I can stand to be around her, which means I get to hang out with you, which is kinda the whole point, anyway.",Joey,Neutral,12,13
+Okay.,Chandler,Neutral,12,14
+"Oh, hey, Chandler, we, ah, we stopped by the coffee shop and ran into Ross.",Joey,Neutral,12,15
+Oh God!,Chandler,Scared,12,16
+"Hey, if it makes you feel any better, I do it too.",Joey,Neutral,12,17
+Really?,Chandler,Neutral,12,18
+"Oh yeah, I always picture your Mom when I'm having sex.",Joey,Joyful,12,19
+"Hi, Dad, what are you doing here?",Monica,Joyful,13,3
+"Well, it's your mother's bridge night so I thought that I would come into the city for a little Monicuddle. Since when did you start smoking cigars?",Jack,Peaceful,13,4
+"I don't, I just, I just like the smell of them. So, uh, what are you really doing here Dad?",Monica,Neutral,13,5
+"Well, I just wanted to make sure you were okay.",Jack,Peaceful,13,6
+What makes you think that I might not be okay?,Monica,Sad,13,7
+I saw Richard.,Jack,Powerful,13,8
+Oh.,Monica,Scared,13,9
+"So, how are you doing?",Jack,Neutral,13,10
+"I'm fine, just a little tired, I'm okay. How's Richard doing?",Monica,Sad,13,11
+You don't wanna know.,Jack,Neutral,13,12
+"No, I really, really do.",Monica,Peaceful,13,13
+"Well, he's doing terrible!",Jack,Powerful,13,14
+Really!,Monica,Joyful,13,15
+Worse than when he broke up with Barbara.,Jack,Sad,13,16
+You're not just saying that are you?,Monica,Neutral,13,17
+"No, the man is a mess.",Jack,Powerful,13,18
+Was he crying?,Monica,Neutral,13,19
+No.,Jack,Neutral,13,20
+"Well, do you think he was waiting 'til after you left, so he could cry?",Monica,Neutral,13,21
+Maybe.,Jack,Neutral,13,22
+I think so.,Monica,Joyful,13,23
+"Honey, relationships are hard. Like with your Mom and me. You know after we graduated college we broke up for a while. It seems her Father, your Grandfather, wanted her to travel around Europe, like he did. Of course, he got to do it on Uncle Sam's nickel, because he was also strafing German troop trains at the time. However,",Jack,Peaceful,13,24
+Yes! Yes! Yes! Yes! Awww!,The,Joyful,1,1
+"Hey, it's your Thanksgiving too, y'know, instead of watching football, you could help.",Phoebe,Neutral,1,2
+We will.,The,Peaceful,1,3
+"Okay, Rachel, you wanna put the marshmellows in concentric circles.",Monica,Neutral,1,4
+"No Mon, you want to put them in concentric circles. I want to do this.",Rachel,Neutral,1,5
+Every year.,Monica,Neutral,1,7
+We should defiantly play football more often. Maybe there's a like league we could join or something.,Rachel,Joyful,5,1
+Isn't there a national football league.,Phoebe,Neutral,5,2
+"Yes. Yes, there is, they play on Sundays and Monday nights.",Chandler,Neutral,5,3
+Oh shoot! I work Monday nights.,Rachel,Sad,5,4
+"Umm, this stuffing is amazing. Do you think we should bring them some?",Phoebe,Joyful,5,5
+"When they're hungry enough, they'll come in.",Joey,Neutral,5,6
+Let go!,Monica,Mad,6,1
+No! You let go!,Ross,Mad,6,2
+No!,Monica,Mad,6,3
+How come it's always us left in the field holding the ball?,Ross,Neutral,6,4
+I don't know. I guess the other people just don't care enough.,Monica,Mad,6,5
+Hey! It's starting to snow.,Ross,Joyful,6,7
+Gimme the this!,Ross,Mad,6,9
+Let go!,Monica,Mad,6,10
+So who's idea was it to put everybody in the diner on skates?,Rachel,Neutral,1,1
+"Oh, some idiot customer put a suggestion in the suggestion box.",Monica,Mad,1,2
+"Oh my God, they took my idea!",Phoebe,Joyful,1,3
+That was you?!,Monica,Neutral,1,4
+"Yeah! Okay, here you go.",Phoebe,Neutral,1,5
+"Rachel, I made you a cocoa.",Gunther,Neutral,1,6
+"Oh my God, are you guys okay?",Phoebe,Scared,1,8
+Are you all right?,Gunther,Neutral,1,9
+Oh my.,Joey,Sad,1,10
+Hey.,Chandler,Joyful,2,1
+Hey. Y'know with that goatee you kinda look like Satan.,Joey,Neutral,2,2
+"Oh, so that's why the priest threw holy water on me. Okay, listen, you have to cheer up! Okay? You should come out with Ross and me, I mean anything is better than sitting around here crying all day about Kate.",Chandler,Peaceful,2,3
+"Hey I was crying because, because nobody believed Quincy's theory. Okay?",Joey,Sad,2,4
+Hey!,Ross,Joyful,2,5
+Hey.,Chandler,Joyful,2,6
+I'm gonna be on TV!!,Ross,Joyful,2,7
+No way!,Chandler,Joyful,2,8
+Yeah! They're putting together this panel to talk about these fossils they just found in Peru and The Discovery Channel's gonna film it!,Ross,Powerful,2,9
+Oh my God! Who's gonna watch that?!,Chandler,Powerful,2,10
+Thanks. You ready to go?,Ross,Joyful,2,11
+Yeah.,Chandler,Joyful,2,12
+Saw a girl with that vest.,Joey,Peaceful,2,13
+Thanks.,Chandler,Powerful,2,14
+"While most of us think of chocolate bunnies and baskets as traditional Easter gifts. Some people insist on giving live chicks as presents. Unfortunately, the sad fact remains that most of these little guys won't live to see the fourth of July. Because of as a result of improper care, they will be dead.",Anchorwoman,Powerful,2,15
+"Yeah, hi. You guys got any of those baby chicks? 'Cause I was watching this ah, commercial on TV and man, those guys are cute!",Joey,Joyful,2,16
+Hi!,Peter,Joyful,3,1
+"Hi! Hey, Pete you're back! Hey, check this out.",Monica,Joyful,3,2
+Wow! Skates!,Peter,Joyful,3,3
+Wow! You're a lot sturdier that Chandler. He crumpled like a piece of paper. So how was you're trip?,Monica,Neutral,3,5
+Well...,Peter,Neutral,3,6
+"Oh, what'd ya bring me?! Awww, hotel toiletries from Japan. Oh, these are gonna go in my permanent collection. You want some coffee?",Monica,Neutral,3,7
+"Yeah, sure, that'd be great.",Peter,Joyful,3,8
+Regular or decaf?,Monica,Neutral,3,10
+"Ah, which ever is closest.",Peter,Peaceful,3,11
+Okay.,Monica,Peaceful,3,12
+So ask me what I did today.,Peter,Neutral,3,13
+So what did you do today Pete?,Monica,Neutral,3,14
+I bought a restaurant and I would like you to be the head chef.,Peter,Peaceful,3,15
+What?! Oh.,Monica,Joyful,3,16
+Can you believe he just offered me a restaurant?,Monica,Joyful,4,1
+What a jerk! You want me to kick his ass?,Rachel,Mad,4,2
+"I mean this has been like my dream since I got my first Easy Bake Oven and opened Easy Monica's Bakery. I mean I would kill for this job. I mean I can totally do this job, and God knows I paid my dues. But Pete's just doing this because he has a crush on me.",Monica,Mad,4,3
+And you're still not attracted to him at all?,Rachel,Neutral,4,4
+"Hmm, no. I mean how can I accept a restaurant from him? I-I-I-I can't. I couldn't even accept a necklace from Stu Vincent in the seventh grade.",Monica,Scared,4,5
+"Yeah, but Mon that's totally different. He was you're health teacher.",Rachel,Peaceful,4,6
+"Oh, please.",Monica,Sad,4,7
+What? Honey.,Monica,Scared,4,9
+"Oh, I am, my side still hurts from when you crashed into me yesterday.",Rachel,Neutral,4,10
+"Oh God, I'm so sorry.",Monica,Sad,4,11
+I know.,Rachel,Neutral,4,12
+Ow!!,Rachel,Mad,4,14
+Oh God!,Monica,Sad,4,15
+"Hey, you guys! Guess what?",Ross,Joyful,4,16
+Got a job on a river boat?,Rachel,Joyful,4,17
+"Y'know what I didn't wear this suit for a year because you hated it. Well, guess what? You're not my girlfriend anymore so...",Ross,Powerful,4,18
+"Oh I see, so this suit is making a point.",Rachel,Powerful,4,19
+Right.,Ross,Powerful,4,20
+"Now that you're on you're own, you're free to look as stupid as you like.",Rachel,Mad,4,21
+You like it right?,Ross,Powerful,4,22
+Oh absolutely. I like it even more on you than I did on Colonel Sanders. Ross! Ross! I'm kidding!,Monica,Joyful,4,23
+"Yeah, come here!",Rachel,Joyful,4,24
+What-what was it you were gonna tell us?,Monica,Joyful,4,25
+Yeah. Oh! Was how you invented the cotton gin?!,Rachel,Joyful,4,26
+"Okay, good bye!",Ross,Mad,4,27
+"So um, after you put the suggestion in the box, how long did it take for the roller skating thing to happen.",Chandler,Neutral,5,1
+"Umm, oh, about three months.",Phoebe,Neutral,5,2
+"Okay, so I guess that's about ah, two weeks before the topless thing kicks in.",Chandler,Neutral,5,3
+Hey!!,Joey,Joyful,5,4
+Hey!,Chandler,Joyful,5,5
+I got you something! Open it! Open it!,Joey,Joyful,5,6
+Okay. It's a chicken.,Chandler,Mad,5,7
+"It's cute, huh?",Joey,Joyful,5,8
+"Whoa-whoa-whoa, you guys, do you know anything about chicks?",Phoebe,Joyful,5,9
+Fowl? No. Women? Nooo.,Chandler,Sad,5,10
+"Okay, well they are a huge responsibility, especially at this age. They require constant care. They-they need just the right food, and lot's and lot's of love.",Phoebe,Neutral,5,11
+"Oh, well no problem there.",Joey,Joyful,5,12
+Easy Lenny.,Chandler,Powerful,5,13
+Oww!,Rachel,Scared,8,1
+Wow! That aspirin dance really works!,Ross,Joyful,8,2
+Oww!,Rachel,Sad,8,3
+"Oh my God, is that still...",Ross,Neutral,8,4
+"I'm fine, I'm fine.",Rachel,Scared,8,5
+No you're not.,Ross,Mad,8,6
+Yes I am!,Rachel,Neutral,8,7
+Rach!,Ross,Neutral,8,8
+"Look, I'm fine. Watch. Look at that. Whoa-whoa!",Rachel,Scared,8,9
+"Okay, okay. Look, you have got to go to a doctor! Okay?",Ross,Scared,8,10
+"No. I have got to get ready and go to a dinner at my bosses house. It's a very big deal, there's a lot of people there I have to meet.",Rachel,Neutral,8,11
+"And I'm sure you're gonna make a big impression. Hi! I'm Rachel Green. It's nice to meet you. Come on, you probably have a broken rib!",Ross,Mad,8,12
+"Well, I will go to the hospital tomorrow, it'll still be broken then.",Rachel,Neutral,8,13
+Rach...,Ross,Neutral,8,14
+"But y'know, I could use a hand getting ready.",Rachel,Neutral,8,15
+Rachel...,Ross,Neutral,8,16
+"Look, either help me or go.",Rachel,Mad,8,17
+Fine. I'll go.,Ross,Scared,8,18
+"Okay, but before you go, could you help me first?",Rachel,Neutral,8,19
+Sure. I'll help you.,Ross,Neutral,8,20
+"Oh, good! Good! Do you guys know how to get a chick out of a VCR?!",Chandler,Joyful,8,21
+"Y'know what? I cannot do this with my left hand! Would you please, help me with this too?",Rachel,Neutral,9,1
+Ohh.,Ross,Neutral,9,2
+Okay. Let's use this brush.,Rachel,Neutral,9,3
+Okay. This stuff?,Ross,Neutral,9,4
+Yeah.,Rachel,Neutral,9,5
+All right.,Ross,Neutral,9,6
+"Careful. Light. Okay, do you know how, just sweep it across the lid. Okay? Just sweep it.",Rachel,Neutral,9,7
+Oke-dokey.,Ross,Neutral,9,8
+Oh-ho!,Rachel,Neutral,9,9
+Sorry.,Ross,Peaceful,9,10
+Hey! That's just poking me in the eye!,Rachel,Mad,9,11
+"Sorry, I'm sorry. Close, close, close...",Ross,Sad,9,12
+"Okay, just sweep it.",Rachel,Powerful,9,13
+I'm sweeping...,Ross,Neutral,9,14
+Right.,Rachel,Neutral,9,15
+"Sweep, sweep....",Ross,Neutral,9,16
+"Okay, now make it even, 'cause we don't...",Rachel,Powerful,9,17
+What? What?,Ross,Scared,9,18
+"We don't want it-it to be too much, we want it to be subtle.",Rachel,Mad,9,19
+"No. No, y'know you don't, you don't wear enough of this. What?",Ross,Neutral,9,21
+"Since when, since when do you think I don't wear enough of this?",Rachel,Mad,9,22
+"Well I, close your eyes, I just think you're gonna like this a little better, 'cause, close-close...",Ross,Neutral,9,23
+Blow it.,Rachel,Mad,9,24
+"Sorry. 'Cause umm, I think this will make you a little more sophisticated.",Ross,Joyful,9,25
+Sophisticated like a hooker?,Rachel,Mad,9,26
+Hey!,Monica,Joyful,10,1
+Hey!,Phoebe,Joyful,10,2
+"Hey, guess what I'm doing tonight.",Monica,Joyful,10,3
+What?,Phoebe,Sad,10,4
+I'm checking out the restaurant with Pete.,Monica,Joyful,10,5
+"Ohh, Monica, I am so excited for you.",Phoebe,Joyful,10,6
+I know.,Monica,Neutral,10,7
+"Ooh, I have to tell you something.",Phoebe,Neutral,10,8
+What?,Monica,Neutral,10,9
+But I can't tell you.,Phoebe,Powerful,10,10
+"Okay, but wouldn't it be easier if you had to tell me something that you could tell me.",Monica,Peaceful,10,11
+"Well, sure in a perfect world. But, no, I promised I wouldn't tell, and I swore to like all my gods.",Phoebe,Peaceful,10,12
+Okay. Does it have to do with Ross and Rachel?,Monica,Scared,10,13
+No.,Phoebe,Neutral,10,14
+Does it have to do with Joey?,Monica,Scared,10,15
+No.,Phoebe,Neutral,10,16
+Does it have to do with-with Chandler and that sock that he keeps by his bed?,Monica,Scared,10,17
+"No, but let's come back to that later!",Phoebe,Powerful,10,18
+Does it involve travel?,Monica,Neutral,12,1
+Noo!,Phoebe,Neutral,12,2
+Does it involve clogs?,Monica,Neutral,12,3
+"Oh, wait, wait. Clogs, or claws?",Phoebe,Neutral,12,4
+Clogs.,Monica,Neutral,12,5
+No.,Phoebe,Neutral,12,6
+Claws?!,Monica,Scared,12,7
+No.,Phoebe,Peaceful,12,8
+"Okay, so it doesn't involve Ross or Rachel or Chandler or Joey. But, what about Pete?",Monica,Scared,12,9
+No!,Phoebe,Joyful,12,10
+What is it?! What about Pete?,Monica,Neutral,12,11
+I don't know!,Phoebe,Neutral,12,12
+"Okay, I feel like I'm talking to Lassie. All right, Phoebe would you just tell me!",Monica,Neutral,12,13
+I can't!!,Phoebe,Neutral,12,14
+"Okay, I gotta go.",Monica,Neutral,12,15
+"I, but you're so close! No!",Phoebe,Neutral,12,16
+"Okay, does it involve something to do with Pete's computer company?",Monica,Neutral,12,17
+"Oh, just go. You're never gonna get it!",Phoebe,Neutral,12,18
+"I know. See, yes. That's Yasmine Bleeth, she's a completely different kind of chick. I love you both. But in very different ways.",Chandler,Joyful,13,1
+Hey!,Joey,Joyful,13,2
+Hey!,Chandler,Joyful,13,3
+Ohhh. Ahh! What are you doing?! I thought you were gonna take her back to the store today.,Joey,Scared,13,4
+"I did! But the store wouldn't take her back! So then I took her to the shelter, and you know what I found out?",Chandler,Neutral,13,5
+"If they can't find a home for her, they kill her! And I'm not gonna let that happen to little Yasmine!",Chandler,Scared,13,7
+"Okay, good, good, good, 'cause, good, 'cause I was kinda having second thoughts too.",Joey,Joyful,13,8
+Okay. And it's not just chicks y'know? It's all kinds of other animals!,Chandler,Powerful,13,9
+"That's horrible! Well, you did the right thing man.",Joey,Powerful,13,10
+"Thanks, I'm glad you see it that way.",Chandler,Joyful,13,11
+"Ohhh-hoo, funny story!",Chandler,Joyful,13,13
+"I don't believe this! Wow, look at this refrigerator! It's gigantic! I mean I could live in this thing! I'd be cold, but I'm always cold. Oh my God, look at these spider burners! I love spider burners.",Monica,Joyful,14,1
+So you like it?,Peter,Joyful,14,2
+"Oh, it is sooo perfect. Thank you so much.",Monica,Joyful,14,3
+"Oh, you're welcome.",Peter,Joyful,14,4
+Did you just smell my hair?,Monica,Scared,14,5
+"Nooo. Uh-huh, no way. What? No.",Peter,Scared,14,6
+Oh God.,Monica,Scared,14,7
+What?,Peter,Scared,14,8
+You still have feelings for me don't you?,Monica,Scared,14,9
+"Now, nooo! I'm just excited about the restaurant, that's all.",Peter,Joyful,14,10
+Pete.,Monica,Powerful,14,11
+"Okay, I love you. Is that so bad?",Peter,Joyful,14,12
+"No, it's not bad. It's not bad at all. It's-it's really nice.",Monica,Joyful,14,13
+"Look, the only who stands to get hurt is me. And I'm okay with that.",Peter,Peaceful,14,14
+"You may be okay about getting hurt, but I am not okay with being the one who hurts you. That's why I can't take this job.",Monica,Joyful,14,15
+What?,Peter,Neutral,14,16
+"And well, we probably shouldn't see each other anymore. I'm sorry.",Monica,Sad,14,17
+"Okay, yeah. I mean... If that's, if that's really what you want, okay.",Peter,Sad,14,18
+"Okay, bye.",Monica,Neutral,14,19
+I'm sorry things didn't work out...,Peter,Sad,14,21
+"All right shut up for a second and let me just see something. Oh, wow!",Monica,Peaceful,14,22
+What 'cha doing?,Joey,Joyful,16,1
+Having a swim.,Chandler,Peaceful,16,2
+What about the chick?,Joey,Neutral,16,3
+Chicks don't swim.,Chandler,Peaceful,16,4
+Are you sure?,Joey,Scared,16,5
+I don't know. Should we try it?,Chandler,Joyful,16,6
+Sure.,Joey,Joyful,16,7
+"See, I told you they don't swim.",Chandler,Neutral,16,9
+Wait. Give him a minute.,Joey,Peaceful,16,10
+"Noo! Oh, it's okay, it's okay, baby, baby, baby.",Chandler,Scared,16,11
+Hi!,Ross,Joyful,1,1
+Hi!,Bonnie,Joyful,1,2
+Rachel was just helping me out. My head got all sunburned.,Bonnie,Neutral,1,3
+Awww.,Ross,Peaceful,1,4
+Thanks a million.,Bonnie,Neutral,1,5
+"Oh, you're welcome a million.",Rachel,Peaceful,1,6
+"Okay, I'll see you in our room.",Bonnie,Neutral,1,7
+Yeah.,Ross,Peaceful,1,8
+Oh my God.,Rachel,Scared,1,9
+I know.,Ross,Neutral,1,10
+"Okay, I gotta go.",Ross,Scared,1,12
+Whoa! What?! Why?!,Rachel,Scared,1,13
+"Well, I-I gotta go break up with Bonnie.",Ross,Powerful,1,14
+Here?! Now?!,Rachel,Scared,1,15
+"Well, yeah. I can't-I can't stay here all night, and if I go in there she's-she's gonna wanna... do stuff.",Ross,Scared,1,16
+"Well, can't you tell her that you are not in the mood?",Rachel,Neutral,1,17
+"No, she likes that. Yeah. Faking sleep doesn't work either, I can't tell you how many mornings I woke up with her...",Ross,Scared,1,18
+Whoa-ho.,Rachel,Scared,1,19
+"Whoa-oh, okay! Yeah, why am I telling you that?",Ross,Scared,1,20
+I don't know.,Rachel,Neutral,1,21
+"Yeah, yeah. It wasn't every morning.",Ross,Neutral,1,23
+"Oh, making it worse!",Rachel,Mad,1,24
+Okay.,Ross,Neutral,1,25
+So I guess you'd like to know how it all happened.,Phoebe,Powerful,2,1
+"I-I mean I, well I think I can figure it out. I guess y'know I was born, and everyone started lying their asses off!",Phoebe,Powerful,2,2
+"Noo! No! It wasn't like that I... Remember how I told you how Lily, Frank, and I we were, we were close. Well, we were, we were very close.",Phoebe,Sad,2,3
+How close?,Phoebe,Scared,2,4
+"Well, the-the three of us we were, kind of umm, a couple.",Phoebe,Powerful,2,5
+I don't even know how that would work!,Phoebe,Powerful,2,6
+"Well, we were...",Phoebe,Joyful,2,7
+I'm not asking!,Phoebe,Peaceful,2,8
+"Well, any how, some how I got pregnant, and, and I was scared. I was stupid and sellfish, and I was 18 years old. I mean, you remember what it's like to be eighteen years old?",Phoebe,Scared,2,9
+"Yeah. Let's see, my had Mom killed herself, and my Dad had run off, and I was living in a Gremlin with a guy named Cindy who talked to his hand.",Phoebe,Mad,2,10
+"Well, I'm so sorry. I thought I was leaving you with the best parents in the world, I didn't even hear about your Mom and Dad til a couple of years ago, and by then you were already grown up. I don't know, you're here, and I would, I would really, I would like to get to know you.",Phoebe,Sad,2,11
+"Yeah, well, everybody does! I'm a really cool person. And y'know you had 29 years to find that out, but you didn't even try! Y'know what, you walked out on me, and I'm just, I'm gonna do the same thing to you.",Phoebe,Powerful,2,12
+Wait!,Phoebe,Sad,2,13
+I don't ever want to see you again!,Phoebe,Sad,2,14
+"Umm, where's my purse?",Phoebe,Scared,2,16
+Shoot! We're out of soda.,Monica,Mad,3,1
+"Oh, I'll go out and get you some.",Chandler,Joyful,3,2
+Really?!,Monica,Scared,3,3
+"Nope! Because I'm not your boyfriend. Hey Pheebs, how did it go?",Chandler,Scared,3,4
+"Well, umm, my Mom's friend, Phoebe, is actually my birth Mom.",Phoebe,Peaceful,3,5
+I found a dried up seashores.,Chandler,Neutral,3,7
+"Sweety, what are you talking about?",Monica,Scared,3,8
+"Oh, my new Mom, who-who's a big, fat abandoner!",Phoebe,Peaceful,3,9
+"Whoa, wait, Pheebs, wait a second! Don't you wanna stay here and talk about it?",Joey,Peaceful,3,10
+"No. I'm just, I wanna, I need to be alone.",Phoebe,Powerful,3,11
+Monica!,Phoebe,Joyful,3,13
+Oh.,Monica,Neutral,3,14
+It's over.,Ross,Mad,4,1
+"Oh, was it awful?",Rachel,Joyful,4,2
+"Well, it was loong. I didn't even realise how late it was, until I noticed the 5 o'clock shadow on her head. Anyway, she didn't want to stay. I called a cab; she just left.",Ross,Sad,4,3
+I wrote you a letter.,Rachel,Neutral,4,5
+Ohh! Thank you! I like mail.,Ross,Joyful,4,6
+"It's just some things I've been thinking about. Some things about us, and before we can even think about the two of us getting back together, I just need to know how you feel about this stuff.",Rachel,Peaceful,4,7
+"Okay. Wow, it's-it's 5:30 in the morning. So, I'd better get cracking on this baby.",Ross,Joyful,4,8
+"Well, I'll be waiting for you, just come up when you're done.",Rachel,Neutral,4,9
+"Okay, I'll be up in, 18 pages. Front and back. Very exciting.",Ross,Joyful,4,10
+Oh. Oh-oh.,Ross,Neutral,5,1
+Hey! What happened to you? Why didn't you come up?,Rachel,Powerful,5,2
+Done!,Ross,Scared,5,3
+You just finished?,Rachel,Mad,5,4
+"Well, I wanted to be thorough. I mean this-this is clearly very, very important to you, to us! And so I wanted to read every word carefully, twice!",Ross,Scared,5,5
+"So umm, does it?",Rachel,Scared,5,6
+I'm sorry.,Ross,Scared,5,7
+Does it?,Rachel,Scared,5,8
+"Does it? Does it? Yeah, I wanted to give that whole 'Does it?' part just another glance.",Ross,Scared,5,9
+"What are you talking about, Ross, you just said that you read it twice! Look, y'know what, either it does or it doesn't, and if you have to even think about it...",Rachel,Mad,5,10
+"No, Rach, no. I don't, I don't, I don't have to think about it, in fact, I've decided, I've decided that, that it.......does.",Ross,Scared,5,11
+Are you sure?,Rachel,Joyful,5,13
+"Oh, sure! I'm sure.",Ross,Scared,5,14
+I know.,Rachel,Joyful,5,15
+"All right, there's a nuclear holocaust, I'm the last man on Earth. Would you go out with me?",Chandler,Joyful,6,1
+Ennnh.,Monica,Neutral,6,2
+I've got canned goods.,Chandler,Neutral,6,3
+"Hey, you guys! Take a look at this! Check this baby out, dug me a hole!",Joey,Peaceful,6,4
+"Excellent hole, Joe.",Chandler,Neutral,6,5
+Oh no! No!! My hole!!,Joey,Powerful,6,7
+Ow!! Ow!!!,Monica,Powerful,6,8
+What?! What?!! What is it?!,Joey,Scared,6,9
+"Jellyfish sting! Oh, it hurts! It hurts!! It hurts!!",Monica,Neutral,6,10
+"Well, can we help?! You want us to take you back to the house?!",Chandler,Powerful,6,11
+It's like two miles!,Monica,Peaceful,6,12
+"Yeah, and I'm a little tired from digging the hole.",Joey,Peaceful,6,13
+Oh damn the jellyfish. Damn all the jellyfish!,Monica,Neutral,6,14
+We've got to do something!,Chandler,Peaceful,6,15
+"Well, there's really only one thing you can do.",Joey,Powerful,6,16
+What?! What is it?!,Monica,Peaceful,6,17
+You're gonna have to pee on it.,Joey,Neutral,6,18
+What?!! Gross!!,Monica,Neutral,6,19
+"Don't blame me, I saw it on The Discovery Channel.",Joey,Peaceful,6,20
+"Y'know what, he's right. There's something like uh, ammonia in that, that like kills the pain.",Chandler,Powerful,6,21
+Well forget it! It doesn't hurt that baaad!!!!,Monica,Neutral,6,22
+If you want some privacy you can use my hole.,Joey,Neutral,6,23
+"Well, I'm ready to get the hell out of here! Oh. Are you? Are you?!! Ohh! That's so great!! Ooh, not for Bonnie. But for you, yay! Ohh.",Phoebe,Joyful,7,1
+Hey!,Ross,Peaceful,7,3
+How was the beach?,Rachel,Peaceful,7,4
+"Nothing, I don't know.",Monica,Sad,7,5
+What happened?,Ross,Neutral,7,6
+Nothing. I'm gonna take a shower.,Monica,Neutral,7,7
+Me too!!,Chandler,Neutral,7,8
+Me too.,Joey,Neutral,7,9
+"Okay, I'm gonna put this in the car.",Phoebe,Peaceful,7,10
+"Ooh, I have to go pack. It really does?",Rachel,Powerful,7,11
+It does. It really and truly does.,Ross,Scared,7,12
+It so does not!!!,Ross,Powerful,7,14
+"She wants me to take responsibility for everything that went wrong in our relationship. I mean she goes on for five pages about, about how I was unfaithful to her! WE WERE ON A BREAK!!!!!",Ross,Mad,8,1
+"Oh my God! If you say that one more time, I'm gonna break up with you!",Chandler,Mad,8,2
+"Fine! Fine! But this break-up was not all my fault, and she, she says here, ""If you accept full responsibility..."" Full responsibility! ""...I can begin to trust you again. Does that seem like something you can do. Does it?!!""",Ross,Mad,8,3
+No?,Joey,Neutral,8,4
+"Look, Ross, you have what you want, you're back with Rachel. If you bring this up now you're gonna wreck the best thing that even happened to you.",Chandler,Mad,8,5
+"Yeah, I know. I mean, no, you're right. Yeah I guess I'll let it go. But you-you understand how-how hard it is to forget about this.",Ross,Neutral,8,6
+"Sure, it's hard to forget! But that doesn't mean you have to talk about it! A lot of things happened on that trip that we should never, ever talk about.",Joey,Mad,8,7
+What the hell happened on that beach?!,Ross,Mad,8,8
+"It's between us and the sea, Ross!",Joey,Mad,8,9
+"Hi, Ursula.",Phoebe,Neutral,9,1
+Hey!,Ursula,Joyful,9,2
+"Okay, well umm, I know that we haven't talked in a long time, but umm okay, our Mom is not our birth Mom. This-this other lady is our birth Mom.",Phoebe,Scared,9,3
+"Right, okay, the one that lives in Montuak, umm-hmm.",Ursula,Powerful,9,4
+You know her?!,Phoebe,Mad,9,5
+"No, I umm, I read about her in Mom's suicide note.",Ursula,Powerful,9,6
+"There-there was a suicide note?! Well, do you still have it?",Phoebe,Mad,9,7
+Hang on.,Ursula,Mad,9,8
+I can't believe you didn't tell me there was a suicide note!,Phoebe,Mad,9,9
+Yeah. So how have you been doing?,Ursula,Neutral,9,10
+"I, umm, shut up!",Phoebe,Mad,9,11
+"""Good-bye Phoebe and Ursula. I'll miss you. P.S. Your Mom lives in Montauk."" You just wrote this!",Phoebe,Mad,9,13
+"Well, it's pretty much the gist. Well, except for the poem. You read the poem, right?",Ursula,Powerful,9,14
+Noooo!!,Phoebe,Mad,9,15
+"All right, hang on!",Ursula,Powerful,9,16
+"""...fuchsia and mauvvve. Those are the 66 colours of my bedroommmm."" Thank you, thank you. Ohh, and I invite you to count the colours in your bedroom. Except for you. You go away.",Phoebe,Joyful,11,1
+"I'll go in a second, I-I just wanted to tell you that there hasn't been a day where I didn't regret giving you up.",Phoebe,Peaceful,11,2
+"Okay, bye.",Phoebe,Neutral,11,3
+"No, I'm not done. I-I-I just want you to know that I, the reason I didn't look you up was, well I was afraid that you'd react, just well like, the way, the way you're reacting right now, and can't we just, y'know, start from here?",Phoebe,Sad,11,4
+No.,Phoebe,Neutral,11,5
+"Sorry. But just one last thing. Y'know you came looking for family. I'm family, I'm it. Now, now I'm done.",Phoebe,Powerful,11,6
+"But, it's not like we're losing anything. Y'know?",Phoebe,Neutral,11,7
+"Yeah, I guess you're right.",Phoebe,Peaceful,11,8
+It's not like we-we know each other or anything. Or that have anything in common.,Phoebe,Sad,11,9
+"Well, I don't know. I mean it's not like we don't have anything in common. I mean I like uh, pizza.",Phoebe,Joyful,11,10
+I-I like pizza!,Phoebe,Joyful,11,11
+"You do?! Wait, I like umm, the Beetles.",Phoebe,Powerful,11,12
+"Oh my God, so do I!",Phoebe,Powerful,11,13
+"I knew it, wow!!",Phoebe,Powerful,11,14
+"Wait-wait-wait, wait! Puppies. Cute or ugly?",Phoebe,Scared,11,15
+"Ohh, so cute.",Phoebe,Peaceful,11,16
+"Uh-huh, well! But umm, still I'm-I'm mad at you.",Phoebe,Mad,11,17
+I know. I'm mad at me too.,Phoebe,Mad,11,18
+"Well umm, do you wanna get something to eat? I'm kinda hungry.",Phoebe,Scared,11,19
+Hey! Me too!,Phoebe,Powerful,11,20
+"All right, stop it. Now you're just doing it to freak me out.",Phoebe,Neutral,11,21
+"Oh-hooo, I missed you.",Rachel,Sad,12,1
+I missed you too.,Ross,Sad,12,2
+"Ooh, I was soo nervous about that letter. But the way you owned up to everything, it just showed me how much you've grown. Y'know?",Rachel,Scared,12,3
+I suppose.,Ross,Powerful,12,4
+"You have! Ross, you should give yourself credit. I mean my Mom never thought this would work out. It was all, ""Once a cheater, always a cheater.""",Rachel,Powerful,12,5
+Umm-hmm.,Ross,Mad,12,6
+"Ooh, I just wish we hadn't lost those four months, but if time was what you needed just to gain a little perspective...",Rachel,Powerful,12,7
+WE WERE ON A BREAK!!!!!!!,Ross,Powerful,12,9
+Coffee house?,Chandler,Powerful,12,10
+You bet.,Monica,Powerful,12,11
+"And for the record, it took two people to break up this relationship!!",Ross,Powerful,12,13
+"Yeah! You and that girl from that copy place, which yesterday you took full responsibility for!!",Rachel,Powerful,12,14
+I didn't know what I was taking full responsibility for! Okay?! I didn't finish the whole letter!,Ross,Powerful,12,15
+What?!!,Rachel,Scared,12,16
+I fell asleep!,Ross,Powerful,12,17
+You fell asleep?!,Rachel,Powerful,12,18
+"It was 5:30 in the morning, and you had rambled on for 18 pages. Front and back!! Oh-oh-oh, and by the way, Y-O-U-apostrophe-R-E means 'you are,' Y-O-U-R means 'your!'",Ross,Powerful,12,19
+Y'know I can't believe I even thought about getting back together again! We are so over!!,Rachel,Joyful,12,20
+FINE BY ME!!,Ross,Joyful,12,21
+"Oh, oh, and hey-hey-hey, those little spelling tips will come in handy when you're at home on Saturday nights playing Scrabble with Monica!!",Rachel,Powerful,12,22
+Hey!!,Monica,Sad,12,23
+Sorry!! I just feel bad about all that sleep you're gonna miss wishing you were with me!,Rachel,Powerful,12,24
+"Oh, no-no-no don't you worry about me falling asleep. I still have your letter!!!",Ross,Powerful,12,25
+"And hey! Just so you know, it's not that common! It doesn't happen to every guy! And it is a big deal!!",Rachel,Peaceful,12,26
+I KNEW IT!!!!,Chandler,Peaceful,12,27
+Gin.,Monica,Neutral,13,1
+"We were playing Gin? Y'know if we were a couple, we could play this game naked.",Chandler,Joyful,13,2
+Will you stop!,Monica,Mad,13,3
+Okay. All right.,Chandler,Powerful,13,4
+"Okay, all right, I think you're great, I think you're sweet, and you're smart, and I love you. But you will always be the guy who peed on me.",Monica,Powerful,13,5
+Gin.,Monica,Joyful,14,0
+"We were playing Gin? Y'know if we were a couple, we could play this game naked.",Chandler,Joyful,14,1
+Will you stop!,Monica,Scared,14,2
+Okay. All right.,Chandler,Neutral,14,3
+"Okay, all right, I think you're great, I think you're sweet, and you're smart, and I love you. But you will always be the guy who peed on me.",Monica,Peaceful,14,4
+"So, thank you for the delicious dinner.",Cheryl,Joyful,1,1
+You're welcome for a delicious dinner.,Ross,Powerful,1,2
+Hey what are you guys looking at?,Phoebe,Neutral,1,4
+Ross and the most beautiful girl in the world.,Chandler,Scared,1,5
+"Yeah, come to papa.",Phoebe,Joyful,1,6
+I know!,Ross,Powerful,1,8
+"Probably the only time I'll ever say this, but did you see the ass on her?",Monica,Peaceful,1,9
+"Where did you, when did you, how did you... How did you get a girl like that?",Chandler,Joyful,1,10
+"Yeah, so what is she, like a... like a spokesmodel, or an aerobics instructor, what?",Rachel,Joyful,1,11
+"Actually she's a paleontology doctoral candidate, specializing in the centazoic era.",Ross,Powerful,1,12
+"Okay, but that's, like, the easiest era.",Chandler,Powerful,1,13
+"I've seen her at work, but I always figured, ah-huh? But, uh, I made her dinner. We had a great time. And we're going out again tomorrow.",Ross,Powerful,1,14
+Well maybe she and her friends are just having a contest to see who can bring home the biggest geek.,Rachel,Peaceful,1,15
+Fine by me; hope she wins.,Ross,Joyful,1,16
+Huh...,Ross,Joyful,3,1
+"Um, would you like to come in?",Cheryl,Peaceful,3,2
+Did homo-erectus hunt with wooden tools?,Ross,Joyful,3,3
+According to recent findings!,Cheryl,Neutral,3,4
+Here Mitzi! Here Mitzi!,Cheryl,Scared,3,6
+Mitzi is.....,Ross,Scared,3,7
+"My hamster. I hope she's okay, I haven't seen her in a while. Have a seat.",Cheryl,Peaceful,3,8
+"Uh... Oh hey, do you, uh ...do you have any, um, Cinnamon Fruit Toasties?",Ross,Scared,3,9
+What?,Cheryl,Scared,3,10
+"Well, I do! Why don't we go back to my place, light a couple of candles, break open a box of Cinnamon Fruit Toasties, uh...",Ross,Scared,3,11
+I'd rather not.,Cheryl,Peaceful,3,12
+"Oh, yeah, why not?",Ross,Scared,3,13
+"Okay, um, don't take this the wrong way, but your place kinda has a weird smell.",Cheryl,Neutral,3,14
+"Oh, is everything in the car?",Monica,Neutral,4,1
+Yes. Did you settle the bill?,Phoebe,Neutral,4,2
+No. I hate this part.,Monica,Powerful,4,3
+"Oh, look what we almost left.",Phoebe,Peaceful,4,4
+"No, that's not mine.",Monica,Neutral,4,5
+"Oh, all right. Oh! Look what we almost took!",Phoebe,Joyful,4,6
+"Excuse me, Mrs. Burkart? Well, we're all cleaned up in the kitchen.",Monica,Mad,4,8
+"Oh, good. Thank you.",Mrs.,Joyful,4,9
+"Um, and, well there's the.. the the small matter of...",Monica,Neutral,4,10
+Dear?,Mrs.,Joyful,4,11
+Just the matter of ...payment?,Monica,Neutral,4,12
+Jack used to handle the finances!,Mrs.,Sad,4,13
+"But Mon, you have to get our money!",Phoebe,Neutral,6,1
+"Oh, Phoebe, she couldn't stop crying! With those thick glasses, her tears looked giant.",Monica,Sad,6,2
+"I know, it's tough. You know what the first thing I did after my mother's funeral was?",Phoebe,Peaceful,6,3
+What?,Monica,Neutral,6,4
+"Pay the caterer! Look, I've had a lot of jobs, okay, and there are some people who just always try to get out of paying. It's either, you know, ""that massage wasn't long enough, or, ""I don't recognize any of those songs,"" or, you know, ""these sombreros aren't big enough. Bad little white girl!""",Phoebe,Peaceful,6,5
+Okay. So what do you.... you think she's faking?,Monica,Sad,6,6
+"Well, it seems like there weren't any tears 'til you showed her the bill.",Phoebe,Peaceful,6,7
+"Phoebe, she sounded pretty upset to me.",Monica,Sad,6,8
+"You're a grand ol' flag, you're a high-flying flag, and forever in peace may you wave....",Mrs.,Joyful,6,10
+She seems fine now.,Phoebe,Peaceful,6,11
+...emblem of the land I love. The home of....,Mrs.,Joyful,6,12
+"So, you just left? Her place was really that bad?",Joey,Powerful,7,1
+You know how you throw your jacket on a chair at the end of the day?,Ross,Powerful,7,2
+Yeah.,Joey,Neutral,7,3
+"Well, like that, only instead of a chair, it's a pile of garbage. And instead of a jacket, it's a pile of garbage. And instead of the end of the day, it's the end of time, and garbage is all that has survived! Here.",Ross,Powerful,7,4
+"Wow. Thanks. So, uh, what happened?",Joey,Joyful,7,5
+What do you mean? Nothing happened! I had to get out of there.,Ross,Scared,7,6
+"All right, so... next time, you take her to your place.",Joey,Scared,7,7
+"No, I tried that. She says it has a weird smell.",Ross,Powerful,7,8
+What kind of smell?,Joey,Powerful,7,9
+I don't know. Soap?,Ross,Scared,7,10
+"All right, listen, Ross... you like this girl, right?",Joey,Scared,7,11
+Yeah.,Ross,Peaceful,7,12
+"You wanna see her again, right?",Joey,Sad,7,13
+Yeah.,Ross,Peaceful,7,14
+So you're gonna have to do it in the mess!,Joey,Powerful,7,15
+"Yeah, okay you're right.",Ross,Joyful,7,16
+Yeah.,Joey,Neutral,7,17
+"I mean, uh, who... who cares about a little sloppiness?",Ross,Sad,7,18
+Yeah!,Joey,Peaceful,7,19
+"It's, uh... it's endearing, really.",Ross,Peaceful,7,20
+All right! Now you go get that beautiful pig! Oink!,Joey,Peaceful,7,21
+"Okay, all right. I just spent the entire afternoon looking for a present for Kathy that would be better than the rabbit.",Chandler,Peaceful,8,1
+Any luck?,Rachel,Joyful,8,2
+"Oh, yeah. Yeah, I found this great place called ""Invisible things for Kathy."" Can you give me a hand with all this stuff?",Chandler,Powerful,8,3
+"All right, look. Why don't you just return the book, let Joey give her the clock pen, and you give her something worse than that. Like... a regular pen.",Rachel,Powerful,8,4
+"She's really going to love this, you know? The bottom line is I want her to have it, even if I don't get to be the one who gives it to her.",Chandler,Powerful,8,5
+"Aw, honey, that's so sweet.",Rachel,Joyful,8,6
+Yeah? You don't think it's just pathetic?,Chandler,Peaceful,8,7
+Oh! Pathetic!,Rachel,Powerful,8,8
+Hey! I'm meeting Kathy in ten minutes! I've been looking all over for you!,Joey,Powerful,8,9
+Where?,Chandler,Powerful,8,10
+"Our place, the hall! I...",Joey,Joyful,8,11
+I got something for her. It's a book!,Chandler,Joyful,8,12
+A book? Is it like a book that's also a safe?,Joey,Neutral,8,13
+"No, it's a book that's just a book, okay? It's an early edition of the Velveteen Rabbit. It was her favorite book as a kid. So, uh, just... let me know if she likes it, okay?",Chandler,Neutral,8,14
+"You got it. Thanks man. Thanks for doing this, I owe you one. Oh, hey! There wasn't any change from that twenty, was there?",Joey,Powerful,8,15
+"No, it came out to an even twenty.",Chandler,Neutral,8,16
+Wow. That's almost as much as a new book.,Joey,Scared,8,17
+"Jeepers, creepers, where'd you get those peepers? Jeepers, creepers, where'd you get those eyes?",Mrs.,Joyful,9,1
+"You didn't get the money, did you?",Phoebe,Powerful,9,3
+"Maybe I can try at intermission? Phoebe, come on... you know what? Let's just go!",Monica,Joyful,9,4
+"No! Hey, we're not leaving until we get paid! I don't know who she thinks she is! Enough is enough! Hey, widow?",Phoebe,Powerful,9,5
+Come on along and listen to...,Mrs.,Scared,9,6
+"Okay, Widow!",Phoebe,Scared,9,7
+...the lullabye of...,Mrs.,Sad,9,8
+"Excuse me. Excuse me! Thanks. Um, clearly this is a very, very hard time for you. Um, but, um, we provided a service, and we deserve to be paid because you ate that service, and, um, we are not leaving here until we're paid every penny. 'Cause you know what, lady? We're part time caterers, and we have no place else to go.",Phoebe,Scared,9,9
+All right. I'll get my bag.,Mrs.,Mad,9,10
+Good.,Phoebe,Joyful,9,11
+I'm gonna leave some cards here. Please think of us for you next event.,Monica,Peaceful,9,12
+So you want to come inside?,Cheryl,Neutral,10,1
+Yes. Yes I do.,Ross,Scared,10,2
+I'll be right back. Make yourself comfortable.,Cheryl,Neutral,10,3
+Guess who?,Cheryl,Joyful,10,4
+Department of Sanitation?,Ross,Joyful,10,5
+It's me!,Cheryl,Joyful,10,6
+Oh! Ah. Aw!,Ross,Joyful,10,7
+What?,Cheryl,Neutral,10,8
+"Ah, Cheryl!",Ross,Scared,10,9
+"Oh, Ross!",Cheryl,Joyful,10,10
+Wait! No! No! It's my hamster! It's Mitzi!,Cheryl,Scared,10,12
+"Oh my god! I'm so sorry, Cheryl. I must have freaked out.",Ross,Scared,10,13
+"Oh, thank god, it's not Mitzi. It's just a rat.",Cheryl,Peaceful,10,14
+I did it! Oh! I finished it! I did it all by myself! And there's nobody to hug!,Rachel,Joyful,11,1
+Move!,Gunther,Powerful,11,3
+"Hey! Hey, you guys, I finished the crossword all by myself! Hug me!",Rachel,Joyful,11,5
+Uh... yay!,Phoebe,Joyful,11,7
+Thanks!,Rachel,Joyful,11,8
+"Oh, that's great! Congratulations!",Monica,Joyful,11,9
+"Thank you! Hey, how'd the catering go?",Rachel,Joyful,11,10
+"Oh, it was great! The widow wouldn't pay, so Phoebe yelled at her 'til she did.",Monica,Joyful,11,11
+Yeah. I'm a hard ass.,Phoebe,Mad,11,12
+And I'm a wuss. And we should be partners.,Monica,Mad,11,13
+Yeah. Hard Ass and Wuss. We could fight crime!,Phoebe,Joyful,11,14
+"Wait a minute, Phoebe! We should be partners. We should be catering partners. I mean, think about it! You're not working right now, and we have such a great time together!",Monica,Joyful,11,15
+Okay!,Phoebe,Joyful,11,16
+I can cook and you can take care of the money.,Monica,Joyful,11,17
+Yeah. Oh! It'll be like I have a wife in the fifties!,Phoebe,Joyful,11,18
+Aah!,Both,Joyful,11,19
+Hey!,Ross,Joyful,1,1
+Hey!,Chandler,Joyful,1,2
+"I'm sorry I'm late, did I miss anything?",Ross,Neutral,1,3
+Joey stuffing 15 Oreos in his mouth.,Phoebe,Joyful,1,4
+15? Your personal best!,Ross,Peaceful,1,5
+Where were you?,Phoebe,Powerful,1,6
+"Oh, on a date. Yeah, I met this girl on the train going to a museum upstate.",Ross,Peaceful,1,7
+"Oh, yeah! How did you meet her?",Chandler,Peaceful,1,9
+"Oh, which museum?",Phoebe,Powerful,1,10
+"No, answer his.",Phoebe,Peaceful,1,11
+"Okay, it was just me and her at the back of the train, and I sat near the door, so she'd have to pass by me if she wanted to switch cars. She was totally at my mercy.",Ross,Joyful,1,12
+Were you so late because you were burring this woman?,Chandler,Neutral,1,13
+"No, I'm getting back down 'cause she lives in Poughkeepsie. She seems really great, but she's like totally great, but she lives two and a half hours away.",Ross,Peaceful,1,14
+How can she be great if she's from Poughkeepsie? That joke would've killed in Albany.,Chandler,Peaceful,1,15
+"Done! I did it! Heh, who's stupid now?",Joey,Powerful,1,16
+"I say, Drew! Are you seeing anybody right now? Og-ee-op, I'm not asking for me, I'm... I mean... No, I'm-I'm not gay, I'm not asking you out. I'm not-I'm not-I'm not gay!",Chandler,Scared,3,1
+I didn't think you were gay. I do now.,Drew,Peaceful,3,2
+"See my friend-my friend, Rachel, she wants to be set up.",Chandler,Scared,3,3
+"Ahh, I just got out of a big relationship, I'm not looking for any thing serious.",Drew,Scared,3,4
+"Oh, y'know what, that might be okay even if it was just kind of a fling, that might be all right with Rachel.",Chandler,Neutral,3,5
+"Whoa-whoa-whoa-whoa! Is this, hot Rachel, that you took to the Christmas party, Rachel?",Mike,Joyful,3,6
+"Oh, by the way, that is her full name.",Chandler,Neutral,3,7
+Oh wow! I'm free for her!,Mike,Joyful,3,8
+"Oh, wait a second! I didn't say I wasn't free!",Drew,Neutral,3,9
+"Hey, Chandler, why don't we talk this over at the Ranger game tomorrow?",Mike,Neutral,3,10
+"Hold on, y'know I just got a box of Cubans, maybe I bring them by your office around uh, five?",Drew,Powerful,3,11
+"Oh well, that's uh, a little later than I uh, generally care to stay, but sure!",Chandler,Joyful,3,12
+"Maybe, before the game we could enjoy some eight year old some small batch Basel Hadens.",Mike,Joyful,3,13
+"Well, I don't really know what that is, but let's!!",Chandler,Joyful,3,14
+"Oh, wow! I should get going. I-I got a date tonight.",Ross,Joyful,5,1
+Oh yeah! With who?,Chandler,Scared,5,2
+You know that girl I told you about who lives up in Poughkeepsie?,Ross,Peaceful,5,3
+Yeah.,Chandler,Powerful,5,4
+"Not her. Yeah, this is someone else I meet, and I-I can't decide between the two of them. Y'know the one from Poughkeepsie, even though she's a two hour train ride away, is really pretty, really smart, and-and a lot of fun. But this other girl, well, she lives right uptown. Y'know she's, well she's-she's just as pretty, I guess she's smart, she's not fun.",Ross,Peaceful,5,5
+"If she's no fun, why do you want to date her at all?",Phoebe,Joyful,5,6
+"Well, I-I want to give her another chance, y'know? She lives so close. And, at the end of the date, the other time, she-she said something that was-if she was kidding was very funny. On the other hand, if she wasn't kidding, she's not fun, she's stupid, and kind of a racist.",Ross,Peaceful,5,7
+Hey!,Joey,Joyful,5,8
+Hey!,Ross,Joyful,5,9
+"Hey, man!",Chandler,Peaceful,5,10
+"Hey! Ooh, how was your first day working at the restaurant?",Phoebe,Peaceful,5,11
+Damn!,Joey,Powerful,5,12
+Hey.,Joey,Neutral,6,1
+Hey.,Monica,Neutral,6,2
+"Hey, what happened to your fancy chef's jacket?",Joey,Neutral,6,3
+"They baked it. I can't take this anymore. I'm gonna call a meeting tonight, I'm gonna fire you tonight.",Monica,Mad,6,4
+You got it! Oh-oh!,Joey,Scared,6,5
+What are you doing?!,Monica,Mad,6,6
+It's still a tiny bit on fire there.,Joey,Scared,6,7
+Thanks. I think you got it!,Monica,Neutral,6,8
+Chandler!! You have the best taste in men!,Rachel,Joyful,7,1
+"Well, like father, like son.",Chandler,Joyful,7,2
+Patrick and I had such a great time last night! I mean I think this could maybe turn into something serious.,Rachel,Joyful,7,3
+Really?! I-I thought you weren't looking for something serious? I thought you were looking for some kind of a fling.,Chandler,Joyful,7,4
+"Well, y'know, possibly. You didn't tell him that, though? Right?",Rachel,Scared,7,5
+"Ummmmmmmm, no.",Chandler,Scared,7,6
+You told this guy that I was looking for a fling?! You don't tell the guy that!,Rachel,Mad,7,7
+Why not?! I'd be thrilled if I heard that some hot girl was just looking to get-oh I see.,Chandler,Neutral,7,8
+"Oh, between you telling him that I wanted to have a fling and me putting out on the first date-oh, he's so gonna get the wrong idea.",Rachel,Mad,7,9
+"Hey, Joey, could you pass the cheese?",Monica,Joyful,8,1
+"Yeah. Listen uh, I'd prefer it if you didn't call me Joey. Since I don't know anyone here, I thought it'd be cool to try out a cool work nickname.",Joey,Scared,8,2
+"Hey, dragon! Here's your tips from Monday and Tuesday.",A,Peaceful,8,3
+There's like-there's like 300 bucks in this one!,Joey,Joyful,8,4
+"Yeah, people get pretty generous around the holidays. And it never hurts to wear tight trousers.",The,Scared,8,5
+"Okay. Could the waiters gather around to hear tonight's specials? Okay, first there is a Chilean Sea Bass prepared with a Mango relish on a bag-Why is nobody writing these down?",Monica,Mad,8,6
+Because we can remember them.,The,Neutral,8,7
+Because your all gonna make up fake specials and make me cook them like you did the other night?,Monica,Mad,8,8
+"Well, sure, that too.",The,Powerful,8,9
+"Okay, forget the specials for a minute. Umm, all right here's the thing, for the last two weeks I have umm, tried really hard to create a positive atmosphere...",Monica,Peaceful,8,10
+Can't hear you!,The,Powerful,8,11
+"A positive atmosphere! But I-I-I have had it up to here. From now on, it is gonna be my way, or the highway! All right? Does anybody have a problem with that?!! Hey new guy! I said, does anybody have a problem with that?!",Monica,Mad,8,12
+No ma'am.,Joey,Joyful,8,13
+"Hey! He has a name, it's Dragon. Do you wanna know your name? Check your hat. We did the hat right?",The,Neutral,8,14
+What the hell happened?!,Monica,Scared,9,1
+"I am so-so-so sorry. I was gonna do it! Really! But I was standing there with 327 dollars in one hand and 238 dollars in the other hand, and I was thinking, ""Wow! It's been a long time since I had... 327 + 238 dollars!""",Joey,Sad,9,2
+"Joey, we had a deal. That-that's why you're here! I've got to fire you!",Monica,Mad,9,3
+"And I gotta pay rent! Look, how-how about this? You don't fire me, instead I stay here, I gain their trust, and they'll start listening to all the nice things I've been saying about you.",Joey,Scared,9,4
+What kinda things have you been saying?,Monica,Neutral,9,5
+"Well nothing yet, they really hate you and I want to fit in.",Joey,Neutral,9,6
+"Happy, happy Chanukah, Chandler and Monica. Very merry...",Phoebe,Joyful,10,1
+"Oh, y'know, y'know what Pheebs?",Chandler,Neutral,10,2
+What?,Phoebe,Neutral,10,3
+"I'm not Jewish, so...",Chandler,Neutral,10,4
+"So! Ross doesn't really decorate his tree with floss, but you don't hear him complaining do you? God!",Phoebe,Neutral,10,5
+Bad dream?,Chandler,Neutral,10,6
+I wasn't sleeping.,Ross,Neutral,10,7
+"Oh yeah, then uh, what was Phoebe's song about?",Chandler,Neutral,10,8
+"The one with the cat. I gotta go, I've got another date.",Ross,Neutral,10,9
+"So, did you pick one yet?",Phoebe,Neutral,10,10
+"No, it turns out that the one from uptown was making a joke. But it was a different joke than I thought-it wasn't that funny. So I'm still torn.",Ross,Neutral,10,11
+"Well look, you don't really like the one from uptown and you're too exhausted from dating the one up in Poughkeepsie, so I say you just end them both. Okay? You take a train up to Poughkeepsie and break up with her, and on your way back you break up with uptown. And then by the time you get home tonight, you're done!",Phoebe,Neutral,10,12
+"Y'know, you're right. Thank you.",Ross,Neutral,10,13
+"Umm, well I had a similar problem when I lived in Prague.",Phoebe,Neutral,10,14
+Prague?,Chandler,Neutral,10,15
+There's sooo much you don't know.,Phoebe,Neutral,10,16
+"Chandler! Patrick just uh, ended things with me. Did you or did you not tell him that I was looking for a serious relationship?",Rachel,Neutral,11,1
+I did! I absolutely did!,Chandler,Scared,11,2
+You idiot!!,Rachel,Mad,11,3
+"I'm sure you're right, but why?",Chandler,Scared,11,4
+You don't tell a guy that you're looking for a serious relationship! You don't tell the guy that! Now you scared him away!,Rachel,Mad,11,5
+"Oh, man. I'm sorry, I'm so-so sorry.",Chandler,Sad,11,6
+"Y'know, you should never be allowed to talk to people!",Rachel,Mad,11,7
+I know! I know!,Chandler,Sad,11,8
+"Oh! See just I'm right back where I started! Aww, this sucks! Being alone, sucks!",Rachel,Mad,11,9
+"Well, y'know, you're-you're gonna meet somebody! You're a great catch! Y'know when I was telling all those guys about you, I didn't have to lie once.",Chandler,Powerful,11,10
+Really?,Rachel,Joyful,11,11
+"Yeah! You graduated Magma Ku Laude, right?",Chandler,Neutral,11,12
+No.,Rachel,Neutral,11,13
+"Oh, it doesn't matter. Hey, y'know what, I've got two tickets to tonight's Rangers game, you wanna come with me?",Chandler,Peaceful,11,14
+Cute guys in little shorts? Sure.,Rachel,Joyful,11,15
+"Well, actually it's a hockey team, so it's angry Canadians with no teeth.",Chandler,Joyful,11,16
+Well that sounds fun too.,Rachel,Joyful,11,17
+Have you ever been with a woman?,Chandler,Peaceful,11,19
+"What?! Chandler, what is the matter with you?!",Rachel,Mad,11,20
+So there is no good time to ask that question.,Chandler,Scared,11,21
+I need more swordfish. Can you get me some more swordfish?,Monica,Powerful,13,1
+I don't speak English.,Kitchen,Mad,13,2
+You did a minute ago!,Monica,Powerful,13,3
+"Well, I don't know what to tell ya!",Kitchen,Mad,13,4
+Fine!,Monica,Mad,13,5
+"Okay! Very funny! Somebody let me out please?! Come on, I'm cold! And covered in marinara sauce! Come on! Let me out!",Monica,Mad,13,7
+"You found that handle, did ya?",The,Powerful,13,8
+That's not funny.,Monica,Mad,13,9
+Well that's not true.,The,Powerful,13,10
+"I'm a good person. And I'm a good chef, and I don't deserve to have marinara sauce all over me! Y'know what, if you want me to quit this bad, then all you have to do is...",Monica,Scared,13,11
+Hey! Chef Geller! Y'know that little speech you made the other day? Well I got a problem with it!,Joey,Powerful,13,12
+You do?,Monica,Mad,13,13
+"You bet I do! I just ah, wasn't listening then, that's all.",Joey,Powerful,13,14
+Well if you want a problem? I'll give you a problem!,Monica,Powerful,13,15
+What are you gonna do? You're gonna fire me?,Joey,Scared,13,16
+You bet your ass I'm gonna fire you! Get out of my kitchen! Get out!! All right! Anybody else got a problem? How 'bout you Chuckles? You think this is funny now?,Monica,Mad,13,17
+No.,The,Scared,13,18
+How about if I dance around all covered in sauce? Huh? You think it's funny now?,Monica,Mad,13,19
+"No, it's really good.",The,Joyful,13,20
+"Good! Now, take those salads to table 4, And you! Get the swordfish! And you! Get a haircut!",Monica,Powerful,13,21
+"Last stop, Montreal. This stop is Montreal.",The,Neutral,14,1
+What?,Ross,Neutral,14,2
+"I made a bet with myself that you have beautiful eyes. Now that I see them, I win.",Woman,Joyful,14,3
+What?,Ross,Neutral,14,4
+We're at my stop. But would you like to have coffee?,Woman,Joyful,14,5
+Are we really in Montreal?!,Ross,Joyful,14,6
+"Yes we are. So, coffee?",Woman,Joyful,14,7
+"Coffee sounds great. Wait, so, so you live in Montreal?",Ross,Joyful,14,8
+"Oh, no. But it's just a two hour ferry ride to Nova Scotia.",Woman,Neutral,14,9
+Well I guess I should've thought about my wife and kids before I talked back to chef Geller!,Joey,Neutral,15,1
+Thanks.,Monica,Neutral,15,2
+Yep! Looks like it's gonna be a leeeeean Christmas at the Dragon house this year.,Joey,Joyful,15,3
+Enough!,Monica,Mad,15,4
+Lean-lean-lean!,Joey,Sad,15,5
+So what did he decide? Does your Uncle Nathan get an invite or not?,Emily,Scared,2,1
+"Ohh, God, nobody likes him, and he's so cheap, he'd never fly to London in a million years. Yeah, invite him? Hey, did I do these neat enough?",Ross,Scared,2,2
+"Yeah, they're fine.",Emily,Joyful,2,3
+Yeah?,Ross,Peaceful,2,4
+"If anyone asks, we'll just say Ben addressed them. Oh! So you invited Rachel then?",Emily,Powerful,2,5
+Sure. Why not?,Ross,Peaceful,2,6
+Really?,Emily,Scared,2,7
+Yeah?,Ross,Peaceful,2,8
+I don't think I'd be comfortable with any of my old lovers there.,Emily,Powerful,2,9
+"Wait-wait-wait, do you, do you think, maybe we shouldn't invite her?",Ross,Peaceful,2,10
+"Oh, no-no, y'know I absolutely adore Rachel it's just that, well it might be a awkward for you. But it's absolutely your decision. More tea?",Emily,Sad,2,11
+Yeah sure.,Ross,Peaceful,2,12
+Earl Grey?,Emily,Mad,2,13
+"Huh? Yeah, fine, invite whoever you want.",Ross,Peaceful,2,14
+"I don't want to be single, okay? I just... I just- I just wanna be married again!",Ross,Mad,3,1
+And I just want a million dollars!,Chandler,Peaceful,3,3
+Rachel?!,Monica,Scared,3,4
+"Oh God Monica hi! I just went to your building and you weren't there and then this guy with a big hammer said you might be here and you are, you are!",Rachel,Mad,3,5
+"Okay, everybody, this is Rachel, another Lincoln High survivor. This is everybody, this is Chandler, and Phoebe, and Joey, and- you remember my brother Ross?",Monica,Powerful,3,7
+"Hi, sure!",Rachel,Peaceful,3,8
+Hi.,Ross,Neutral,3,9
+"You know you probably didn't know this, but back in high school, I had a, um, major crush on you.",Ross,Peaceful,4,1
+I knew.,Rachel,Neutral,4,2
+You did! Oh.... I always figured you just thought I was Monica's geeky older brother.,Ross,Powerful,4,3
+I did.,Rachel,Peaceful,4,4
+"Oh. Listen, do you think- and try not to let my intense vulnerability become any kind of a factor here-but do you think it would be okay if I asked you out? Sometime? Maybe?",Ross,Powerful,4,5
+"Yeah, maybe...",Rachel,Powerful,4,6
+"Okay... okay, maybe I will...",Ross,Powerful,4,7
+"See, I see.... big passion in your future.",Ross,Powerful,5,1
+Really?,Rachel,Neutral,5,2
+I do.,Ross,Neutral,5,3
+"Oh Ross, you're so great.",Rachel,Joyful,5,4
+It's never gonna happen.,Joey,Neutral,5,6
+"Hey, I have a question. Well, actually, it's not so much a question as.. more of a general wondering... ment.",Ross,Neutral,6,1
+Okay.,Rachel,Neutral,6,2
+"Okay. Umm, for a while now, I've been wanting to, um....",Ross,Neutral,6,3
+Ohhh!!!!,Rachel,Scared,6,4
+"Yes, yes, that's right...",Ross,Neutral,6,5
+"Oh, look at the little cat! Look at it!",Rachel,Joyful,6,6
+What? Ow!,Ross,Scared,6,7
+"I'm on top of the world, looking down on creation and the only explanation I can find...",Joey,Joyful,6,9
+"All right, listen, missy. If you want this cart, you're gonna have to take me with it!",Rachel,Mad,7,1
+Yes! Did you see that?,Rachel,Joyful,7,3
+"You were incredible! Brand new woman, ladies and gentlemen.",Ross,Joyful,7,4
+I could not have done this without you.,Rachel,Powerful,7,5
+"Ok, um, uh, more clothes in the dryer? I'm fine, I'm fine.",Ross,Peaceful,7,7
+You had no right to tell me you ever had feelings for me.,Ross,Mad,8,1
+What?,Rachel,Sad,8,2
+I was doing great with Julie before I found out about you.,Ross,Mad,8,3
+"Hey, I was doin' great before I found out about you. You think it's easy for me to see you with Julie?",Rachel,Mad,8,4
+"The point is I... I don't need this right now, OK. It, it's too late, I'm with somebody else, I'm happy. This ship has sailed.",Ross,Mad,8,6
+"Alright, fine, you go ahead and you do that, alright Ross.",Rachel,Mad,8,8
+Fine.,Ross,Mad,8,9
+'Cause I don't need your stupid ship.,Rachel,Mad,8,10
+Good.,Ross,Mad,8,11
+Good.,Rachel,Mad,8,12
+Ross do you realise this is the first time in my life I'm doing something I actually care about. This is the first time in my life I'm doing something that I'm actually good at. I mean. if you don't get that...,Rachel,Powerful,9,1
+"No, hey, I get that, okay, I get that big time. And I'm happy for ya, but I'm tired of having a relationship with your answering machine! Okay, I don't know what to do anymore.",Ross,Sad,9,2
+Well neither do I!,Rachel,Peaceful,9,3
+Is this about Mark?,Ross,Scared,9,4
+Oh my God.,Rachel,Scared,9,5
+"Okay, it's not, it's not.",Ross,Mad,9,6
+"Oh my God. I cannot keep having this same fight over and over again, Ross, no, you're, you're, you're making this too hard.",Rachel,Powerful,9,7
+"Oh I'm, I'm making this too hard. Okay, what do you want me to do.",Ross,Peaceful,9,8
+"I don't know, I don't know. Urrrgh! Look, maybe we should take a break.",Rachel,Scared,9,9
+"Okay, okay, fine, you're right. Let's ah, let's take a break, let's cool off, okay, let's get some frozen yogart, or something..",Ross,Powerful,9,10
+No. A break from us.,Rachel,Sad,9,11
+Do I know why we're rushing?,Chloe,Scared,10,1
+"Yeah, y'know the ah, the girlfriend I told you about last night? Well it turns out she ah, she wants to get back together with me. Oh, I found it!!",Ross,Peaceful,10,2
+That's so great for you guys!,Chloe,Joyful,10,3
+Yeah!,Ross,Scared,10,4
+"Good luck, with your girlfriend.",Chloe,Joyful,10,6
+"Oh, thank you. Hey, hey. Rachel!!!!",Ross,Scared,10,7
+"Hi. Ohhh, you got my message.",Rachel,Joyful,10,8
+"Yeah, oh hey, you are right on time.",Ross,Scared,10,9
+So what do you say? Can I be your girlfriend again?,Rachel,Peaceful,10,10
+"Yes, you can, very much.",Ross,Powerful,10,11
+Ahhhh!!,Ross,Scared,10,13
+"Y'know what, I want you to leave! Get outta here!",Rachel,Mad,11,1
+No!!,Ross,Mad,11,2
+Just get out! Now!!,Rachel,Mad,11,3
+No!! No!! I wanna stay. I wanna talk about this.,Ross,Powerful,11,4
+Okay! All right! How was she?,Rachel,Neutral,11,5
+Uh-oh.,Chandler,Scared,11,7
+What?,Ross,Neutral,11,9
+Was she good?,Rachel,Neutral,11,10
+Don't answer that.,Joey,Neutral,11,12
+"Come on Ross! You said you wanted to talk about it, let's talk about it!! How was she?",Rachel,Mad,11,14
+She was...,Ross,Scared,11,15
+Awful! Horrible!,Joey,Mad,11,17
+She was not good. Not good.,Chandler,Neutral,11,18
+She was nothing compared to you.,Joey,Neutral,11,19
+"She, she was different.",Ross,Peaceful,11,21
+Ewwwww!,Joey,Neutral,11,23
+Uh-oh.,Chandler,Scared,11,24
+Good different?,Rachel,Neutral,11,26
+Nobody likes change.,Ross,Neutral,11,27
+"What? Okay, okay, okay, okay.",Ross,Neutral,11,29
+You seem to really like her.,Rachel,Joyful,14,1
+"Yeah, I really do. Yeah, but what am I gonna do, I mean we-we both agreed that it was gonna be a two-week thing, y'know no commitment.",Ross,Neutral,14,2
+"Ross, that girl just spent the entire evening talking to your friends, asking to hear stories about you, looking through Monica's photo albums, I mean you don't do that if you're just in it for two weeks.",Rachel,Neutral,14,3
+You think?,Ross,Neutral,14,4
+"Yeah, you got like 14 hours until she has to be at the airport, and you're sitting here in the hallway with a 28-year-old cheerleader with a fat lip.",Rachel,Neutral,14,5
+"Hey, you're right.",Ross,Joyful,14,6
+Yeah.,Rachel,Joyful,14,7
+Who's this from?,Rachel,Neutral,16,1
+"Oh, that's Ross's.",Chandler,Joyful,16,2
+Oh... Oh my God. He remembered.,Rachel,Powerful,16,3
+Remembered what?,Phoebe,Neutral,16,4
+"It was like months ago. We were walking by this antique store, and I saw this pin in the window, and I told him that it was just like one my grandmother had when I was a little girl. Oh! I can't believe he remembered!",Rachel,Joyful,16,5
+"Oh, it's so pretty. This must have cost him a fortune.",Phoebe,Joyful,16,6
+I can't believe he did this.,Monica,Joyful,16,7
+"Come on, Ross? Remember back in college, when he fell in love with Carol and bought her that ridiculously expensive crystal duck?",Chandler,Joyful,16,8
+What did you just say?,Rachel,Scared,16,10
+F-hah.... flennin....,Chandler,Scared,16,11
+Oh.... my God.,Rachel,Joyful,16,12
+"Rach, I got a message from you.",Ross,Joyful,21,1
+"Oh my God. Oh my God Ross, no, hang up the phone, give me the phone Ross, give me the phone, give me the phone, give me the. . .",Rachel,Scared,21,3
+You're over me?,Ross,Sad,21,4
+Ohhhhhhhh God.,Rachel,Peaceful,21,5
+"Wha... you're uh, you're, you're over me?",Ross,Sad,21,6
+"Ohh, ohh.",Rachel,Sad,21,7
+"When, when were you... under me?",Ross,Scared,21,8
+"Well, basically, lately, I've uh, I've uh, sort of had feelings for you.",Rachel,Scared,21,9
+"OK, I need to lie down.",Ross,Scared,21,11
+"He broke up with Julie. Well, go hug her, for god's sakes.",Joey,Mad,22,1
+Really?,Rachel,Neutral,22,2
+"Really. It's always been you, Rach.",Ross,Neutral,22,3
+"Oh, god.",Rachel,Scared,22,4
+Ohhh.,Chandler,Sad,22,6
+"Y'know, hey! You're the one who ended it, remember?",Ross,Mad,25,1
+"Yeah, because I was mad at you, not because I stopped loving you!",Rachel,Scared,25,2
+You still love me?,Ross,Scared,25,3
+Noo.,Rachel,Mad,25,4
+"What does this mean? What do you, I mean do you wanna, get back together?",Ross,Scared,25,6
+"Noo! Maybe! I, I don't know.",Rachel,Scared,25,7
+What?!,Ross,Mad,25,8
+"I just, I feel, I-I just...",Rachel,Neutral,25,9
+"All right, check it out. Check this out. It says here that there's a place you can go to rent videos of all the museums! ""It's almost as good as being there.""",Chandler,Joyful,29,1
+It's better! You can't go to a museum in your underwear!,Joey,Joyful,29,2
+"Well, You could, but... probably just the one time.",Chandler,Joyful,29,3
+"I bet we could get videos of all the sites, get a VCR in our hotel room... we'd never even have to go outside!",Joey,Joyful,29,4
+"If we do that, we gotta get Die Hard.",Chandler,Joyful,29,5
+Oh-ho! I bet the British version is gooooood!,Joey,Joyful,29,6
