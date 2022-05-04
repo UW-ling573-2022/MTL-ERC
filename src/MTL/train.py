@@ -1,5 +1,5 @@
 import torch
-import datasets
+from datasets import Dataset
 from transformers import Trainer
 from transformers import is_datasets_available
 from transformers.trainer_pt_utils import IterableDatasetShard
@@ -13,7 +13,7 @@ class MultiTaskTrainer(Trainer):
         elif description == "evaluation" and dataset is None and self.eval_dataset is None:
             raise ValueError("Trainer: evaluation requires an eval_dataset.")
         
-        if is_datasets_available() and isinstance(dataset, datasets.Dataset):
+        if is_datasets_available() and isinstance(dataset, Dataset):
             dataset = self._remove_unused_columns(dataset, description=description)
 
         if isinstance(dataset, torch.utils.data.IterableDataset):
