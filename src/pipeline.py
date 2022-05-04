@@ -10,58 +10,81 @@ from MTL.train import MultiTaskTrainer
 from preprocess import preprocess
 
 
-def prepare_datasets(cx_datasets, **kwargs):
-    task_datasets = {}
-    for split in ["train", "validation", "test"]:
-        task_datasets[split] = {}
-        for cx in cx_datasets:
-            if cx == "with_past" and kwargs["num_past_utterances"] == 0:
-                continue
-            elif cx == "with_future" and kwargs["num_future_utterances"] == 0:
-                continue
-            elif cx == "no_context" and kwargs["num_past_utterances"] + kwargs["num_future_utterances"] > 0:
-                continue
-            else:
-                for task, (ds, _) in cx_datasets[cx].items():
-                    if split == "train" and task not in kwargs["training"]:
-                        continue
-                    if task not in task_datasets[split]:
-                        task_datasets[split][task] = ds[split]
-                    else:
-                        ds_to_concat = [task_datasets[split][task], ds[split]]
-                        task_datasets[split][task] = concatenate_datasets(ds_to_concat)
+def prepare_datasets(datasets, **kwargs):
+    for name, cx_datasets in datasets.items():
+        task_datasets = {}
+        for split in ["train", "validation", "test"]:
+            task_datasets[split] = {}
+            for cx in cx_datasets:
+                if cx == "with_past" and kwargs["num_past_utterances"] == 0:
+                    continue
+                elif cx == "with_future" and kwargs["num_future_utterances"] == 0:
+                    continue
+                elif cx == "no_context" and kwargs["num_past_utterances"] + kwargs["num_future_utterances"] > 0:
+                    continue
+                else:
+                    for task, (ds, _) in cx_datasets[cx].items():
+                        if split == "train" and task not in kwargs["training"]:
+                            continue
+                        if task not in task_datasets[split]:
+                            task_datasets[split][task] = ds[split]
+                        else:
+                            ds_to_concat = [task_datasets[split][task], ds[split]]
+                            task_datasets[split][task] = concatenate_datasets(ds_to_concat)
 
-    train_dataset = task_datasets["train"]
-    eval_dataset = task_datasets["validation"]
-    test_dataset = task_datasets["test"]
+        train_dataset = task_datasets["train"]
+        eval_dataset = task_datasets["validation"]
+        test_dataset = task_datasets["test"]
 
-    eval_dataset["task"] = kwargs["evaluation"]
-    test_dataset["task"] = kwargs["evaluation"]
+        eval_dataset["task"] = kwargs["evaluation"]
+        test_dataset["task"] = kwargs["evaluation"]
+        
+        datasets[name] = {"train": train_dataset, "validation": eval_dataset, "test": test_dataset}
+    
+    train_dataset = datasets["MELD"]["train"]
+    train_dataset["EmoryNLP"] = datasets["EmoryNLP"]["train"]["Emotion"]
+    eval_dataset = datasets["MELD"]["validation"]
+    test_dataset = datasets["MELD"]["test"]
 
     return train_dataset, eval_dataset, test_dataset
 
 
 def pipeline(**kwargs):
     labels = {
-        "Speaker": ClassLabel(
-            num_classes=7,
-            names=["Chandler", "Joey", "Monica", "Rachel", "Ross", "Phoebe", "Others"]),
-        "Emotion": ClassLabel(
-            num_classes=7,
-            names=["anger", "disgust", "fear", "joy", "neutral", "sadness", "surprise"]),
-        "Sentiment": ClassLabel(
-            num_classes=3,
-            names=["positive", "neutral", "negative"])
+        "MELD": 
+        {
+            "Speaker": ClassLabel(
+                num_classes=7,
+                names=["Chandler", "Joey", "Monica", "Rachel", "Ross", "Phoebe", "Others"]),
+            "Emotion": ClassLabel(
+                num_classes=7,
+                names=["anger", "disgust", "fear", "joy", "neutral", "sadness", "surprise"]),
+            "Sentiment": ClassLabel(
+                num_classes=3,
+                names=["positive", "neutral", "negative"])
+        },
+        "EmoryNLP": 
+        {   
+            "Speaker": ClassLabel(
+                num_classes=7,
+                names=["Chandler", "Joey", "Monica", "Rachel", "Ross", "Phoebe", "Others"]),
+            "Emotion": ClassLabel(
+                num_classes=7,
+                names=["Sad", "Mad", "Scared", "Powerful", "Peaceful", "Joyful", "Neutral"])
+        }
     }
+    
     tokenizer = AutoTokenizer.from_pretrained(kwargs["checkpoint"])
-    cx_datasets = preprocess(tokenizer, labels, **kwargs)
-    train_dataset, eval_dataset, test_dataset = prepare_datasets(
-        cx_datasets, **kwargs)
+    datasets = preprocess(tokenizer, labels, **kwargs)
+    train_dataset, eval_dataset, test_dataset = prepare_datasets(datasets, **kwargs)
+    
+    tasks = {task: labels["MELD"][task] for task in labels["MELD"] if task in kwargs["training"]}
+    tasks["EmoryNLP"] = labels["EmoryNLP"]["Emotion"]
 
     task_models = {
         task: AutoModelForSequenceClassification.from_pretrained(
             kwargs["checkpoint"], num_labels=label.num_classes)
-        for task, (_, label) in cx_datasets["no_context"].items()
+        for task, label in tasks.items()
     }
     multi_task_model = MultiTaskModel.from_task_models(task_models)
 

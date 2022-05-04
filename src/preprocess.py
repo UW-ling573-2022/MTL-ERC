@@ -3,12 +3,22 @@ from datasets import load_dataset
 
 def preprocess(tokenizer, labels, **kwargs):
 
-    data_files = {"train": kwargs["data_dir"] + "MELD/train_sent_emo.csv",
-                  "validation": kwargs["data_dir"] + "MELD/dev_sent_emo.csv",
-                  "test": kwargs["data_dir"] + "MELD/test_sent_emo.csv"}
-    raw_datasets = load_dataset("csv", data_files=data_files)
-
-    def encode_label(example):
+    meld_files = {
+        "train": kwargs["data_dir"] + "MELD/train_sent_emo.csv", 
+        "validation": kwargs["data_dir"] + "MELD/dev_sent_emo.csv",
+        "test": kwargs["data_dir"] + "MELD/test_sent_emo.csv"
+    }
+    
+    emorynlp_files = {
+        "train": kwargs["data_dir"] + "EMORYNLP/train.csv",
+        "validation": kwargs["data_dir"] + "EMORYNLP/dev.csv",
+        "test": kwargs["data_dir"] + "EMORYNLP/test.csv"
+    }
+    
+    datasets = {"MELD": load_dataset("csv", data_files=meld_files),
+                "EmoryNLP": load_dataset("csv", data_files=emorynlp_files)}
+    
+    def encode_label(example, labels):
         for task, label in labels.items():
             if task == "Speaker":
                 example[task] = label.str2int(example[task]) \
@@ -17,9 +27,10 @@ def preprocess(tokenizer, labels, **kwargs):
                 example[task] = label.str2int(example[task])
         return example
 
-    raw_datasets = raw_datasets.map(encode_label)
+    for name, dataset in datasets.items():
+        datasets[name] = dataset.map(lambda e: encode_label(e, labels[name]))
 
-    def add_context(example, idx, dataset):
+    def add_context(example, idx, dataset, labels):
         example["Past"] = ""
         example["Future"] = ""
 
@@ -54,8 +65,9 @@ def preprocess(tokenizer, labels, **kwargs):
 
         return example
 
-    for split, dataset in raw_datasets.items():
-        raw_datasets[split] = dataset.map(lambda e, i: add_context(e, i, dataset), with_indices=True)
+    for name, dataset in datasets.items():
+        for split, ds in dataset.items():
+            dataset[split] = ds.map(lambda e, i: add_context(e, i, ds, labels[name]), with_indices=True)
 
     def tokenize(example, add_past, add_future):
         if add_past:
@@ -64,29 +76,31 @@ def preprocess(tokenizer, labels, **kwargs):
             return tokenizer(example["Utterance"], example["Future"])
         else:
             return tokenizer(example["Utterance"])
+        
+    for name, dataset in datasets.items():
+        cx_datasets = {}
+        cx_datasets["with_past"] = dataset.map(
+            lambda e: tokenize(e, add_past=True, add_future=False), batched=True)
+        cx_datasets["with_future"] = dataset.map(
+            lambda e: tokenize(e, add_past=False, add_future=True), batched=True)
+        cx_datasets["no_context"] = dataset.map(
+            lambda e: tokenize(e, add_past=False, add_future=False), batched=True)
 
-    cx_datasets = {}
-    cx_datasets["with_past"] = raw_datasets.map(
-        lambda e: tokenize(e, add_past=True, add_future=False), batched=True)
-    cx_datasets["with_future"] = raw_datasets.map(
-        lambda e: tokenize(e, add_past=False, add_future=True), batched=True)
-    cx_datasets["no_context"] = raw_datasets.map(
-        lambda e: tokenize(e, add_past=False, add_future=False), batched=True)
+        tasks = list(labels[name].keys())
+        for cx in cx_datasets:
+            cols_to_keep = ["input_ids", "attention_mask"] + tasks
+            cols_to_remove = [c for c in cx_datasets[cx]["train"].column_names if c not in cols_to_keep]
+            cx_datasets[cx] = cx_datasets[cx].remove_columns(cols_to_remove)
+            task_datasets = {}
+            for task in tasks:
+                label = labels[name][task]
+                ds = cx_datasets[cx]
+                ds = ds.cast_column(task, label)
+                ds = ds.remove_columns([t for t in tasks if t != task])
+                ds = ds.rename_column(task, "labels")
+                ds.set_format()
+                task_datasets[task] = (ds, label)
+            cx_datasets[cx] = task_datasets
+        datasets[name] = cx_datasets
 
-    tasks = list(labels.keys())
-    for cx in cx_datasets:
-        cols_to_keep = ["input_ids", "attention_mask"] + tasks
-        cols_to_remove = [c for c in cx_datasets[cx]["train"].column_names if c not in cols_to_keep]
-        cx_datasets[cx] = cx_datasets[cx].remove_columns(cols_to_remove)
-        task_datasets = {}
-        for task in tasks:
-            label = labels[task]
-            ds = cx_datasets[cx]
-            ds = ds.cast_column(task, label)
-            ds = ds.remove_columns([t for t in tasks if t != task])
-            ds = ds.rename_column(task, "labels")
-            ds.set_format()
-            task_datasets[task] = (ds, label)
-        cx_datasets[cx] = task_datasets
-
-    return cx_datasets
+    return datasets
