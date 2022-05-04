@@ -80,7 +80,6 @@ def pipeline(**kwargs):
     
     tasks = {task: labels["MELD"][task] for task in labels["MELD"] if task in kwargs["training"]}
     tasks["EmoryNLP"] = labels["EmoryNLP"]["Emotion"]
-
     task_models = {
         task: AutoModelForSequenceClassification.from_pretrained(
             kwargs["checkpoint"], num_labels=label.num_classes)
