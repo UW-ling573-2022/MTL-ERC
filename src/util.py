@@ -68,13 +68,13 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--model_file",
         type=str,
-        default=get_root_dir() + "outputs/D2/pytorch_model.bin",
+        default=get_root_dir() + "outputs/D3/pytorch_model.bin",
         help="Path to stored model",
     )
     parser.add_argument(
         "--output_file",
         type = str,
-        default=get_root_dir() + "outputs/D2/predictions.out",
+        default=get_root_dir() + "outputs/D3/predictions.out",
         help="Path to store predictions",
     )
     parser.add_argument(
@@ -104,7 +104,7 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--result_file",
         type=str,
-        default=get_root_dir() + "results/D2_scores.out",
+        default=get_root_dir() + "results/D3_scores.out",
         help="Path to store results"
     )
     args = parser.parse_args()
