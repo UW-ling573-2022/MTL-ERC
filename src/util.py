@@ -21,7 +21,7 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--num_past_utterances",
         type=int,
-        default=6,
+        default=10,
         help="Number of past utterances for generating dataset.",
     )
     parser.add_argument(
@@ -80,7 +80,7 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--epoch",
         type=int,
-        default=5,
+        default=6,
         help="Number of training epoch",
     )
     parser.add_argument(
@@ -98,7 +98,7 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--batch_size",
         type=int,
-        default=8,
+        default=16,
         help="How many examples per batch"
     )
     parser.add_argument(
