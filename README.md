@@ -12,9 +12,9 @@
 ### Condor or Locally
 
 - Install [conda](https://docs.anaconda.com/anaconda/install/index.html)
-- Clone this project and change to the project's root directory
+- Clone this project recursively (since data folder is a submodule) and change to the project's root directory
 - `conda env create -f environment.yaml` to initialize conda environment
-- Put the downloaded the `pytorch_model.bin`model file from [Google Drive](https://drive.google.com/file/d/11gUWjXurmcthj6UGVoaOk-N2dE_Q1w3N/view?usp=sharing)
+- Put the downloaded the `pytorch_model.bin` model file from [Google Drive](https://drive.google.com/uc?id=1U6Ek3c75RjxypFAj7_B-yfQ9NyDNk-eS)
 in `outputs/D3`
 
 #### Condor
