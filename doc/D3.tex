@@ -46,7 +46,7 @@ MELD splits the data into training, development, and testing set separately (103
 
 According to Poria, the speakers of these dialogues are categorized to 6 main characters and others. The utterances are distributed relatively evenly with respect to speakers (from 12\% to 16\%).  The emotion distribution for each character is also similar. 
 
-We also use the EmoryNLP \citep{EmoryNLP} as an auxiliary dataset to facilitate the training. EmoryNLP is another multi-party emotional conversational database curated by Zahiri and Choi. The utterances are also collected from Friends TV show and are annotated with emotion and speaker labels by crowdsourced worker based on Willcox's feeling wheel. EmoryNLP splits the dataset into training, development, and testing set separately. We use the testing set and corresponding gold standard annotation for analysis. 
+We also use the EmoryNLP \citep{EmoryNLP} as an auxiliary dataset to facilitate the training. EmoryNLP is another multi-party emotional conversational database curated by Zahiri and Choi. The utterances are also collected from the Friends TV show and are annotated with emotion and speaker labels by crowdsourced workers based on Willcox's feeling wheel. EmoryNLP splits the dataset into training, development, and testing sets separately. We use the testing set and corresponding gold standard annotation for analysis. 
 
 According to Zahiri and Choi, the distribution of all emotions in the corpus is not even. The two most dominant emotions, \textit{neutral} and \textit{joyful}, together yield over 50\% of the dataset.
 
@@ -252,7 +252,7 @@ The prediction output and accuracy is shown as above in Table 3 and 4. A major t
 
 \subsection{Pre-trained model decision}
 
-Using RoBERTA-base pre-trained model, we achieve similar result illustrated in Kim et al. However, using RoBERTa-large or RoBERTa-full pre-trained model used by Kim et al., weighted F1 score reduced by as much as 30 percent, regardless of number of utterances or auxiliary tasks included in the training dataset. We choose to stick with RoBERTa-base model for Delivery 3.
+Using the RoBERTA-base pre-trained model, we achieve a similar result illustrated in Kim et al. However, using the RoBERTa-large or RoBERTa-full pre-trained model used by Kim et al., weighted F1 score reduced by as much as 30 percent, regardless of the number of utterances or auxiliary tasks included in the training dataset. We choose to stick with the RoBERTa-base model for Delivery 3.
 
 \subsection{Number of past and future utterance.}
 
@@ -281,7 +281,7 @@ An incorrectly classified example. The prediction is 'surprise' while the truth 
 
 We initially anticipate that the speaker tag will be utilized for sentiment classification. However, both the incorrectly and correctly classified example, the <s> token in the last layer mainly focus on punctuation marks. This phenomenon far deviates from Kim et al.'s result, that <s> token mainly focus on the speaker in correctly classified examples. This proves that separating speaker and utterance for speaker detection does not benefit the model to utilize speaker context for sentiment analysis.\\
 
-For Delivery 3, we did another qualitative analysis with on 10 correctly and 10 incorrectly classified random sample from the MELD test split.
+For Delivery 3, we did another qualitative analysis with ten correctly and ten incorrectly classified random samples from the MELD test split.
 
 {\small
 \begin{quote}
@@ -300,7 +300,7 @@ A correctly classified example when training with speaker context. Both the pred
 
 An incorrectly classified example when training with speaker context. The prediction is 'joy' while the truth is 'neutral'. The predicted and the true speaker is Rachel.}
 
-After using EmoryNLP for auxiliary emotion and speaker detection tasks, we notice an increase of accuracy in emotion detection task. However, the speaker contexts are mainly utilized by incorrect outputs. Only 5 of the correct samples utilize the speaker tag, where as all incorrect samples utilize the speaker tag. Both correct and incorrect samples have sixty percent accuracy of predicting the speaker. Based on the the new finding, we revised our hypothesis, that adding speaker contexts does not improve the emotion detection accuracy. We then train a new model without the speaker context.
+After using EmoryNLP for auxiliary emotion and speaker detection tasks, we notice an increase in accuracy in the emotion detection task. However, the speaker contexts are mainly utilized by incorrect outputs. Only 5 of the correct samples utilize the speaker tag, whereas all incorrect samples utilize the speaker tag. Both correct and incorrect samples have sixty percent accuracy in predicting the speaker. Based on the new finding, we revised our hypothesis, that adding speaker contexts does not improve the emotion detection accuracy. We then train a new model without the speaker context.
 
 {\small
 \begin{quote}
