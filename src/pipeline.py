@@ -43,7 +43,8 @@ def prepare_datasets(datasets, **kwargs):
     
     train_dataset = datasets[kwargs["eval_dataset"]]["train"]
     for dataset_name in datasets.keys():
-        train_dataset[dataset_name] = datasets[dataset_name]["train"]["Emotion"]
+        if dataset_name != kwargs["eval_dataset"]:
+            train_dataset[dataset_name] = datasets[dataset_name]["train"]["Emotion"]
 
     eval_dataset = datasets[kwargs["eval_dataset"]]["validation"]
     test_dataset = datasets[kwargs["eval_dataset"]]["test"]
@@ -82,7 +83,7 @@ def pipeline(**kwargs):
         },
     }
     
-    tokenizer = AutoTokenizer.from_pretrained(kwargs["checkpoint"])
+    tokenizer = AutoTokenizer.from_pretrained(kwargs["checkpoint"], max_length=1024, padding="max_length", truncation=True)
     datasets = preprocess(tokenizer, dataset_labels, **kwargs)
     train_dataset, eval_dataset, test_dataset = prepare_datasets(datasets, **kwargs)
     
@@ -93,10 +94,11 @@ def pipeline(**kwargs):
                 tasks[task] = label
         else:
             tasks[dataset_name] = dataset_label["Emotion"]
-            
     task_models = {
         task: AutoModelForSequenceClassification.from_pretrained(
-            kwargs["checkpoint"], num_labels=label.num_classes)
+            kwargs["checkpoint"], 
+            num_labels=label.num_classes,
+            max_length=1024)
         for task, label in tasks.items()
     }
     multi_task_model = MultiTaskModel.from_task_models(task_models)

@@ -22,7 +22,7 @@ class MultiTaskModel(PreTrainedModel):
         model_name = model.__class__.__name__
         if model_name.startswith('Bert'):
             return 'bert'
-        elif model_name.startswith('Roberta'):
+        elif model_name.startswith('Roberta') or model_name.startswith("XLMRoberta"):
             return 'roberta'
         elif model_name.startswith('Albert'):
             return 'albert'
