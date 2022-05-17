@@ -15,8 +15,15 @@ def preprocess(tokenizer, labels, **kwargs):
         "test": kwargs["data_dir"] + "EMORYNLP/test.csv"
     }
     
+    mpdd_files = {
+        "train": kwargs["data_dir"] + "MPDD/train_mpdd.csv", 
+        "validation": kwargs["data_dir"] + "MPDD/dev_mpdd.csv",
+        "test": kwargs["data_dir"] + "MPDD/test_sent_mpdd.csv"
+    }
+    
     datasets = {"MELD": load_dataset("csv", data_files=meld_files),
-                "EmoryNLP": load_dataset("csv", data_files=emorynlp_files)}
+                "EmoryNLP": load_dataset("csv", data_files=emorynlp_files),
+                "MPDD": load_dataset("csv", data_files=mpdd_files)}
     
     def encode_label(example, labels):
         for task, label in labels.items():
@@ -38,9 +45,9 @@ def preprocess(tokenizer, labels, **kwargs):
             i = 1
             while idx - i >= 0:
                 past = dataset[idx - i]
-                past_speaker = labels["Speaker"].int2str(past["Speaker"])
                 past_utterance = past["Utterance"]
-                if kwargs["speaker_in_context"]:
+                if "Speaker" in labels and kwargs["speaker_in_context"]:
+                    past_speaker = labels["Speaker"].int2str(past["Speaker"])
                     example["Past"] = past_speaker + ":" + past_utterance + " " + example["Past"]
                 else:
                     example["Past"] = past_utterance + " " + example["Past"]
@@ -52,9 +59,9 @@ def preprocess(tokenizer, labels, **kwargs):
             i = 1
             while idx + i < len(dataset):
                 future = dataset[idx + i]
-                future_speaker = labels["Speaker"].int2str(future["Speaker"])
                 future_utterance = future["Utterance"]
-                if kwargs["speaker_in_context"]:
+                if "Speaker" in labels and kwargs["speaker_in_context"]:
+                    future_speaker = labels["Speaker"].int2str(future["Speaker"])
                     example["Future"] += " " + future_speaker + ":" + future_utterance
                 else:
                     example["Future"] += " " + future_utterance

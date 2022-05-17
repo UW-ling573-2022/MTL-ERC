@@ -41,10 +41,11 @@ def prepare_datasets(datasets, **kwargs):
         
         datasets[name] = {"train": train_dataset, "validation": eval_dataset, "test": test_dataset}
     
-    train_dataset = datasets["MELD"]["train"]
+    train_dataset = datasets["MPDD"]["train"]
+    train_dataset["MELD"] = datasets["MELD"]["train"]["Emotion"]
     train_dataset["EmoryNLP"] = datasets["EmoryNLP"]["train"]["Emotion"]
-    eval_dataset = datasets["MELD"]["validation"]
-    test_dataset = datasets["MELD"]["test"]
+    eval_dataset = datasets["MPDD"]["validation"]
+    test_dataset = datasets["MPDD"]["test"]
 
     return train_dataset, eval_dataset, test_dataset
 
@@ -71,14 +72,21 @@ def pipeline(**kwargs):
             "Emotion": ClassLabel(
                 num_classes=7,
                 names=["Sad", "Mad", "Scared", "Powerful", "Peaceful", "Joyful", "Neutral"])
-        }
+        },
+        "MPDD": 
+        {
+            "Emotion": ClassLabel(
+                num_classes=7,
+                names=["anger", "disgust", "fear", "joy", "neutral", "sadness", "surprise"])
+        },
     }
     
     tokenizer = AutoTokenizer.from_pretrained(kwargs["checkpoint"])
     datasets = preprocess(tokenizer, labels, **kwargs)
     train_dataset, eval_dataset, test_dataset = prepare_datasets(datasets, **kwargs)
     
-    tasks = {task: labels["MELD"][task] for task in labels["MELD"] if task in kwargs["training"]}
+    tasks = {task: labels["MPDD"][task] for task in labels["MPDD"] if task in kwargs["training"]}
+    tasks["MELD"] = labels["MELD"]["Emotion"]
     tasks["EmoryNLP"] = labels["EmoryNLP"]["Emotion"]
     task_models = {
         task: AutoModelForSequenceClassification.from_pretrained(
@@ -134,8 +142,8 @@ def pipeline(**kwargs):
     print("Weighted F1:", f1)
     
     
-    pred_labels = labels["MELD"][kwargs["evaluation"]].int2str(pred.predictions.argmax(axis=-1))
-    true_labels = labels["MELD"][kwargs["evaluation"]].int2str(pred.label_ids)
+    pred_labels = labels["MPDD"][kwargs["evaluation"]].int2str(pred.predictions.argmax(axis=-1))
+    true_labels = labels["MPDD"][kwargs["evaluation"]].int2str(pred.label_ids)
     inputs = tokenizer.batch_decode(test_dataset[kwargs["evaluation"]]["input_ids"])
     f = open(kwargs["output_file"], "w")
     f.write("Input\tPredicted\tTrue\n")
