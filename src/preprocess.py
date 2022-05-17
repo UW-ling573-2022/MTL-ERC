@@ -18,7 +18,7 @@ def preprocess(tokenizer, labels, **kwargs):
     mpdd_files = {
         "train": kwargs["data_dir"] + "MPDD/train_mpdd.csv", 
         "validation": kwargs["data_dir"] + "MPDD/dev_mpdd.csv",
-        "test": kwargs["data_dir"] + "MPDD/test_sent_mpdd.csv"
+        "test": kwargs["data_dir"] + "MPDD/test_mpdd.csv"
     }
     
     datasets = {"MELD": load_dataset("csv", data_files=meld_files),
