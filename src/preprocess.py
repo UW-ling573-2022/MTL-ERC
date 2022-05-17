@@ -1,7 +1,7 @@
 from datasets import load_dataset
 
 
-def preprocess(tokenizer, labels, **kwargs):
+def preprocess(tokenizer, dataset_labels, **kwargs):
 
     meld_files = {
         "train": kwargs["data_dir"] + "MELD/train_sent_emo.csv", 
@@ -35,7 +35,7 @@ def preprocess(tokenizer, labels, **kwargs):
         return example
 
     for name, dataset in datasets.items():
-        datasets[name] = dataset.map(lambda e: encode_label(e, labels[name]))
+        datasets[name] = dataset.map(lambda e: encode_label(e, dataset_labels[name]))
 
     def add_context(example, idx, dataset, labels):
         example["Past"] = ""
@@ -74,7 +74,7 @@ def preprocess(tokenizer, labels, **kwargs):
 
     for name, dataset in datasets.items():
         for split, ds in dataset.items():
-            dataset[split] = ds.map(lambda e, i: add_context(e, i, ds, labels[name]), with_indices=True)
+            dataset[split] = ds.map(lambda e, i: add_context(e, i, ds, dataset_labels[name]), with_indices=True)
 
     def tokenize(example, add_past, add_future):
         if add_past:
@@ -93,14 +93,14 @@ def preprocess(tokenizer, labels, **kwargs):
         cx_datasets["no_context"] = dataset.map(
             lambda e: tokenize(e, add_past=False, add_future=False), batched=True)
 
-        tasks = list(labels[name].keys())
+        tasks = list(dataset_labels[name].keys())
         for cx in cx_datasets:
             cols_to_keep = ["input_ids", "attention_mask"] + tasks
             cols_to_remove = [c for c in cx_datasets[cx]["train"].column_names if c not in cols_to_keep]
             cx_datasets[cx] = cx_datasets[cx].remove_columns(cols_to_remove)
             task_datasets = {}
             for task in tasks:
-                label = labels[name][task]
+                label = dataset_labels[name][task]
                 ds = cx_datasets[cx]
                 ds = ds.cast_column(task, label)
                 ds = ds.remove_columns([t for t in tasks if t != task])
