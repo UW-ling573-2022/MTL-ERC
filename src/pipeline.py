@@ -11,10 +11,10 @@ from preprocess import preprocess
 
 
 def prepare_datasets(datasets, **kwargs):
-    for name, cx_datasets in datasets.items():
-        task_datasets = {}
+    for dataset_name, cx_datasets in datasets.items():
+        task_dataset = {}
         for split in ["train", "validation", "test"]:
-            task_datasets[split] = {}
+            task_dataset[split] = {}
             for cx in cx_datasets:
                 if cx == "with_past" and kwargs["num_past_utterances"] == 0:
                     continue
@@ -24,33 +24,36 @@ def prepare_datasets(datasets, **kwargs):
                     continue
                 else:
                     for task, (ds, _) in cx_datasets[cx].items():
-                        if split == "train" and task not in kwargs["training"]:
+                        if split == "train" and task not in kwargs["train_task"]:
                             continue
-                        if task not in task_datasets[split]:
-                            task_datasets[split][task] = ds[split]
+                        if task not in task_dataset[split]:
+                            task_dataset[split][task] = ds[split]
                         else:
-                            ds_to_concat = [task_datasets[split][task], ds[split]]
-                            task_datasets[split][task] = concatenate_datasets(ds_to_concat)
+                            ds_to_concat = [task_dataset[split][task], ds[split]]
+                            task_dataset[split][task] = concatenate_datasets(ds_to_concat)
 
-        train_dataset = task_datasets["train"]
-        eval_dataset = task_datasets["validation"]
-        test_dataset = task_datasets["test"]
+        train_dataset = task_dataset["train"]
+        eval_dataset = task_dataset["validation"]
+        test_dataset = task_dataset["test"]
 
-        eval_dataset["task"] = kwargs["evaluation"]
-        test_dataset["task"] = kwargs["evaluation"]
+        eval_dataset["task"] = kwargs["eval_task"]
+        test_dataset["task"] = kwargs["eval_task"]
         
-        datasets[name] = {"train": train_dataset, "validation": eval_dataset, "test": test_dataset}
+        datasets[dataset_name] = {"train": train_dataset, "validation": eval_dataset, "test": test_dataset}
     
-    train_dataset = datasets["MELD"]["train"]
-    train_dataset["EmoryNLP"] = datasets["EmoryNLP"]["train"]["Emotion"]
-    eval_dataset = datasets["MELD"]["validation"]
-    test_dataset = datasets["MELD"]["test"]
+    train_dataset = datasets[kwargs["eval_dataset"]]["train"]
+    for dataset_name in datasets.keys():
+        if dataset_name != kwargs["eval_dataset"]:
+            train_dataset[dataset_name] = datasets[dataset_name]["train"]["Emotion"]
+
+    eval_dataset = datasets[kwargs["eval_dataset"]]["validation"]
+    test_dataset = datasets[kwargs["eval_dataset"]]["test"]
 
     return train_dataset, eval_dataset, test_dataset
 
 
 def pipeline(**kwargs):
-    labels = {
+    dataset_labels = {
         "MELD": 
         {
             "Speaker": ClassLabel(
@@ -71,18 +74,31 @@ def pipeline(**kwargs):
             "Emotion": ClassLabel(
                 num_classes=7,
                 names=["Sad", "Mad", "Scared", "Powerful", "Peaceful", "Joyful", "Neutral"])
-        }
+        },
+        "MPDD": 
+        {
+            "Emotion": ClassLabel(
+                num_classes=7,
+                names=["angry", "disgust", "fear", "joy", "neutral", "sadness", "surprise"])
+        },
     }
     
-    tokenizer = AutoTokenizer.from_pretrained(kwargs["checkpoint"])
-    datasets = preprocess(tokenizer, labels, **kwargs)
+    tokenizer = AutoTokenizer.from_pretrained(kwargs["checkpoint"], max_length=1024, padding="max_length", truncation=True)
+    datasets = preprocess(tokenizer, dataset_labels, **kwargs)
     train_dataset, eval_dataset, test_dataset = prepare_datasets(datasets, **kwargs)
     
-    tasks = {task: labels["MELD"][task] for task in labels["MELD"] if task in kwargs["training"]}
-    tasks["EmoryNLP"] = labels["EmoryNLP"]["Emotion"]
+    tasks = {}
+    for dataset_name, dataset_label in dataset_labels.items():
+        if dataset_name == kwargs["eval_dataset"]:
+            for task, label in dataset_label.items():
+                tasks[task] = label
+        else:
+            tasks[dataset_name] = dataset_label["Emotion"]
     task_models = {
         task: AutoModelForSequenceClassification.from_pretrained(
-            kwargs["checkpoint"], num_labels=label.num_classes)
+            kwargs["checkpoint"], 
+            num_labels=label.num_classes,
+            max_length=1024)
         for task, label in tasks.items()
     }
     multi_task_model = MultiTaskModel.from_task_models(task_models)
@@ -134,9 +150,9 @@ def pipeline(**kwargs):
     print("Weighted F1:", f1)
     
     
-    pred_labels = labels["MELD"][kwargs["evaluation"]].int2str(pred.predictions.argmax(axis=-1))
-    true_labels = labels["MELD"][kwargs["evaluation"]].int2str(pred.label_ids)
-    inputs = tokenizer.batch_decode(test_dataset[kwargs["evaluation"]]["input_ids"])
+    pred_labels = dataset_labels[kwargs["eval_dataset"]][kwargs["eval_task"]].int2str(pred.predictions.argmax(axis=-1))
+    true_labels = dataset_labels[kwargs["eval_dataset"]][kwargs["eval_task"]].int2str(pred.label_ids)
+    inputs = tokenizer.batch_decode(test_dataset[kwargs["eval_task"]]["input_ids"])
     f = open(kwargs["output_file"], "w")
     f.write("Input\tPredicted\tTrue\n")
     f.write("\n".join(["\t".join([input, pred_label, true_label]) 

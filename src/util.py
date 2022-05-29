@@ -47,17 +47,23 @@ def get_args() -> argparse.Namespace:
         help="Train the model and store to default directory",
     )
     parser.add_argument(
-        "--training",
+        "--train_task",
         type=str,
         nargs='+',
         default=["Emotion", "Speaker"],
         help="Task for training. (\"Emotion\", \"Speaker\",\"Sentiment\")",
     )
     parser.add_argument(
-        "--evaluation",
+        "--eval_task",
         type=str,
         default="Emotion",
         help="Task for evaluation. (\"Emotion\", \"Speaker\",\"Sentiment\")",
+    )
+    parser.add_argument(
+        "--eval_dataset",
+        type=str,
+        default="MPDD",
+        help="Dataset for evaluation. (\"MELD\", \"EmoryNLP\",\"MPDD\")",
     )
     parser.add_argument(
         "--train_dir",
