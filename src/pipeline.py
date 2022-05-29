@@ -35,9 +35,6 @@ def prepare_datasets(datasets, **kwargs):
         train_dataset = task_dataset["train"]
         eval_dataset = task_dataset["validation"]
         test_dataset = task_dataset["test"]
-
-        eval_dataset["task"] = kwargs["eval_dataset"] + "_" + kwargs["eval_task"]
-        test_dataset["task"] = kwargs["eval_dataset"] + "_" + kwargs["eval_task"]
         
         datasets[dataset_name] = {"train": train_dataset, "validation": eval_dataset, "test": test_dataset}
         
@@ -45,8 +42,11 @@ def prepare_datasets(datasets, **kwargs):
                      for dataset_name in datasets if dataset_name in kwargs["train_dataset"]
                      for task in datasets[dataset_name]["train"] if task in kwargs["train_task"]}
 
-    eval_dataset = datasets[kwargs["eval_dataset"]]["validation"]
-    test_dataset = datasets[kwargs["eval_dataset"]]["test"]
+    eval_dataset_task = kwargs["eval_dataset"] + "_" + kwargs["eval_task"]
+    eval_dataset = {eval_dataset_task: datasets[kwargs["eval_dataset"]]["validation"][kwargs["eval_task"]]}
+    eval_dataset["task"] = eval_dataset_task
+    test_dataset = {eval_dataset_task: datasets[kwargs["eval_dataset"]]["test"][kwargs["eval_task"]]}
+    test_dataset["task"] = eval_dataset_task
 
     return train_dataset, eval_dataset, test_dataset
 
