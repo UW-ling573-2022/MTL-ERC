@@ -146,7 +146,7 @@ def pipeline(**kwargs):
     
     pred_labels = dataset_labels[kwargs["eval_dataset"]][kwargs["eval_task"]].int2str(pred.predictions.argmax(axis=-1))
     true_labels = dataset_labels[kwargs["eval_dataset"]][kwargs["eval_task"]].int2str(pred.label_ids)
-    inputs = tokenizer.batch_decode(test_dataset[kwargs["eval_task"]]["input_ids"])
+    inputs = tokenizer.batch_decode(test_dataset[kwargs["eval_dataset"] + "_" + kwargs["eval_task"]]["input_ids"])
     f = open(kwargs["output_file"], "w")
     f.write("Input\tPredicted\tTrue\n")
     f.write("\n".join(["\t".join([input, pred_label, true_label]) 
