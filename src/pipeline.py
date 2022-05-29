@@ -42,9 +42,8 @@ def prepare_datasets(datasets, **kwargs):
         datasets[dataset_name] = {"train": train_dataset, "validation": eval_dataset, "test": test_dataset}
         
     train_dataset = {dataset_name + "_" + task: datasets[dataset_name]["train"][task] 
-                     for dataset_name in datasets 
-                     for task in datasets[dataset_name]["train"] 
-                     if task in kwargs["train_task"]}
+                     for dataset_name in datasets if dataset_name in kwargs["train_dataset"]
+                     for task in datasets[dataset_name]["train"] if task in kwargs["train_task"]}
 
     eval_dataset = datasets[kwargs["eval_dataset"]]["validation"]
     test_dataset = datasets[kwargs["eval_dataset"]]["test"]

@@ -54,6 +54,13 @@ def get_args() -> argparse.Namespace:
         help="Task for training. (\"Emotion\", \"Speaker\",\"Sentiment\")",
     )
     parser.add_argument(
+        "--train_dataset",
+        type=str,
+        nargs='+',
+        default=["MELD", "EmoryNLP", "MPDD"],
+        help="Dataset for training. (\"MELD\", \"EmoryNLP\",\"MPDD\")",
+    )
+    parser.add_argument(
         "--eval_task",
         type=str,
         default="Emotion",
