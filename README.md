@@ -18,8 +18,8 @@
 in `outputs/D4`
 
 #### Condor
-- `condor_submit D3.cmd` to run inference and evaluation
-- `condor_submit D3_full.cmd` to run training and evaluation
+- `condor_submit D4.cmd` to run inference and evaluation
+- `condor_submit D4_full.cmd` to run training and evaluation
 
 #### Locally
 - `python src/pipeline.py` to run inference and evaluation
