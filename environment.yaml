@@ -13,3 +13,4 @@ dependencies:
   - transformers
   - datasets
   - sentencepiece
+  - protobuf
