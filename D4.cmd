@@ -4,5 +4,4 @@ output=log/D4.out
 error=log/D4.error
 request_memory = 4096
 notification=Always
-request_gpus=1
 Queue
