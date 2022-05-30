@@ -50,7 +50,7 @@ def get_args() -> argparse.Namespace:
         "--train_task",
         type=str,
         nargs='+',
-        default=["Emotion", "Speaker"],
+        default=["Emotion"],
         help="Task for training. (\"Emotion\", \"Speaker\",\"Sentiment\")",
     )
     parser.add_argument(
@@ -105,7 +105,7 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--checkpoint",
         type=str,
-        default="roberta-base",
+        default="markussagen/xlm-roberta-longformer-base-4096",
         help="Which checkpoint to use."
     )
     parser.add_argument(
