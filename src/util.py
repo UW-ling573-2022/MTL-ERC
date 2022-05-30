@@ -81,7 +81,7 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--model_file",
         type=str,
-        default=get_root_dir() + "outputs/D3/pytorch_model.bin",
+        default=get_root_dir() + "outputs/D4/pytorch_model.bin",
         help="Path to stored model",
     )
     parser.add_argument(
