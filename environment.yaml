@@ -12,3 +12,5 @@ dependencies:
   - tqdm
   - transformers
   - datasets
+  - sentencepiece
+  - protobuf

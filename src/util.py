@@ -50,7 +50,7 @@ def get_args() -> argparse.Namespace:
         "--train_task",
         type=str,
         nargs='+',
-        default=["Emotion", "Speaker"],
+        default=["Emotion"],
         help="Task for training. (\"Emotion\", \"Speaker\",\"Sentiment\")",
     )
     parser.add_argument(
@@ -81,14 +81,20 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--model_file",
         type=str,
-        default=get_root_dir() + "outputs/D3/pytorch_model.bin",
+        default=get_root_dir() + "outputs/D4/pytorch_model.bin",
         help="Path to stored model",
     )
     parser.add_argument(
-        "--output_file",
+        "--output_dir",
         type = str,
-        default=get_root_dir() + "outputs/D3/predictions.out",
+        default=get_root_dir() + "outputs/D4/adaptation",
         help="Path to store predictions",
+    )
+    parser.add_argument(
+        "--result_dir",
+        type=str,
+        default=get_root_dir() + "results/D4/adaptation",
+        help="Path to store results"
     )
     parser.add_argument(
         "--epoch",
@@ -99,7 +105,7 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--checkpoint",
         type=str,
-        default="roberta-base",
+        default="markussagen/xlm-roberta-longformer-base-4096",
         help="Which checkpoint to use."
     )
     parser.add_argument(
@@ -111,14 +117,8 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--batch_size",
         type=int,
-        default=16,
+        default=8,
         help="How many examples per batch"
-    )
-    parser.add_argument(
-        "--result_file",
-        type=str,
-        default=get_root_dir() + "results/D3_scores.out",
-        help="Path to store results"
     )
     args = parser.parse_args()
     return args

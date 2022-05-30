@@ -2,5 +2,8 @@
 source ~/anaconda3/etc/profile.d/conda.sh
 conda activate ~/anaconda3/envs/UW-LING-573
 
-# put your command for running word2vec.py here
-python src/pipeline.py
+# Run Primary Task
+python src/pipeline.py --eval_dataset MELD --output_dir "outputs/D4/primary" --result_dir "results/D4/primary"
+
+# Run Adaptation Task
+python src/pipeline.py --eval_dataset MPDD --output_dir "outputs/D4/adaptation" --result_dir "results/D4/adaptation"
