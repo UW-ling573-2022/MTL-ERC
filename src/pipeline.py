@@ -35,19 +35,18 @@ def prepare_datasets(datasets, **kwargs):
         train_dataset = task_dataset["train"]
         eval_dataset = task_dataset["validation"]
         test_dataset = task_dataset["test"]
-
-        eval_dataset["task"] = kwargs["eval_task"]
-        test_dataset["task"] = kwargs["eval_task"]
         
         datasets[dataset_name] = {"train": train_dataset, "validation": eval_dataset, "test": test_dataset}
-    
-    train_dataset = datasets[kwargs["eval_dataset"]]["train"]
-    for dataset_name in datasets.keys():
-        if dataset_name != kwargs["eval_dataset"]:
-            train_dataset[dataset_name] = datasets[dataset_name]["train"]["Emotion"]
+        
+    train_dataset = {dataset_name + "_" + task: datasets[dataset_name]["train"][task] 
+                     for dataset_name in datasets if dataset_name in kwargs["train_dataset"]
+                     for task in datasets[dataset_name]["train"] if task in kwargs["train_task"]}
 
-    eval_dataset = datasets[kwargs["eval_dataset"]]["validation"]
-    test_dataset = datasets[kwargs["eval_dataset"]]["test"]
+    eval_dataset_task = kwargs["eval_dataset"] + "_" + kwargs["eval_task"]
+    eval_dataset = {eval_dataset_task: datasets[kwargs["eval_dataset"]]["validation"][kwargs["eval_task"]]}
+    eval_dataset["task"] = eval_dataset_task
+    test_dataset = {eval_dataset_task: datasets[kwargs["eval_dataset"]]["test"][kwargs["eval_task"]]}
+    test_dataset["task"] = eval_dataset_task
 
     return train_dataset, eval_dataset, test_dataset
 
@@ -87,13 +86,8 @@ def pipeline(**kwargs):
     datasets = preprocess(tokenizer, dataset_labels, **kwargs)
     train_dataset, eval_dataset, test_dataset = prepare_datasets(datasets, **kwargs)
     
-    tasks = {}
-    for dataset_name, dataset_label in dataset_labels.items():
-        if dataset_name == kwargs["eval_dataset"]:
-            for task, label in dataset_label.items():
-                tasks[task] = label
-        else:
-            tasks[dataset_name] = dataset_label["Emotion"]
+    
+    tasks = {task: dataset_labels[task.split("_")[0]][task.split("_")[1]] for task in train_dataset.keys()}
     task_models = {
         task: AutoModelForSequenceClassification.from_pretrained(
             kwargs["checkpoint"], 
@@ -152,7 +146,7 @@ def pipeline(**kwargs):
     
     pred_labels = dataset_labels[kwargs["eval_dataset"]][kwargs["eval_task"]].int2str(pred.predictions.argmax(axis=-1))
     true_labels = dataset_labels[kwargs["eval_dataset"]][kwargs["eval_task"]].int2str(pred.label_ids)
-    inputs = tokenizer.batch_decode(test_dataset[kwargs["eval_task"]]["input_ids"])
+    inputs = tokenizer.batch_decode(test_dataset[kwargs["eval_dataset"] + "_" + kwargs["eval_task"]]["input_ids"])
     f = open(kwargs["output_file"], "w")
     f.write("Input\tPredicted\tTrue\n")
     f.write("\n".join(["\t".join([input, pred_label, true_label]) 
