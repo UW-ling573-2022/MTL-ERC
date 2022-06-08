@@ -160,7 +160,7 @@ Both tasks will be evaluated using weighted F1 to account for the imbalance of t
 
 Using our evaluation metric, the model yields a highest 64.74 percent weighted F1 score on MELD. Table 1 shows the results before we add the EmoryNLP dataset, and we have speaker classification task as the auxiliary task. Table 1 shows that adding only past utterances yields the best result. Table 2 shows the results when we set the one of the auxiliary tasks to emotion prediction, while keeping the second auxiliary task of speaker classification optional. We also experiment with the option of having speaker in input.
 
-The prediction output and accuracy of our primary task is shown as below in Table 3 and 4. A major trend we see from the tables is that the prediction for "neutral" has the highest accuracy compared to other emotions. Before data augmentation, the accuracy for the prediction of specific emotion decreases as the quantity of learning instances for the corresponding emotion decreases. After data augmentation, distributional bias in the data-set is not as patent. Specifically, we see a great improvement in "fear" prediction.
+The prediction output and accuracy of our primary task is shown as below in Table 3 and 4. A major trend we see from the tables is that the prediction for "neutral" has the highest accuracy compared to other emotions. Before data augmentation, the accuracy for the prediction of specific emotion decreases as the quantity of learning instances for the corresponding emotion decreases. After data augmentation, distributional bias in the data-set is not as patent. As we can see from Figure 1, the accuracy for all emotions increased,  except the 'neutral' emotion.  Specifically, there is a great improvement in rare emotion prediction, such as 'disgust' and 'fear'. 
 
 \begin{table}[hbt]
   \centering
@@ -221,15 +221,15 @@ The prediction output and accuracy of our primary task is shown as below in Tabl
         %
         xlabel= Emotions,
         xtick={1,2,...,7},
-        xticklabels={{neutral},{surprise}, {joy}, {sadness},{anger},{fear},{disgust}},
+        xticklabels={{neutral},{surprise}, {joy}, {anger},{sadness},{disgust},{fear}},
         x tick label style={rotate=30,anchor=north east},
         ]
         \addplot[color=red,mark=x]
           plot coordinates {
             (1,0.8169)
             (2,0.6144)
-            (3,0.4522)
-            (4,0.6157)
+            (3,0.6157)
+            (4,0.4522)
             (5,0.3173)
             (6,0.0735)
             (7,0.02)
@@ -240,8 +240,8 @@ The prediction output and accuracy of our primary task is shown as below in Tabl
           plot coordinates {
             (1,0.7842)
             (2,0.6542)
-            (3,0.5014)
-            (4,0.6406)
+            (3,0.6406)
+            (4,0.5014)
             (5,0.3654)
             (6,0.1912)
             (7,0.22)
@@ -356,8 +356,7 @@ The prediction output and accuracy of our primary task is shown as below in Tabl
   \caption{Weighted F1 for Adaption Task. Shared encoder=xlm-roberta}
 \end{table}
 
-
-Table 5 shows the weighted F1 of both monolingual and multilingual models. The results show that multilingual training datasets yield better results than monolingual training datasets.
+For adaptation task, we switched from the monolingual model to the multilingual model. Table 5 shows the weighted F1 of both monolingual and multilingual models. In Figure 2 and Figure 3, we compared the accuracy with respect to each emotion between different training datasets. The results show that multilingual training datasets yield better results than monolingual training datasets. 
 
 \section{Discussion}
 
